@@ -3,6 +3,8 @@ import "./about.css";
 
 const About = () => (
 	<main role="main" className="main">
+		<div className="main-container">
+
 		<div className="ourStoryH1">
 			<h1>OUR STORY</h1>
 		</div>
@@ -33,6 +35,7 @@ const About = () => (
 					the country.
 				</p>
 			</div>
+		</div>
 		</div>
 	</main>
 );
