@@ -1,3 +1,9 @@
+.imageAndTextContainer {
+    border: 1px solid red;
+    position: relative;
+    height:auto;
+}
+
 .ourStoryH1 {
 	text-align: center;
 	margin-top: 30px;
@@ -16,15 +22,18 @@ hr {
         font-weight: 600;
 }
 
-.ourStoryImg {
-    color: red !important;    
+.imgOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.300);
+    
 }
 
-.ourStoryImg img {
+img {
 	width: 100%;
-	height: 100%;
-	/* border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px; */
 }
 span {
     color: #17997a;
@@ -35,21 +44,24 @@ span {
       /* MEDIA QUERY */
 
 @media only screen and (min-width: 768px) {
-	
 
+    .imageAndTextContainer {
+        height: 66vh;
+    }
+    
 	.ourStoryP {
-		max-width:max-content;
+        position: relative;
 		font-weight: bold;
         text-align: center;
-        margin: 40px auto 100px auto; 
-	}
-
-	.container {
-        
-	}
-
-	.ourStoryImg {
-		max-height: 300px;
-        margin-top: 40px;
-	}
+        margin: 0px auto 100px auto;
+        height: 180px;
+        width: 100%;
+	}	
+    p {
+        position: absolute;
+        top: -100px;
+    }
+    .imgOverlay {
+        background-color: rgba(0, 0, 0, 0.500);
+    }
 }

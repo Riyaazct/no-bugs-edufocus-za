@@ -7,7 +7,8 @@ const About = () => (
 			<h1>OUR STORY</h1>
 		</div>
 		<hr color="#1e0f9e" size="5" />
-		<div className="">
+		<div className="imageAndTextContainer">
+		<div className="imgOverlay"></div>
 			<div className="ourStoryImg">
 				<img src="/images/our-story.jpg" alt=".." />
 			</div>
