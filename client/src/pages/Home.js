@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 
 import "./Home.css";
 import logo from "./logo.svg";
+import ListAll from "../componets/buttons/ListAll";
+import NavbarBlue from "../componets/Navbar/NavbarBlue"
+import NavbarWhite from "../componets/Navbar/NavbarWhite";
+
 
 export function Home() {
 	const [message, setMessage] = useState("Loading...");
@@ -25,17 +29,13 @@ export function Home() {
 
 	return (
 		<main role="main">
+			<NavbarBlue />
+			<NavbarWhite />
 			<div>
-				<img
-					className="logo"
-					data-qa="logo"
-					src={logo}
-					alt="Just the React logo"
-				/>
 				<h1 className="message" data-qa="message">
 					{message}
 				</h1>
-				<Link to="/about/this/site">About</Link>
+				<Link to="/buttons">Buttons</Link>
 			</div>
 		</main>
 	);
