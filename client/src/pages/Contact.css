@@ -1,22 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
+
 
 body {
     margin: 0 auto;
+    height: 2000px;
     max-width: 100%;
     box-sizing: border-box;
-}
+    color:#000000;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+} 
 
 .fakenav {
     display: flex;
     width: 100vw;
     justify-content: space-between;
     align-items: baseline;
-    position: absolute;
+    //position: absolute;
     height: 100px;
     left: 0px;
     top: 0px;
     right:0px;
-  
     background: #FFFFFF;
     border: 1px solid #FFFFFF;
 }
@@ -48,12 +53,6 @@ line-height: 150%;
     padding: 10px 20px;
 }
 
-h2 {
-    font-family: 'Raleway';
-    font-style: normal; 
-    font-size: 40px; 
-    color: #000000;
-}
 
 .navsiteheading {
     position: relative;
@@ -65,5 +64,41 @@ h2 {
     letter-spacing: 0.02em;
 }
 
+h2 {
+    font-family: 'Raleway';
+    font-style: normal; 
+    font-size: 40px; 
+    color: #000000;
+}
 
-          
+.contactsection {
+    height: 2000px;
+    
+}
+
+.contactintroimage {
+    margin: 15px 0 0 200px;
+    position: relative;
+}
+
+.contactintroheading {
+    position: absolute;
+    bottom: 200px;
+    left: 470px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+}
+
+.contactintroblurb {
+   position: absolute;
+    bottom: 115px;
+    left: 550px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+}
