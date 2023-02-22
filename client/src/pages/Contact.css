@@ -59,6 +59,9 @@ h2 {
     color: #000000;
 }
 
+.contactintro {
+    text-align: center;
+}
 .contactsection {
     height: 2000px;
 }
@@ -66,12 +69,15 @@ h2 {
 .contactintroimage {
     margin: 15px auto;
     position: relative;
+    width: 50%;
+    height: auto;
 }
 
 .contactintroheading {
     position: absolute;
-    top:120px;
-    left:10%;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
     font-style: normal;
     font-weight: 700;
     font-size:32px;
@@ -81,10 +87,11 @@ h2 {
 }
 
 .contactsocialcontainer {
-    width: 95%;
+    width: 80%;
     position: absolute;
-    left: 10px;
-    top: 220px;
+    left: 10%;
+    right:10%;
+    top: 200px;
     text-align: center;
 }
 
@@ -123,8 +130,8 @@ h2 {
 
 /* only 2 breakpoints general mobile and then laptop */
 /*laptop breakpoint */
-@media only screen and (min-width: 376px) {
-
+/* @media only screen and (min-width: 376px) { */
+@media only screen and (min-width: 768px) {
    .fakenavlist {
         margin-right:36px;
         height: 40px;
@@ -150,6 +157,7 @@ h2 {
         /* position: relative; */
     }
     .contactintroheading {
+        position: absolute;
         top: 200px;
         left: 470px;    
         font-size: 48px;
