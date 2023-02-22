@@ -115,11 +115,22 @@ img {
 		font-size: 4.3rem;
 	}
 	.firstParagraph {
-		top: -165px;
+		top: -205px;
 		max-width: 70%;
 	}
 	.secondParagraph {
 		max-width: 70%;
 	}
 
+	p {
+		font-size: 1.2rem;
+	}
+
+}
+
+@media only screen and (min-width: 1691px) {
+	.firstParagraph, .secondParagraph {
+		max-width: 60%;
+		font-size: 1.3rem;
+	}
 }
