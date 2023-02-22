@@ -2,7 +2,7 @@
 import "./about.css";
 
 const About = () => (
-	<main role="main" className="main">
+	<main role="main" >
 		<div className="main-container">
 
 		<div className="ourStoryH1">
