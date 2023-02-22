@@ -21,36 +21,53 @@ const Contact = () => (
 				src="/contact/greenblob.png"
 				alt="green blob"
 			/>
-			<h2 className="contactintroheading">Get in touch with us</h2>
+			<h2 className="contactintroheading">Get in touch with us.</h2>
 			<div className="contactsocialcontainer">
 				<p className="contactintroblurb">
-				Click here to see what we've been up to <br /> and join our social media community! </p>
+					Click here to see what we've been up to and join our social media
+					community!{" "}
+				</p>
 				<section className="contactsocialmedia">
-					<a href="https://www.facebook.com/groups/www.edufocusprojects.co.za" target="_blank" rel="noreferrer">
+					<a
+						href="https://www.youtube.com/@EduFocusProjects_NPO"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<img
-								className="contactintroicon contactintrogriditem"
-								src="/contact/facebook.svg"
-								alt="facebook icon"
+							className="contactintroicon contactintrogriditem"
+							src="/contact/youtube.svg"
+							alt="youtube icon"
 						/>
 					</a>
-					<a href="https://www.youtube.com/@EduFocusProjects_NPO" target="_blank" rel="noreferrer">
+					<a
+						href="https://www.facebook.com/groups/www.edufocusprojects.co.za"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<img
-								className="contactintroicon contactintrogriditem"
-								src="/contact/youtube.svg"
-								alt="youtube icon"
+							className="contactintroicon contactintrogriditem"
+							src="/contact/facebook.svg"
+							alt="facebook icon"
 						/>
 					</a>
-					<a href="https://acrobat.adobe.com/link/review?uri=urn%3Aaaid%3Ascds%3AUS%3A1e5659ff-bbfc-3803-b8b5-e60db9e520bb" target="_blank" rel="noreferrer">
+					<a
+						href="https://acrobat.adobe.com/link/review?uri=urn%3Aaaid%3Ascds%3AUS%3A1e5659ff-bbfc-3803-b8b5-e60db9e520bb"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<img
-								className="contactintroicon contactintrogriditem"
-								src="/contact/dimensions8.png"
-								alt="youtube icon"
+							className="contactintroicon contactintrogriditem"
+							src="/contact/dimensions8.png"
+							alt="8 dimenions of healing icon"
 						/>
 					</a>
-					<p className="contactintroicondesc contactintrogriditem">Please click here 
-						to watch all our videos</p>
+					<p className="contactintroicondesc contactintrogriditem">
+						Please click here to watch all our videos
+					</p>
 					<p className="contactintroicondesc contactintrogriditem"></p>
-					<p className="contactintroicondesc contactintrogriditem">Click here for our Eight Dimensions of Wellness Programme Overview</p>
+					<p className="contactintroicondesc contactintrogriditem">
+						Click here for our Eight Dimensions of Wellness Programme Overview
+					</p>
 				</section>
 			</div>
 		</section>

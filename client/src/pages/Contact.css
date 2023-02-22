@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
 
-
 body {
     margin: 0 auto;
     height: 2000px;
@@ -17,7 +16,6 @@ body {
     width: 100vw;
     justify-content: space-between;
     align-items: baseline;
-    //position: absolute;
     height: 100px;
     left: 0px;
     top: 0px;
@@ -27,16 +25,7 @@ body {
 }
 
 .fakenavlist {
-margin-right:36px;
-height: 40px;
-display: flex;
-gap: 20px;
-list-style: none;
-font-family: 'Plus Jakarta Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
+    display:none;
 }
 
 .fakebutton {
@@ -56,9 +45,8 @@ line-height: 150%;
 
 .navsiteheading {
     position: relative;
-    margin: 0;
+    margin: 0 auto;
     top: 18px;
-    left: 57px;
     font-weight: 600;
     line-height: 150%;
     letter-spacing: 0.02em;
@@ -73,50 +61,50 @@ h2 {
 
 .contactsection {
     height: 2000px;
-    
 }
 
 .contactintroimage {
-    margin: 15px 0 0 200px;
+    margin: 15px auto;
     position: relative;
 }
 
 .contactintroheading {
     position: absolute;
-    top: 200px;
-    left: 470px;
+    top:120px;
+    left:10%;
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size:32px;
     line-height: 150%;
     letter-spacing: 0.02em;
+    color: #1E0F9E;
+}
+
+.contactsocialcontainer {
+    width: 95%;
+    position: absolute;
+    left: 10px;
+    top: 220px;
+    text-align: center;
 }
 
 .contactintroblurb {
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 150%;
     letter-spacing: 0.02em;
 }
 
-.contactsocialcontainer {
-    width: 620px;
-    position: absolute;
-    top: 300px;
-    left: 550px;
-}
 .contactsocialmedia {
     display:grid;
-    column-gap: 4px;
+    column-gap: 2px;
     align-items: center;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
     justify-content: center;
-row-gap: 1em;   
+    row-gap: 1em;   
 }
-
 
 .contactintroicon {
     width:60px;
@@ -129,3 +117,61 @@ row-gap: 1em;
   align-self: start;
   text-align: center;
 }
+
+/* Media Queries */
+
+
+/* only 2 breakpoints general mobile and then laptop */
+/*laptop breakpoint */
+@media only screen and (min-width: 376px) {
+
+   .fakenavlist {
+        margin-right:36px;
+        height: 40px;
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        font-family: 'Plus Jakarta Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .navsiteheading {
+        position: relative;
+        margin: 0;
+        top: 18px;
+        left: 57px;
+    }  
+    
+    .contactintroimage {
+        margin: 15px 0 0 200px;
+        /* position: relative; */
+    }
+    .contactintroheading {
+        top: 200px;
+        left: 470px;    
+        font-size: 48px;
+    }    
+    .contactsocialcontainer {
+        width: 620px;
+        position: absolute;
+        top: 300px;
+        left: 550px;
+    }
+    .contactintroblurb {
+        font-size: 30px; 
+    }
+
+    .contactsocialmedia {
+        column-gap: 4px;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 1em; 
+    }
+}
+
+/* only breakpoints general ipad */
+
+/* @media only screen and (min-width: 375px) and (max-width: endofipad) {
+} */
