@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 body {
     margin: 0 auto;
@@ -12,6 +15,7 @@ body {
 } 
 
 .fakenav {
+      z-index: -150;
     display: flex;
     width: 100vw;
     justify-content: space-between;
@@ -61,6 +65,7 @@ h2 {
 
 .contactintro {
     text-align: center;
+      margin-top: 50px;
 }
 .contactsection {
     height: 2000px;
@@ -68,6 +73,7 @@ h2 {
 
 .contactintroimage {
     margin: 15px auto;
+    top:0px;
     position: relative;
     width: 50%;
     height: auto;
@@ -75,7 +81,7 @@ h2 {
 
 .contactintroheading {
     position: absolute;
-    bottom: 20px;
+    top: 140px;
     left: 20px;
     right: 20px;
     font-style: normal;
@@ -124,6 +130,25 @@ h2 {
   align-self: start;
   text-align: center;
 }
+
+.contactformsection {
+    display: flex;
+    justify-content: center;
+}
+
+.contactformheading {
+    position: relative;
+    top:50px;
+}
+.contactform{
+    position: absolute;
+    top:600px;
+}
+
+.formitem{
+        margin-bottom: 20px;
+        width: 300px
+    }
 
 /* Media Queries */
 
@@ -176,6 +201,27 @@ h2 {
         column-gap: 4px;
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 1em; 
+    }
+
+    .contactformheading {
+    position: absolute;
+    top:600px;
+    }
+
+.contactform{
+    position: absolute;
+    top:700px;
+    left: 550px;
+    width: 500px;
+}
+
+.contactform input{
+      height: 30px;
+      width: 300px;
+}
+    .formnewsletter{
+display: flex;
+column-gap: 10px;
     }
 }
 
