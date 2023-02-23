@@ -1,7 +1,38 @@
-.VisionH1 {
+
+.visionCard {
+    border: 2px solid red;
+    
+    
+}
+.visionCard hr {
+    margin-top: 0;
+
+    margin-bottom: 20px;
+}
+
+.visionCardTitle {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.visionCardContent {
     
 }
 
-.visionImage {}
+.visionCard h1 {
+    
+    
+}
 
-.visionParagraph {}
+.visionCardContent img {
+    width: 100%;
+}
+
+.visionCardContent li {
+    padding: 20px;
+    list-style: none;
+}
+
+.visionCard:nth-child(3) li  {
+    list-style: circle;
+}

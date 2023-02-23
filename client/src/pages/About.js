@@ -9,7 +9,7 @@ const About = () => (
 			<div className="aboutOurStoryH1">
 				<h1>OUR STORY</h1>
 			</div>
-			<hr color="#1e0f9e" size="5" />
+			<hr className="aboutHr" color="#1e0f9e" size="5" />
 			{/* CONTAINER FOR IMAGE AND PARAGRAPH */}
 			<div className="aboutImageAndTextContainer">
 				{/* IMAGE OVERLAY */}
