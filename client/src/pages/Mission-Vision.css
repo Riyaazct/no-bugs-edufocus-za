@@ -1,21 +1,25 @@
-
-.visionCard {
-    border: 2px solid red;
+.visionCardContainer {
     
     
 }
-.visionCard hr {
-    margin-top: 0;
 
+.visionCard {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+hr {
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
 .visionCardTitle {
-    margin-top: 30px;
+    margin-top: 20%;
     margin-left: 10px;
+
 }
 
 .visionCardContent {
+    
     
 }
 
@@ -26,13 +30,34 @@
 
 .visionCardContent img {
     width: 100%;
+    /* border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    margin-bottom: 4%;
 }
 
 .visionCardContent li {
-    padding: 20px;
     list-style: none;
+}
+
+.visionCard:first-child ul, .visionCard:nth-child(2) ul {
+    padding-left: 5px;
+    padding-right: 25px;
 }
 
 .visionCard:nth-child(3) li  {
     list-style: circle;
+    padding: 15px;
+}
+.visionCard .readMoreButton {
+    text-align: center;
+}
+
+.readMoreButton {
+    border: none;
+    background-color: unset;
+    color: #17997A;
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 100%;
+    
 }

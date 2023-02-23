@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState } from "react";
 import "./Mission-Vision.css";
 
 const slide = [
@@ -28,25 +28,44 @@ const slide = [
 ];
 
 const Mission = () => {
-	return (
-		<div className="visionCardContainer">
+    const [isActive, setIsActive] = useState(false);
+
+    // FUNCTION TO HANDLE BUTTON CLICKS
+    const handleClick = () => {
+        setIsActive(!isActive);
+    };
+    return (
+        // MAIN CONTAINER
+        <div className="visionCardContainer">
+            {/* SLIDES ARRAY DATA MAPPED OUT TO CREATE CARD */}
 			{slide.map(({ title, text, image }, index) => (
-				<div className="visionCard" key={index}>
+                <div className="visionCard" key={index}>
+                    {/* TITLE */}
 					<h1 className="visionCardTitle">{title}</h1>
-					<hr color="1e0f9e" size="5" />
-					<div className="visionCardContent">
-						<img src={image} alt="/" />
-						<ul>
-							{text.map((item, itemIndex) => (
-								<li key={itemIndex}>{item}</li>
-							))}
-						</ul>
+					<hr color="#1e0f9e" size="5" />
+                    <div className="visionCardContent">
+                        {/* IMAGE */}
+                        <img src={image} alt="/" />
+                        {/* UNORDERED LIST FOR TEXT CONTENT */}
+                        <ul>
+                            {/* CHECK IF BUTTON WAS CLICKED AND RETURN ALL TEXT DATA AND IF NOT JUST
+                            RETURN THE FIRST BULLET POINT FROM THE LAST ITEM IN SLIDE FOLDER */}
+                            {isActive ? text.map((item, itemIndex) => (
+                                <li key={itemIndex}>{item}</li>
+                            )) : <li>{text[0]}</li>}
+                            {/* Check if it's the last item in the slide array and add a button to read more */}
+                            {index === slide.length - 1 && <button className="readMoreButton" onClick={handleClick}>{isActive ? "See less.." : "Read more..."}</button>}
+                        </ul>
 					</div>
 				</div>
 			))}
 		</div>
 	);
 };
+
+/*{text.map((item, itemIndex) => (
+								<li key={itemIndex}>{item}</li>
+							))}*/
 
 export default Mission;
 
