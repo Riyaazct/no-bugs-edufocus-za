@@ -7,6 +7,7 @@
 hr {
 	margin-top: 0;
 	margin-bottom: 20px;
+	
 }
 
 .visionCardTitle {
@@ -77,6 +78,8 @@ hr {
 		gap: 35px;
         /* max-width: 70%; */
         margin: 0px auto ;
+		height: 100vh;
+		
 		
 	}
 
@@ -153,6 +156,7 @@ hr {
 
 @media only screen and (min-width: 962px) {
 
+	
 .visionCardContainer {
 	max-width: 1350px;
 }
