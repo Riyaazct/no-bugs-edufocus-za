@@ -1,151 +1,145 @@
-
 /* MOBILE VIEW */
 .visionCard {
-    margin-top: 20px;
-    margin-bottom: 50px;
+	margin-top: 20px;
+	margin-bottom: 50px;
 }
 
 hr {
-    margin-top: 0;
-    margin-bottom: 20px;
+	margin-top: 0;
+	margin-bottom: 20px;
 }
 
 .visionCardTitle {
-    margin-top: 20%;
-    margin-left: 10px;
+	margin-top: 5%;
+	margin-left: 10px;
 }
 
 .visionCardImage {
-    margin-bottom: 4%; 
+	margin-bottom: 4%;
 }
 
 .visionCardContent img {
-    width: 100%;
+	width: 100%;
 }
 
 .visionCardContent li {
-    list-style: none;
-    font-size: 1.13rem;
+	list-style: none;
+	font-size: 1.13rem;
 }
 
-.visionCard:first-child ul, .visionCard:nth-child(2) ul {
-    padding-left: 5px;
-    padding-right: 25px;
+.visionCard:first-child ul,
+.visionCard:nth-child(2) ul {
+	padding-left: 5px;
+	padding-right: 25px;
 }
 
-.visionCard:nth-child(3) li  {
-    list-style: circle;
-    padding: 15px;
+.visionCard:nth-child(3) li {
+	list-style: circle;
+	padding: 15px;
 }
 
 .visionCard .readMoreButton {
-    text-align: center;
+	text-align: center;
 }
 
 .readMoreButton {
-    border: none;
-    background-color: unset;
-    color: #17997A;
-    font-size: 1.3rem;
-    font-weight: 500;
-    width: 100%;
-    
+	border: none;
+	background-color: unset;
+	color: #17997a;
+	font-size: 1.3rem;
+	font-weight: 500;
+	width: 100%;
 }
+
+
 
 /* MEDIA QUERIES */
 
 /* 576px */
 @media only screen and (min-width: 576px) {
-.visionCardContent li {
-    font-size: 1.25rem;
-    margin-left: 5px;
-}
+	.visionCardContent li {
+		font-size: 1.25rem;
+		margin-left: 5px;
+	}
 }
 
 /* 768px */
 @media only screen and (min-width: 768px) {
-    .visionCardContainer {
-        display: flex;
-        padding: 5px;
-        gap: 15px;
-    }
-
-
-.visionCard {
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #1d0f9e1a;
-    border-radius: 20px;
+	.visionCardContainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		padding: 5px;
+		gap: 5%;
+        max-width: 70%;
+        margin: 0 auto;
+	}
     
+.visionCard:last-child {
+  grid-row: 2 / 3;
+  grid-column: 1 / span 2;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.visionCardTitle {
-    font-size: 1.25rem;
-}
+	.visionCard {
+		padding: 10px;
+		width: 100%;
+		border: 1px solid #1d0f9e1a;
+		border-radius: 20px;
+	}
 
-.visionCard img {
-    height: 150px;
-    object-fit: cover;
-    /* border-top-left-radius: 5px;
-    border-top-right-radius: 5px; */
-    border-radius: 5px;
-    
-}
+	.visionCardTitle {
+		font-size: 1.25rem;
+	}
 
+	.visionCard img {
+		height: 150px;
+		object-fit: cover;
+		border-radius: 5px;
+	}
 
+	.visionCardContent ul {
+		font-size: 0.95rem;
+		text-align: left;
+	}
+	.visionCardContent li {
+	}
 
-.visionCardContent ul {
-    font-size: 0.95rem;
-    text-align: left;
-    
-}
-.visionCardContent li{
-    
-}
+	.visionCard:first-child ul,
+	.visionCard:nth-child(2) ul {
+		padding-right: 0;
+	}
 
-.visionCard:first-child ul, .visionCard:nth-child(2) ul {
-    padding-right: 0;
-}
+	.visionCard:nth-child(3) li {
+		list-style: none;
+		padding-left: 0px;
+		padding-right: 0;
+	}
 
-.visionCard:nth-child(3) li  {
-    list-style: none;
-    padding-left: 0px;
-    padding-right: 0;
-}
+	.visionCard:nth-child(3) li:first-child {
+		padding-top: 0;
+	}
 
-.visionCard:nth-child(3) li:first-child  {
-    padding-top: 0;
-    
-}
+	/* FOR SETTING THE BOTTOM BORDER ON THE LIST ITEMS IN THE OUR OBJECTIVES CARD */
+	.bottomBorderLi {
+		border-bottom: 1px solid #1d0f9e3d;
+	}
 
-/* FOR SETTING THE BOTTOM BORDER ON THE LIST ITEMS IN THE OUR OBJECTIVES CARD */
-.bottomBorderLi {
-    border-bottom: 1px solid #1d0f9e3d;    
-}
+	.visionCard:nth-child(3) ul {
+		padding: 0px;
+	}
 
-.visionCard:nth-child(3) ul  {
-    padding: 0px;
-    
-    
-}
+	.visionCard .readMoreButton {
+	}
 
-.visionCard .readMoreButton {
-}
+	.readMoreButton {
+		font-size: medium;
+		/* width: 50%; */
+	}
 
-.readMoreButton {
-    font-size: medium;
-    /* width: 50%; */
-}
-    
-
-
-
-
-
-
-
-    .visionHr {
-        width: 95%;
-        background-color: #1e0f9e;
-    }
+	.visionHr {
+		width: 95%;
+		background-color: #1e0f9e;
+	}
 }

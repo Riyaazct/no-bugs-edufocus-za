@@ -55,7 +55,11 @@ const Mission = () => {
 								{isActive ? (
 									text.map((item, itemIndex) => (
 										<li // SET CLASS TO CSS SELECTOR THAT ADDS A BOTTOM BORDER TO EACH li for objectives
-											className={isActive && index === slide.length-1 ? "bottomBorderLi" : null}
+											className={
+												index === slide.length - 1
+													? "bottomBorderLi card-large"
+													: null
+											}
 											key={itemIndex}
 										>
 											{item}
