@@ -35,37 +35,48 @@ const Mission = () => {
         setIsActive(!isActive);
     };
     return (
-        // MAIN CONTAINER
-        <div className="visionCardContainer">
-            {/* SLIDES ARRAY DATA MAPPED OUT TO CREATE CARD */}
-			{slide.map(({ title, text, image }, index) => (
-                <div className="visionCard" key={index}>
-                    {/* TITLE */}
-					<h1 className="visionCardTitle">{title}</h1>
-					<hr color="#1e0f9e" size="5" />
-                    <div className="visionCardContent">
-                        {/* IMAGE */}
-                        <img src={image} alt="/" />
-                        {/* UNORDERED LIST FOR TEXT CONTENT */}
-                        <ul>
-                            {/* CHECK IF BUTTON WAS CLICKED AND RETURN ALL TEXT DATA AND IF NOT JUST
+			// MAIN CONTAINER
+			<div className="visionCardContainer">
+				{/* SLIDES ARRAY DATA MAPPED OUT TO CREATE CARD */}
+				{slide.map(({ title, text, image }, index) => (
+					<div className="visionCard" key={index}>
+						{/* TITLE */}
+						<h1 className="visionCardTitle">{title}</h1>
+						<hr color="#1e0f9e" size="5" className="visionHr" />
+						<div className="visionCardContent">
+							{/* IMAGE */}
+							<div className="visionCardImage">
+								<img src={image} alt="/" />
+							</div>
+							{/* UNORDERED LIST FOR TEXT CONTENT */}
+							<ul>
+								{/* CHECK IF BUTTON WAS CLICKED AND RETURN ALL TEXT DATA AND IF NOT JUST
                             RETURN THE FIRST BULLET POINT FROM THE LAST ITEM IN SLIDE FOLDER */}
-                            {isActive ? text.map((item, itemIndex) => (
-                                <li key={itemIndex}>{item}</li>
-                            )) : <li>{text[0]}</li>}
-                            {/* Check if it's the last item in the slide array and add a button to read more */}
-                            {index === slide.length - 1 && <button className="readMoreButton" onClick={handleClick}>{isActive ? "See less.." : "Read more..."}</button>}
-                        </ul>
+								{isActive ? (
+									text.map((item, itemIndex) => (
+										<li // SET CLASS TO CSS SELECTOR THAT ADDS A BOTTOM BORDER TO EACH li for objectives
+											className={isActive && index === slide.length-1 ? "bottomBorderLi" : null}
+											key={itemIndex}
+										>
+											{item}
+										</li>
+									))
+								) : (
+									<li>{text[0]}</li>
+								)}
+								{/* Check if it's the last item in the slide array and add a button to read more */}
+								{index === slide.length - 1 && (
+									<button className="readMoreButton" onClick={handleClick}>
+										{isActive ? "See less.." : "See more..."}
+									</button>
+								)}
+							</ul>
+						</div>
 					</div>
-				</div>
-			))}
-		</div>
-	);
+				))}
+			</div>
+		);
 };
-
-/*{text.map((item, itemIndex) => (
-								<li key={itemIndex}>{item}</li>
-							))}*/
 
 export default Mission;
 

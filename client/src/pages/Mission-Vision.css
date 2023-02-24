@@ -1,12 +1,10 @@
-.visionCardContainer {
-    
-    
-}
 
+/* MOBILE VIEW */
 .visionCard {
     margin-top: 20px;
     margin-bottom: 50px;
 }
+
 hr {
     margin-top: 0;
     margin-bottom: 20px;
@@ -15,24 +13,14 @@ hr {
 .visionCardTitle {
     margin-top: 20%;
     margin-left: 10px;
-
 }
 
-.visionCardContent {
-    
-    
-}
-
-.visionCard h1 {
-    
-    
+.visionCardImage {
+    margin-bottom: 4%; 
 }
 
 .visionCardContent img {
     width: 100%;
-    /* border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px; */
-    margin-bottom: 4%;
 }
 
 .visionCardContent li {
@@ -48,6 +36,7 @@ hr {
     list-style: circle;
     padding: 15px;
 }
+
 .visionCard .readMoreButton {
     text-align: center;
 }
@@ -60,4 +49,75 @@ hr {
     font-weight: 500;
     width: 100%;
     
+}
+
+@media only screen and (min-width: 768px) {
+    .visionCardContainer {
+        display: flex;
+        padding: 5px;
+        gap: 10px;
+    }
+
+
+.visionCard {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #1d0f9e;
+    border-radius: 20px;
+}
+
+.visionCardTitle {
+    font-size: 1.2rem;
+}
+
+.visionCard img {
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+
+
+.visionCardContent ul {
+    font-size: 0.95rem;
+    /* padding: 5px; */
+    text-align: left;
+}
+
+.visionCard:first-child ul, .visionCard:nth-child(2) ul {
+    
+}
+
+.visionCard:nth-child(3) li  {
+    list-style: none;
+    padding-left: 2px;
+    /* text-align: cen; */ 
+}
+
+.bottomBorderLi {
+    border-bottom: 1px solid #1d0f9e3d;    
+}
+
+.visionCard:nth-child(3) ul  {
+    padding-left: 5px;
+}
+
+.visionCard .readMoreButton {
+}
+
+.readMoreButton {
+    font-size: medium;
+    /* width: 50%; */
+}
+    
+
+
+
+
+
+
+
+    .visionHr {
+        width: 30%;
+    }
 }
