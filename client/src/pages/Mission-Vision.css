@@ -25,6 +25,7 @@ hr {
 
 .visionCardContent li {
     list-style: none;
+    font-size: 1.13rem;
 }
 
 .visionCard:first-child ul, .visionCard:nth-child(2) ul {
@@ -51,28 +52,43 @@ hr {
     
 }
 
+/* MEDIA QUERIES */
+
+/* 576px */
+@media only screen and (min-width: 576px) {
+.visionCardContent li {
+    font-size: 1.25rem;
+    margin-left: 5px;
+}
+}
+
+/* 768px */
 @media only screen and (min-width: 768px) {
     .visionCardContainer {
         display: flex;
         padding: 5px;
-        gap: 10px;
+        gap: 15px;
     }
 
 
 .visionCard {
     padding: 10px;
     width: 100%;
-    border: 1px solid #1d0f9e;
+    border: 1px solid #1d0f9e1a;
     border-radius: 20px;
+    
 }
 
 .visionCardTitle {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
 .visionCard img {
-    height: 200px;
+    height: 150px;
     object-fit: cover;
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px; */
+    border-radius: 5px;
     
 }
 
@@ -81,19 +97,25 @@ hr {
 .visionCardContent ul {
     font-size: 0.95rem;
     text-align: left;
+    
+}
+.visionCardContent li{
+    
 }
 
 .visionCard:first-child ul, .visionCard:nth-child(2) ul {
-    
+    padding-right: 0;
 }
 
 .visionCard:nth-child(3) li  {
     list-style: none;
-    padding-left: 2px;
+    padding-left: 0px;
+    padding-right: 0;
 }
 
 .visionCard:nth-child(3) li:first-child  {
     padding-top: 0;
+    
 }
 
 /* FOR SETTING THE BOTTOM BORDER ON THE LIST ITEMS IN THE OUR OBJECTIVES CARD */
@@ -102,7 +124,8 @@ hr {
 }
 
 .visionCard:nth-child(3) ul  {
-    padding-left: 5px;
+    padding: 0px;
+    
     
 }
 
@@ -122,6 +145,7 @@ hr {
 
 
     .visionHr {
-        width: 30%;
+        width: 95%;
+        background-color: #1e0f9e;
     }
 }
