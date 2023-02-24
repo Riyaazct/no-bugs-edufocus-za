@@ -88,7 +88,7 @@ hr {
 		margin: auto;
 	}
 
-	.aboutFirstParagraph p, .aboutSecondParagraph p {
+	.aboutFirstParagraph , .aboutSecondParagraph  {
 		font-size: 1.1rem;
 	}
 
@@ -120,13 +120,11 @@ hr {
 	.aboutFirstParagraph {
 		top: -205px;
 		max-width: 65%;
+		font-size: 1.3rem;
 	}
 	.aboutSecondParagraph {
 		max-width: 65%;
-	}
-
-	.aboutFirstParagraph p, .aboutSecondParagraph p {
-		font-size: 1.2rem;
+		font-size: 1.3rem;
 	}
 	.spanForName {
 		font-size: 1.5rem;
@@ -137,7 +135,8 @@ hr {
 @media only screen and (min-width: 1691px) {
 	.aboutFirstParagraph, .aboutSecondParagraph {
 		max-width: 65%;
-		font-size: 1.3rem;
+		font-size: 1.35rem;
+		padding: 0;
 	}
 	.spanForName {
 		font-size: 2rem;

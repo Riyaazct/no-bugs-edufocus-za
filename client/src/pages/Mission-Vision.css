@@ -24,7 +24,7 @@ hr {
 
 .visionCardContent li {
 	list-style: none;
-	font-size: 1.13rem;
+	font-size: 1.1rem;
 }
 
 .visionCard:first-child ul,
@@ -57,8 +57,12 @@ hr {
 
 /* 576px */
 @media only screen and (min-width: 576px) {
+
+	.visionCard h1 {
+		font-size: 1.32rem;
+	}
+
 	.visionCardContent li {
-		font-size: 1.25rem;
 		margin-left: 5px;
 	}
 }
@@ -67,27 +71,25 @@ hr {
 @media only screen and (min-width: 768px) {
 	.visionCardContainer {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto auto;
+		grid-template-columns: 1fr 1fr 1fr;
+		/* grid-template-rows: auto auto; */
 		padding: 5px;
-		gap: 5%;
-        max-width: 70%;
-        margin: 0 auto;
+		gap: 35px;
+        /* max-width: 70%; */
+        margin: 0px auto ;
+		
 	}
 
 .visionCard:last-child {
-  grid-row: 2 / 3;
-  grid-column: 1 / span 2;
-  max-width: 500px;
-  margin: 0 auto;
+  
 }
 
 	.visionCard {
-		padding: 10px;
-		width: 100%;
-        max-width: 300px;
-		border: 1px solid #1d0f9e1a;
-		border-radius: 20px;
+		padding: 20px;
+        max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
 	}
 
 	.visionCardTitle {
@@ -103,19 +105,23 @@ hr {
 	.visionCardContent ul {
 		font-size: 0.95rem;
 		text-align: left;
+		
 	}
 	.visionCardContent li {
+		font-size: 0.85rem;
 	}
 
 	.visionCard:first-child ul,
 	.visionCard:nth-child(2) ul {
-		padding-right: 0;
+		padding: 0;
+		
 	}
 
 	.visionCard:nth-child(3) li {
 		list-style: none;
 		padding-left: 0px;
 		padding-right: 0;
+		
 	}
 
 	.visionCard:nth-child(3) li:first-child {
@@ -136,11 +142,27 @@ hr {
 
 	.readMoreButton {
 		font-size: medium;
-		/* width: 50%; */
+
 	}
 
 	.visionHr {
 		width: 95%;
 		background-color: #1e0f9e;
 	}
+}
+
+@media only screen and (min-width: 962px) {
+
+.visionCardContainer {
+	max-width: 1350px;
+}
+
+.visionCard h1 {
+	font-size: 2rem;
+}
+
+.visionCard li {
+	font-size: 1rem;
+}
+
 }

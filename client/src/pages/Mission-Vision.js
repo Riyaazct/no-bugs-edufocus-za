@@ -15,7 +15,7 @@ const slide = [
 	{
 		title: "OUR OBJECTIVES",
 		text: [
-			"To provide support, coaching and mentoring to teachers in the eight dimensions of holistic wellbeing i.e.(physical, psychological, social, financial, emotional, spiritual, vocational and environmental) in order to serve public school learners from previously disadvantaged communities.",
+			"To provide support, coaching and mentoring to teachers in the eight dimensions of holistic wellbeing i.e. (physical, psychological, social, financial, emotional, spiritual, vocational and environmental) in order to serve public school learners from previously disadvantaged communities.",
 			"To empower teachers with coping mechanisms and strategies to manage and refer learners from previous disadvantaged communities affected by social ills, to the relevant support structures.",
 			"To partner with the relevant stakeholders in order to equip teachers to become change agents in the schooling communities and communities at large.",
 			"To network and partner with local community-based organisations (CBOs) in order to identify and understand the unique context and needs of the community where the schools are located.",
