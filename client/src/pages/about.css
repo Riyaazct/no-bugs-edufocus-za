@@ -2,6 +2,8 @@
 	position: relative;
 }
 
+
+
 h1 {
 	margin-left: 10px;
 	margin-top: 30px;
@@ -133,7 +135,7 @@ h1 {
 	.aboutSecondParagraph {
 		max-width: 65%;
 		font-size: 1.26rem;
-		top: -200px;
+		top: -180px;
 	}
 	.spanForName {
 		font-size: 1.5rem;
@@ -146,8 +148,9 @@ h1 {
 @media only screen and (min-width: 1691px) {
 	.aboutFirstParagraph,
 	.aboutSecondParagraph {
+		top: -170px;
 		max-width: 65%;
-		font-size: 1.35rem;
+		font-size: 1.3rem;
 		padding: 0;
 	}
 	.spanForName {

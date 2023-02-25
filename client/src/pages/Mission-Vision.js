@@ -70,9 +70,12 @@ const Mission = () => {
 								)}
 								{/* Check if it's the last item in the slide array and add a button to read more */}
 								{index === slide.length - 1 && (
+									<div className="seeMoreButtonContainer">
+
 									<button className="readMoreButton" onClick={handleClick}>
 										{isActive ? "See less.." : "See more..."}
 									</button>
+									</div>
 								)}
 							</ul>
 						</div>

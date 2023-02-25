@@ -59,59 +59,49 @@ hr {
 /* 576px */
 @media only screen and (min-width: 576px) {
 
-	.visionCard h1 {
-		font-size: 1.32rem;
-	}
-
-	.visionCardContent li {
+		.visionCardContent li {
 		margin-left: 5px;
 	}
-}
+} 
+/* END OF MOBILE VIEW */
+
+
 
 /* 768px */
 @media only screen and (min-width: 768px) {
+
 	.visionCardContainer {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		/* grid-template-rows: auto auto; */
-		padding: 5px;
-		gap: 35px;
-        /* max-width: 70%; */
+		padding-left: 30px;
+		padding-right: 30px;
+		gap: 10px;
         margin: 0px auto ;
-		height: 100vh;
-		
-		
+		height: 80vh;
 	}
-
-.visionCard:last-child {
-  
-}
 
 	.visionCard {
-		padding: 20px;
-        max-width: 400px;
-		margin-left: auto;
-		margin-right: auto;
 		margin-top: 100px;
-	}
+		padding: 4px;
+		}
 
 	.visionCardTitle {
-		font-size: 1.25rem;
+		font-size: 1.4rem;
+		margin: auto;		
 	}
 
 	.visionCard img {
-		height: 150px;
+		height: 180px;
 		object-fit: cover;
 		border-radius: 5px;
 	}
 
 	.visionCardContent ul {
-		font-size: 0.95rem;
 		text-align: left;
 		
 	}
 	.visionCardContent li {
-		font-size: 0.85rem;
+		font-size: 1rem;
 	}
 
 	.visionCard:first-child ul,
@@ -140,11 +130,9 @@ hr {
 		padding: 0px;
 	}
 
-	.visionCard .readMoreButton {
-	}
-
 	.readMoreButton {
 		font-size: medium;
+		width: max-content;
 
 	}
 
@@ -152,21 +140,58 @@ hr {
 		width: 95%;
 		background-color: #1e0f9e;
 	}
+
+	.seeMoreButtonContainer {
+	text-align: end;
+}
 }
 
-@media only screen and (min-width: 962px) {
 
-	
-.visionCardContainer {
-	max-width: 1350px;
+
+/* 1050px  SCREEN*/
+@media only screen and (min-width: 1050px) {
+	.visionCardContainer {
+		max-width: 95%;
+		gap: 30px;
+	}
+	.visionCardTitle {
+		font-size: 1.6rem;
+	}
+
+	.visionCard li {
+	font-size: 1.14rem;
+	max-width: 450px;
 }
 
-.visionCard h1 {
-	font-size: 2rem;
+.visionCardContent img {
+	height: 200px;
 }
 
-.visionCard li {
-	font-size: 1rem;
+.readMoreButton {
+	font-size: 1.25rem;
+}
 }
 
+/* 1400px screen size */
+@media only screen and (min-width: 1400px) {
+	.visionCardContainer {
+		max-width: 90%;
+		gap: 50px;
+	}
+
+	.visionCardTitle {
+		font-size: 2rem;
+}
+
+	.visionCard li {
+	font-size: 1.3rem;
+}
+
+.visionCardContent img {
+	height: 280px;
+}
+
+.readMoreButton {
+	font-size: 1.45rem;
+}
 }
