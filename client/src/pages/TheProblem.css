@@ -1,0 +1,28 @@
+.theProblemContent {
+    margin: 0;
+	background-color: #17997a;
+	display: flex;
+	align-items: center;
+	color: white;
+	padding: 20px;	
+	width: 100%;
+}
+
+.theProblemContent h1 {
+	color: black;
+
+	text-align: center;
+}
+
+.theProblemContent img {
+	height: 200px;
+}
+
+.theProblemContent p {
+	max-width: 95%;
+	margin: auto;
+	font-size: 1.3rem;
+}
+.mainContainer {
+    
+}
