@@ -29,7 +29,14 @@ body {
   min-height: 100vh;
   margin: 0 auto;
 }
-
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem 0.5rem;
+}
 .wrap {
   display: flex;
   flex-direction: column;
@@ -74,4 +81,48 @@ button {
 
 button:hover {
   background-color: var(--color-blue);
+}
+.instructions {
+  font-size: 0.7rem;
+  border-radius: 0.5rem;
+  background: var(--color-blue);
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions>svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: green;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: white;
+  color: red;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  display: inline-block;
 }
