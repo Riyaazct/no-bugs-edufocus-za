@@ -22,9 +22,10 @@
 }
 
 .mainContainer hr {
-	margin-bottom: 20px;
+	margin-bottom: 60px;
+	margin-top: 30px;
 	background-color: #1d0f9e80;
-	height: 2px;
+
 }
 
 .theProblemContent img {
@@ -72,23 +73,91 @@
 		line-height: 1.2;
 	
 	}
+	.mainContainer hr {
+		max-width: 600px;
+	}
 	
 }
 
 @media only screen and (min-width:992px) {
+	.mainContainer {
+		height: 100vh;
+		border: 2px solid red;
+	}
 
 	.theProblemContent {
+		position: relative;
 	flex-direction: row;
-	height: 100vh;
-	max-width: 900px;
+	height: fit-content;
+	max-width: 800px;
+	margin-top: 50px;
+	gap: 10px;
+	border: 2px solid red;
 	}
 
 	.theProblemContent img {
-		height: 500px;
-		max-width: 600px;
+		max-height: max-content;
+		max-width: 450px;
+		border-radius: unset;
+		height: 280px;
+		width: 300px;
+		
 	}
 	.theProblemTextContainer {
-		height: 500px;
+		height: fit-content;
+		padding: 10px;
+		background-color: unset;
+		max-width: 50%;
+		margin-top: 50px;
+	}
+
+	.theProblemTextContainer p {
+		font-size: 1.14rem;
+		color: black;
+	}
+
+	.backgroundDiv {
+		position: absolute;
+		width: 80%;
+		max-width: 600px;
+		height: 550px;
+		background-color: #17997b;
+		z-index: -1;
+		bottom: 20px;
+		right: 55px;
+		border-radius: 5px;
+	}
+	.mainContainer hr {
+		width: 60%;
+	}
+}
+
+@media only screen and (min-width: 1250px) {
+	
+	
+	.mainContainer {
+		
+	}
+
+	.theProblemContent {
+		border: 2px solid greenyellow;
+	} 
+
+	.theProblemContent img {
+		
+		
+	}
+	.theProblemTextContainer {
+		
+	}
+
+	.theProblemTextContainer p {
+		
+	}
+
+	.backgroundDiv {
+	}
+	.mainContainer hr {
 	}
 }
 

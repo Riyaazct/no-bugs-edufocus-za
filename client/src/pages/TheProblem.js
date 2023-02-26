@@ -7,6 +7,7 @@ const TheProblem = () => {
 			<h1>THE PROBLEM</h1>
 			<hr size="2" /*color="#1e0f9e"*/ />
 			<div className="theProblemContent">
+				<div className="backgroundDiv"></div>
 
 					<img src="/images/theproblem.jpg" alt="" />
 
