@@ -129,14 +129,29 @@ const Contact = () => {
 							/>
 						</div>
 					</div>
-
+					<div className="formitem">
+						<div>
+							<label htmlFor="inline-message-type">Message Type</label>
+						</div>
+						<div>
+							<input
+								className="contactmessage"
+								id="inline-message-type"
+								type="text"
+								name="message"
+								placeholder="Enter Query Here"
+								value={message}
+								onChange={handleMessageChange}
+							/>
+						</div>
+					</div>
 					<div className="formitem">
 						<div>
 							<label htmlFor="inline-customer-message">Message Details</label>
 						</div>
 						<div>
 							<input
-								className = "contactmessagebox"
+								className="contactmessagebox"
 								id="inline-message"
 								type="text"
 								name="message"

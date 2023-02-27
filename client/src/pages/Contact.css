@@ -219,7 +219,12 @@ h2 {
       height: 30px;
       width: 300px;
 }
-    .formnewsletter{
+
+#inline-message {
+    height:100px;
+}
+
+.formnewsletter{
 display: flex;
 column-gap: 10px;
     }
