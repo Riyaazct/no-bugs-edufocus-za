@@ -1,0 +1,101 @@
+.login,
+.rectangle1 {
+  position: absolute;
+  left: 0;
+}
+.login {
+  top: calc(50% - 11px);
+  line-height: 22px;
+  font-weight: 500;
+}
+.rectangle1 {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100px;
+  border: 2px solid #ebeaed;
+  box-sizing: border-box;
+}
+.sign-up2 {
+  position: absolute;
+  top: calc(50% - 11px);
+  left: calc(50% - 28px);
+  line-height: 22px;
+  font-weight: 500;
+}
+.sign-up1,
+.small-dark-outline {
+  position: absolute;
+  top: calc(50% - 20px);
+  height: 40px;
+}
+.small-dark-outline {
+  width: 57.8%;
+  right: 0;
+  left: 42.2%;
+  text-align: center;
+}
+.sign-up1 {
+  width: 12.36%;
+  right: 8.21%;
+  left: 79.43%;
+}
+.about-us1,
+.home1 {
+  position: absolute;
+  top: calc(50% - 13px);
+  left: 86.87%;
+  line-height: 26px;
+}
+.about-us1 {
+  left: 61.19%;
+}
+.contact-us1 {
+  left: 27.46%;
+  line-height: 26px;
+}
+.contact-us1,
+.menu1,
+.our-people1 {
+  position: absolute;
+  top: calc(50% - 13px);
+}
+.our-people1 {
+  left: 0;
+  line-height: 26px;
+}
+.menu1 {
+  width: 23.93%;
+  right: 38.57%;
+  left: 37.5%;
+  height: 26px;
+}
+.logo {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  letter-spacing: -0.29px;
+}
+.logo-b {
+  position: absolute;
+  width: 7.93%;
+  top: calc(50% - 9px);
+  right: 83.93%;
+  left: 8.14%;
+  height: 19px;
+  text-align: center;
+  font-size: 24px;
+}
+.navbar-white {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 16px;
+  color: #1e0e62;
+  font-family: "DM Sans";
+}
