@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import "./Home.css";
 import logo from "./logo.svg";
-import ListAll from "../componets/buttons/ListAll";
-import NavbarBlue from "../componets/Navbar/NavbarBlue"
-import NavbarWhite from "../componets/Navbar/NavbarWhite";
+// import ListAll from "../components/buttons/components";
+import NavbarBlue from "../components/Navbar/NavbarBlue"
+import NavbarWhite from "../components/Navbar/NavbarWhite";
 
 
 export function Home() {

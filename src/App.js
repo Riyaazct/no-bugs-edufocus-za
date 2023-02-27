@@ -5,8 +5,8 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
-import People from "./pages/People"
-import ListAll from "./componets/buttons/ListAll";
+import OurPeople from "./pages/OurPeople"
+import ListAll from "./components/buttons/ListAll";
 
 
 const App = () => (
@@ -16,7 +16,7 @@ const App = () => (
 		<Route path="/createAccount" element={<Signup />} />
 		<Route path="/login" element={<Login/>} />
 		<Route path="/contact-us" element={<Contact />} />
-		<Route path="/our-people" element={<People />} />
+		<Route path="/our-people" element={<OurPeople />} />
 
 
 		<Route path="/buttons" element={<ListAll />} />
