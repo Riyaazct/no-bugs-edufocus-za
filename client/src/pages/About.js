@@ -1,9 +1,11 @@
 // import backgroundImg from "/public/bg.jpg";
 import "./about.css";
 import Mission from "./Mission-Vision";
+import NavbarBlue from "../components/Navbar/NavbarBlue";
 
 const About = () => (
 	<main role="main">
+		<NavbarBlue />
 		<div className="main-container">
 			{/* TITLE */}
 			<div className="aboutOurStoryH1">
