@@ -1,7 +1,9 @@
 import React from "react";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
+import AuthContext from "../context/AuthProvider";
 
 function LogIn() {
+  const { setAuth } = useContext(AuthContext);
   const userRef = useRef();
   const errRef = useRef();
 
@@ -38,7 +40,6 @@ function LogIn() {
       ) : (
         <section className='wrap'>
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-          <h1>Sign In</h1>
           <h2>Log in</h2>
           <form onSubmit={handleSubmit}>
             {/* USERNAME */}
