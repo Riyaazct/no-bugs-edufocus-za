@@ -1,0 +1,122 @@
+.small-fill {
+  position: absolute;
+  width: 6.43%;
+  top: calc(50% - 20px);
+  right: 8.21%;
+  left: 85.36%;
+}
+.rectangle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  opacity: 0.3;
+}
+.sign-up {
+  position: absolute;
+  top: calc(50% - 11px);
+  left: calc(50% - 25px);
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.login,
+.rectangle {
+  position: absolute;
+  left: 0;
+}
+.login {
+  top: calc(50% - 11px);
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.small-white-outline {
+  position: absolute;
+  width: 6.43%;
+  top: calc(50% - 20px);
+  right: 16.07%;
+  left: 77.5%;
+  height: 40px;
+}
+.about-us,
+.home {
+  position: absolute;
+}
+.home {
+  top: calc(50% - 13px);
+  left: 87.21%;
+  line-height: 26px;
+}
+.about-us {
+  left: 60.47%;
+}
+.about-us,
+.contact-us,
+.our-people {
+  top: calc(50% - 13px);
+  line-height: 26px;
+}
+.contact-us {
+  position: absolute;
+  left: 29.94%;
+}
+.our-people {
+  left: 0;
+}
+.edufocus,
+.menu,
+.our-people {
+  position: absolute;
+}
+.menu {
+  width: 24.57%;
+  top: calc(50% - 12px);
+  right: 37.57%;
+  left: 37.86%;
+  height: 26px;
+  text-align: left;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+.menu a:hover {
+  background-color: "#1e0e62";
+  font-Family: "'DM Sans'";
+}
+.edufocus {
+  top: -6px;
+  left: 0;
+  letter-spacing: -0.29px;
+}
+.black {
+  position: absolute;
+  width: 7.93%;
+  top: calc(50% - 9px);
+  right: 83.86%;
+  left: 8.21%;
+  height: 19px;
+  font-size: 24px;
+}
+.navbar-blue {
+  position: relative;
+  background-color: #2f1893;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  font-family: "DM Sans";
+}
+
