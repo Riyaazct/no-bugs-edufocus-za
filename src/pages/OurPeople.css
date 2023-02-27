@@ -1,0 +1,303 @@
+.rectangle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100px;
+  background-color: #25dac5;
+}
+.sign-up {
+  position: absolute;
+  top: calc(50% - 13px);
+  left: calc(50% - 81px);
+  line-height: 26px;
+  font-weight: 500;
+}
+.middle-fill {
+  position: absolute;
+  height: 4.49%;
+  width: 15.71%;
+  top: 86.54%;
+  right: 42.14%;
+  bottom: 8.98%;
+  left: 42.14%;
+  font-size: 18px;
+  color: #fff;
+}
+.designer-who-makes {
+  position: absolute;
+  width: 81.55%;
+  top: 35.78%;
+  left: 9.06%;
+  line-height: 20px;
+  font-weight: 500;
+  display: inline-block;
+  mix-blend-mode: normal;
+}
+.product-manager {
+  position: absolute;
+  top: 19.17%;
+  left: 0;
+  letter-spacing: 2px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #25dac5;
+}
+.nicole-fisher {
+  position: absolute;
+  top: 0;
+  left: 19.09%;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #1e0e62;
+}
+.mask-icon,
+.name {
+  position: absolute;
+  height: 73.65%;
+  width: 114.44%;
+  top: 47.3%;
+  right: -7.41%;
+  bottom: -20.95%;
+  left: -7.04%;
+}
+.mask-icon {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.member-1,
+.userpic {
+  position: absolute;
+  height: 40.54%;
+  width: 62.96%;
+  top: 0;
+  right: 18.52%;
+  bottom: 59.46%;
+  left: 18.52%;
+}
+.member-1 {
+  height: 26.57%;
+  width: 19.29%;
+  top: 21.72%;
+  right: 65.36%;
+  bottom: 51.71%;
+  left: 15.36%;
+}
+.designer-who-makes1 {
+  position: absolute;
+  width: 100%;
+  top: 43.82%;
+  left: 0;
+  line-height: 20px;
+  font-weight: 500;
+  display: inline-block;
+  mix-blend-mode: normal;
+}
+.product-manager1 {
+  position: absolute;
+  top: 23.48%;
+  left: 26.19%;
+  letter-spacing: 2px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #25dac5;
+}
+.nicole-fisher1 {
+  position: absolute;
+  top: 0;
+  left: 17.06%;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #1e0e62;
+}
+.member-11,
+.name1 {
+  position: absolute;
+  height: 60.14%;
+  width: 93.33%;
+  top: 47.3%;
+  right: 3.33%;
+  bottom: -7.43%;
+  left: 3.33%;
+}
+.member-11 {
+  height: 26.57%;
+  width: 19.29%;
+  top: 21.72%;
+  right: 40.36%;
+  bottom: 51.71%;
+  left: 40.36%;
+}
+.designer-who-makes2 {
+  position: absolute;
+  width: 100%;
+  top: 35.78%;
+  left: 0;
+  line-height: 20px;
+  font-weight: 500;
+  display: inline-block;
+  mix-blend-mode: normal;
+}
+.product-manager2 {
+  position: absolute;
+  top: 19.17%;
+  left: 30.95%;
+  letter-spacing: 2px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #25dac5;
+}
+.nicole-fisher2 {
+  position: absolute;
+  top: 0;
+  left: 16.67%;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #1e0e62;
+}
+.member-12,
+.name2 {
+  position: absolute;
+  height: 73.65%;
+  width: 93.33%;
+  top: 47.3%;
+  right: 3.33%;
+  bottom: -20.95%;
+  left: 3.33%;
+}
+.member-12 {
+  height: 26.57%;
+  width: 19.29%;
+  top: 54.58%;
+  right: 65.36%;
+  bottom: 18.85%;
+  left: 15.36%;
+}
+.nicole-fisher3 {
+  position: absolute;
+  top: 0;
+  left: 26.19%;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #1e0e62;
+}
+.member-13 {
+  position: absolute;
+  height: 26.57%;
+  width: 19.29%;
+  top: 21.72%;
+  right: 15.36%;
+  bottom: 51.71%;
+  left: 65.36%;
+}
+.product-manager4 {
+  position: absolute;
+  top: 23.48%;
+  left: 30.56%;
+  letter-spacing: 2px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #25dac5;
+}
+.nicole-fisher4 {
+  position: absolute;
+  top: 0;
+  left: 2.78%;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #1e0e62;
+}
+.member-14 {
+  position: absolute;
+  height: 26.57%;
+  width: 19.29%;
+  top: 54.58%;
+  right: 40.29%;
+  bottom: 18.85%;
+  left: 40.43%;
+}
+.designer-who-makes5 {
+  position: absolute;
+  width: 67.56%;
+  top: 35.78%;
+  left: 16.09%;
+  line-height: 20px;
+  font-weight: 500;
+  display: inline-block;
+  mix-blend-mode: normal;
+}
+.nicole-fisher5 {
+  position: absolute;
+  top: 0;
+  left: 34.32%;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #1e0e62;
+}
+.member-15,
+.name5 {
+  position: absolute;
+  height: 73.65%;
+  width: 138.15%;
+  top: 47.3%;
+  right: -19.26%;
+  bottom: -20.95%;
+  left: -18.89%;
+}
+.member-15 {
+  height: 26.57%;
+  width: 19.29%;
+  top: 54.58%;
+  right: 15.21%;
+  bottom: 18.85%;
+  left: 65.5%;
+}
+.great-crew-of {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  letter-spacing: -0.4px;
+  line-height: 52px;
+  display: inline-block;
+}
+.title {
+  position: absolute;
+  height: 4.67%;
+  width: 51.29%;
+  top: 8.98%;
+  right: 24.36%;
+  bottom: 86.36%;
+  left: 24.36%;
+  font-size: 42px;
+  color: #1e0e62;
+}
+.our-people {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 1114px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(21, 20, 57, 0.4);
+  font-family: "DM Sans";
+}
