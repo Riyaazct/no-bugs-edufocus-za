@@ -20,9 +20,9 @@ const Button1 = () => {
           right: "0%",
           bottom: "0%",
           left: "0%",
-          'border-Radius': "100px!important",
+          "border-Radius": "100px!important",
           border: "2px solid #fff",
-          'box-sizing': "border-box"
+          "box-sizing": "border-box",
         }}
         sx={{ width: 100 }}
         variant="contained"

@@ -1,7 +1,7 @@
 import "./NavbarWhite.css";
 
 const NavbarWhite = () => {
-  
+
   return (
     <div className="navbar-white">
       <div className="sign-up1">
