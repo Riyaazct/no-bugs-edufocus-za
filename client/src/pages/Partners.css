@@ -1,0 +1,13 @@
+.container {
+	height: 100vh;
+	width: 100%;
+	background-color: blue;
+	color: white;
+	display: flex;
+}
+
+.textContent {
+	margin: auto;
+	width: fit-content;
+	font-size: 2rem;
+}
