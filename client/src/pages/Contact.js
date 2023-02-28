@@ -4,26 +4,63 @@ import React, { useState } from "react";
 
 const Contact = () => {
 
-   const contactMessage = {
-	fullname: "",
-	email: "",
-	message: "",
-   };
+	const options = [
+		{ label: "Query", value: "query" },
+		{ label: "Concern", value: "concern" },
+		{ label: "Training Feedback", value: "feedback" },
+		{ label: "Donation", value: "donation" },
+	];
 
+ 	const [contactmsg, setContactmsg] = useState({
+		fullname: "",
+		email: "",
+		messagetype: "",
+		message: "",
+   });
 
  	const [fullname, setFullname] = useState("");
 	const [email, setEmail] = useState("");
+	const [messagetype, setMessagetype] = useState("query");
 	const [message, setMessage] = useState("");
 
 	function handleFullnameChange(event) {
-		setFullname(event.target.value);
+		contactmsg.fullname = event.target.value;
+		setContactmsg({ ...contactmsg });
 	}
+
 	function handleEmailChange(event) {
-		setEmail(event.target.value);
+		contactmsg.email = event.target.value;
+		setContactmsg({ ...contactmsg });
 	}
+
+	function handleMessagetypeChange(event) {
+		contactmsg.messagetype = event.target.value;
+		setContactmsg({ ...contactmsg });
+	}
+
 	function handleMessageChange(event) {
-		setMessage(event.target.value);
+		contactmsg.message = event.target.value;
+		setContactmsg({ ...contactmsg });
 	}
+
+	 function handleSubmit(event) {
+			event.preventDefault();
+
+			console.log("Sending data to server");
+
+			fetch("https://httpstat.us/200", {
+				method: "POST",
+				body: JSON.stringify({
+					username: username,
+					email: email,
+					password: password,
+				}),
+				headers: {
+					"Content-Type": "application/json",
+				},
+			});
+		}
+
 
 	return (
 		<section className="contactsection">
@@ -97,8 +134,12 @@ const Contact = () => {
 				</div>
 			</section>
 			<section className="contactformsection">
-				<h2 className="contactformheading">Have a question?</h2>
-				<form className="contactform">
+				<h2 className="contactformheading">Have a question? Want to donate?</h2>
+				<form
+					className="contactform"
+					onSubmit={handleSubmit}
+					method="POST"
+				>
 					<div className="formitem">
 						<div>
 							<label htmlFor="inline-full-name">Full Name</label>
@@ -109,7 +150,7 @@ const Contact = () => {
 								type="text"
 								name="fullname"
 								placeholder="Enter Full Name"
-								value={fullname}
+								value={contactmsg.fullname}
 								onChange={handleFullnameChange}
 							/>
 						</div>
@@ -124,26 +165,25 @@ const Contact = () => {
 								type="email"
 								name="email"
 								placeholder="Enter Email Address"
-								value={email}
+								value={contactmsg.email}
 								onChange={handleEmailChange}
 							/>
 						</div>
 					</div>
 					<div className="formitem">
 						<div>
-							<label htmlFor="inline-message-type">Message Type</label>
+							<label htmlFor="inline-query">Message Type</label>
 						</div>
-						<div>
-							<input
-								className="contactmessage"
-								id="inline-message-type"
-								type="text"
-								name="message"
-								placeholder="Enter Query Here"
-								value={message}
-								onChange={handleMessageChange}
-							/>
-						</div>
+						<select
+							value={contactmsg.messagetype}
+							onChange={handleMessagetypeChange}
+						>
+							{options.map((option, inx) => (
+								<option key={inx} value={option.value}>
+									{option.label}
+								</option>
+							))}
+						</select>
 					</div>
 					<div className="formitem">
 						<div>
@@ -156,14 +196,14 @@ const Contact = () => {
 								type="text"
 								name="message"
 								placeholder="Enter Query Here"
-								value={message}
+								value={contactmsg.message}
 								onChange={handleMessageChange}
 							/>
 						</div>
 					</div>
 					<div className="formitem">
 						<div>
-							<button className="fakebutton" type="button">
+							<button className="fakebutton" type="submit">
 								Send Message
 							</button>
 						</div>
@@ -172,6 +212,7 @@ const Contact = () => {
 			</section>
 		</section>
 	);
+
 };
 
 
