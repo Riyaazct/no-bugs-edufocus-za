@@ -2,11 +2,13 @@ import React from "react";
 import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from 'axios';
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{6,24}$/;
 const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
-
+const SIGNUP_URL = `http://localhost:3100/api/users`;
 function SignUp() {
+
   const userRef = useRef();
   const errRef = useRef();
 
@@ -72,8 +74,30 @@ function SignUp() {
       setErrMsg("Invalid Entry");
       return;
     }
-    console.log(user, email, pwd);
-    setSuccess(true);
+
+    try {
+      const response = await axios.post(SIGNUP_URL,
+        JSON.stringify({ user, email, pwd }),
+        {
+          headers: { 'Content-Type': 'application/json' },
+          withCredentials: true
+        }
+      );
+      setSuccess(true);
+      setUser('');
+      setPwd('');
+      setMatchPwd('');
+    } catch (err) {
+      if (!err?.response) {
+        setErrMsg('No Server Response');
+      } else if (err.response?.status === 409) {
+        setErrMsg('Username Taken');
+      } else {
+        setErrMsg('Registration Failed')
+      }
+      errRef.current.focus();
+    }
+
   }
 
 

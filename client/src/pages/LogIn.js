@@ -25,7 +25,7 @@ function LogIn() {
     console.log(user, pwd);
     setUser("");
     setPwd("");
-    setSuccess(true);
+    setSuccess(true);  
   }
   return (
     <>
