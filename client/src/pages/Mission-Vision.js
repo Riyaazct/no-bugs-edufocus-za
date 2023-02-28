@@ -5,12 +5,12 @@ const slide = [
 	{
 		title: "OUR VISION",
 		text: ['To become the leading service provider of intervention initiatives for teachers, in order to fulfill Goal 4 of the SDGs: "Ensuring inclusive and equitable quality education and promote lifelong learning opportunities for all."'],
-		image: "images/vision.jpg",
+		image: "/images/vision.jpg",
 	},
 	{
 		title: "OUR MISSION",
 		text: ["We empower and motivate teachers in South African schools by facilitating coaching, training, mentoring and motivational initiatives, special events and other research-based activities to amplify the teacher’s voice through reflexive practices."],
-		image: "images/mission.jpg",
+		image: "/images/mission.jpg",
 	},
 	{
 		title: "OUR OBJECTIVES",
@@ -23,7 +23,7 @@ const slide = [
 			"To organise programmes for teachers exposing them to learn and practice new skills.",
 			"To contribute to the research community and to make recommendations to policy makers and education authorities about the implementation of a holistic mentorship programme in order to benefit stakeholders in previous disadvantaged communities.",
 		],
-		image: "images/objective.jpg",
+		image: "/images/objective.jpg",
 	},
 ];
 
