@@ -12,6 +12,8 @@ router.get("/", (_, res) => {
 // Router Link location of About Page
 router.get("/about/this/site", (_, res) =>{
 	console.log("About page Api is working...");
+}).post((req, res) => {
+res.send(res);
 });
 
 router.get("/createAccount", (_, res)=> {
