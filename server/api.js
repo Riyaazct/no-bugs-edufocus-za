@@ -1,8 +1,8 @@
 import { Router } from "express";
-// import db from "./db";
+import db from "./db";
 import logger from "./utils/logger";
 
-const router = Router(db);
+const router = Router();
 
 router.get("/", (_, res) => {
 	logger.debug("Welcoming everyone...");
@@ -13,8 +13,8 @@ router.post("/users", async (req, res) => {
 	
 	try {
 		const {users, email, pwd} = req.body
-		const result = await db.none(
-			"INSERT INTO signup (users, pwd, email) VALUES ($1, $2, $3)",
+		const result = await db.query(
+			"INSERT INTO signup (users, email, pwd) VALUES ($1, $2, $3)",
 			[users, email, pwd]
 
 		);
