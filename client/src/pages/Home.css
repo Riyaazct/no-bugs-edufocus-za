@@ -1,11 +1,235 @@
-.logo {
-	width: 100px;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.message {
-	color: blue;
+:root {
+  --color-black: #000;
+  --color-blue: #1E0F9E;
+  --color-lightgreen: #6AE3C6;
+  --color-green: #17997A;
+  
 }
 
-.message:hover {
-	background-color: yellow;
+html {
+  font-size: 1.8rem;
+  color: #000;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.navbar {
+  width: 100%;
+  background-color: grey;
+  height: 2.5rem;
+}
+
+.hero-wrap {
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url('C:\CODE YOUR FUTURE\no-bugs-edufocus-za\public\img-home\hero.webp');
+
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 20rem;
+  line-height: 1.6rem;
+}
+
+
+
+.big-logo img {
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+}
+.title-wrap {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 50%;
+  max-height: 20%;
+}
+.welcome {
+  margin-top: 1rem;
+  width: 80%;
+  max-width: 1000px;
+  text-align: center;
+  margin: auto;
+}
+.welcome h2 {
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 1.3rem;
+  margin-top: 2rem;
+}
+.welcome p {
+  font-size: 0.8rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  width: 100%;
+  max-width: 68rem;
+  height: 9rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+.second-hero img {
+  margin-left: 17rem;
+  margin-top: -10rem;
+  display: block;
+  max-width: 65%;
+  height: auto;
+}
+
+.svg1 {
+  width: 50%;
+  height: 40vh;
+  max-width: 800px;
+  margin-right: 22rem;
+  margin-top: 1rem;
+}
+.svg2 {
+  position: absolute;
+  width: 25%;
+  height: 40%;
+  margin-top: -13rem;
+}
+.programmes h2 {
+  margin-top: -3rem;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: var(--color-blue);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.text {
+  padding: 1rem;
+  margin-top: 1rem;
+  flex: 1;
+  flex-basis: 100%;
+  font-size: 0.8rem;
+  background-color: var(--color-lightgreen);
+}
+.text p {
+  font-size: 0.7rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2;
+  font-weight: 600;
+  text-indent: 1rem;
+  color: var(--color-black);
+}
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.photos img {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 1rem;
+  }
+  .hero-wrap {
+    height: 40vh;
+  }
+  .overlay {
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .svg1 {
+    margin-top: rem;
+    margin-left: -4rem;
+  }
+  .svg2 {
+    width: 6rem;
+    height: 12rem;
+    margin-top: -12rem;
+	}
+ .second-hero {
+    margin-top: 2rem;
+    margin-left: -10rem;
+  }
+ .programmes {
+    margin-top: 2rem;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  html {
+    font-size: 1.3rem;
+  }
+  .hero-wrap {
+    height: 37vh;
+  }
+  .svg1 {
+    width: 35%;
+    height: 20vh;
+    margin-top: -1rem;
+  }
+  .svg2 {
+    width: 8rem;
+  }
+  .second-hero img {
+    padding-left: 5rem;
+    max-width: 70%;
+
+  }
+}
+/* BIG SCREEN */
+@media screen and (min-width: 1315px) {
+  .hero-wrap {
+    height: 80vh;
+  }
+  .welcome p {
+    max-width: 80%;
+  }
+  .svg1 {
+    width: 25%;
+    height: 30vh;
+
+  }
+  .svg2 {
+    width: 9rem;
+    margin-top: -16rem;
+  }
+
 }
