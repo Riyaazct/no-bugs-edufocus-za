@@ -14,16 +14,6 @@
   
 }
 
-html {
-  font-size: 1.8rem;
-  color: #000;
-}
-
-body {
-  min-height: 100vh;
-  margin: 0 auto;
-}
-
 .navbar {
   width: 100%;
   background-color: grey;
@@ -164,9 +154,7 @@ body {
 
 /*MOBILE*/
 @media only screen and (max-width: 768px) {
-  html {
-    font-size: 1rem;
-  }
+  
   .hero-wrap {
     height: 40vh;
   }
@@ -194,9 +182,7 @@ body {
 
 /* TABLET */
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
-  html {
-    font-size: 1.3rem;
-  }
+  
   .hero-wrap {
     height: 37vh;
   }
