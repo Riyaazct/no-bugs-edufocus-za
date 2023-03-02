@@ -1,0 +1,49 @@
+.visionMainContainer {
+	/* position: relative; */
+}
+
+.visionH1 {
+	margin-top: 40px;
+	margin-left: 10px;
+}
+
+.visionHr {
+	text-align: left;
+	margin-right: auto;
+	margin-top: 5px;
+}
+
+.visionContentContainer {
+	position: relative;
+	text-align: center;
+}
+
+.visionImage {
+    position: relative;
+}
+
+.visionImage img {
+	width: 100%;
+}
+
+.visionParagraph {
+	margin-top: 15px;
+    margin-bottom: 280px;
+}
+
+.visionParagraph p {
+	width: 80%;
+	margin: auto;
+	font-size: 1.15rem;
+}
+
+.visionOverlay {
+	background-color: rgba(0, 0, 0, 0.1);
+	position: absolute;
+	top: 0;
+	bottom: 0px;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
