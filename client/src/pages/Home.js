@@ -3,6 +3,9 @@ import React from "react";
 // import { Link } from "react-router-dom";
 
 import "./Home.css";
+import NavbarBlue from "../components/Navbar/NavbarBlue";
+
+import Button from "@material-ui/core/Button"
 
 
 function Home() {
@@ -25,20 +28,61 @@ function Home() {
 	// }, []);
 
 	return <>
-    <section>
-      <div className='navbar'>Navbar</div>
+	
+	<NavbarBlue/>
+  <section class='hero-wrap'>
+  <div class='overlay'>
+    <div class='content-wrap'>
+      <div class='text-wrap'>
+        <h4>The teacher is at the heart of everything we do</h4>
+      </div>  
+      <div class='logo-wrap'>
+         <img src='img-home/logo.webp' alt='big round logo EduFocus' />
+      </div>
+      
+      <div className="buttons">
+       <Button variant="contained" color="secondary" size="large" style={{margin: "10px"}}>
+       Programmes
+       </Button>
+       <Button variant="contained" color="primary" size="large" style={{margin: "10px"}}>
+       Partner with us
+       </Button>
+       <Button variant="contained" color="secondary" size="large" style={{margin: "10px"}}>
+       Support
+       </Button>
+          
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+    {/* <section>
       <div className='hero-wrap'>
         <div className='overlay'>
           <div className='title-wrap'>
-            <h1>The teacher is at the heart of everything we do</h1>
+            <h3>The teacher is at the heart of everything we do</h3>
           </div>
           <div className='big-logo'>
 						<img src='img-home/logo.webp' alt='big round logo EduFocus' />
 					</div>
-        </div>
-      </div>
-    </section>
+          <div className="buttons">
+        <Button variant="contained" color="secondary" size="large" style={{margin: "10px"}}>
+        Programmes
+        </Button>
+        <Button variant="contained" color="primary" size="large" style={{margin: "10px"}}>
+        Partner with us
+        </Button>
 
+        <Button variant="contained" color="secondary" size="large" style={{margin: "10px"}}>
+        Support
+        </Button>
+        </div>
+        </div>
+        
+      </div>
+			
+    </section> */}
     <section>
       <div className='welcome'>
         <h2>Welcome to EduFocus Projects.</h2>
@@ -54,7 +98,7 @@ function Home() {
     </section>
 
     <section className='programmes'>
-      <h2>What Do We Do?</h2>
+      <h3>What Do We Do?</h3>
       <div className="container">
         <div className="text">
           <p>We empower and motivate teachers in South African schools by facilitating coaching, 
@@ -66,26 +110,15 @@ function Home() {
         <div className='photos'>
           <img src='img-home/coaching.webp' alt='coaching' />
           <img src='img-home/training.webp' alt='training' />
-          <img src='img-home/mentor.webp' alt='mentor' /></div>
+          <img src='img-home/mentor.webp' alt='mentor' />
+        </div>
         </div>
     </section>
+		
+		
+		
   </>
-
-		// <main role="main">
-		// 	<div>
-		// 		<img
-		// 			className="logo"
-		// 			data-qa="logo"
-		// 			src={logo}
-		// 			alt="Just the React logo"
-		// 		/>
-		// 		<h1 className="message" data-qa="message">
-		// 			{message}
-		// 		</h1>
-		// 		<Link to="/about/this/site">About</Link>
-		// 	</div>
-		// </main>
-	
+		
 }
 
 export default Home;
