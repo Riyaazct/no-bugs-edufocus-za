@@ -1,122 +1,145 @@
-.small-fill {
-  position: absolute;
-  width: 6.43%;
-  top: calc(50% - 20px);
-  right: 8.21%;
-  left: 85.36%;
-}
-.rectangle {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 100px;
-  border: 2px solid #fff;
-  box-sizing: border-box;
-  opacity: 0.3;
-}
-.sign-up {
-  position: absolute;
-  top: calc(50% - 11px);
-  left: calc(50% - 25px);
-  line-height: 22px;
-  font-weight: 500;
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:400,700,500");
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "DM Sans";
 }
 
-.login,
-.rectangle {
-  position: absolute;
-  left: 0;
+:root {
+	--mainColor: #2F1893;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #25DAC5;
+	--textColor: #eee;
 }
-.login {
-  top: calc(50% - 11px);
-  line-height: 22px;
-  font-weight: 500;
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: var(--mainColor);
+	color: var(--textColor);
+}
+  
+.header-buttons2 {
+  display: none;
+}
+/* .header-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+} */
+
+nav a {
+	margin: 0 1rem;
+	color: var(--textColor);
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: var(--secondaryColor);
+}
+
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+.valign-text-middle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.small-fill {
+  align-items: flex-start;
+  background-color: var(--secondaryColor);
+  border-radius: 100px;
+  display: flex;
+  height: 40px;
+  justify-content: flex-end;
+  min-width: 92px;
+  padding: 8px 16.9px;
 }
 
 .small-white-outline {
-  position: absolute;
-  width: 6.43%;
-  top: calc(50% - 20px);
-  right: 16.07%;
-  left: 77.5%;
+  align-items: flex-start;
+  border-radius: 100px;
+  display: flex;
   height: 40px;
-}
-.about-us,
-.home {
-  position: absolute;
-}
-.home {
-  top: calc(50% - 13px);
-  left: 87.21%;
-  line-height: 26px;
-}
-.about-us {
-  left: 60.47%;
-}
-.about-us,
-.contact-us,
-.our-people {
-  top: calc(50% - 13px);
-  line-height: 26px;
-}
-.contact-us {
-  position: absolute;
-  left: 29.94%;
-}
-.our-people {
-  left: 0;
-}
-.edufocus,
-.menu,
-.our-people {
-  position: absolute;
-}
-.menu {
-  width: 24.57%;
-  top: calc(50% - 12px);
-  right: 37.57%;
-  left: 37.86%;
-  height: 26px;
-  text-align: left;
+  min-width: 92px;
+   padding: 8px 16.9px;
 }
 
-.menu a {
-  color: #fff;
-  text-decoration: none;
-  padding: 15px 20px;
-}
-
-.menu a:hover {
-  background-color: "#1e0e62";
-  font-Family: "'DM Sans'";
-}
-.edufocus {
-  top: -6px;
-  left: 0;
-  letter-spacing: -0.29px;
-}
-.black {
-  position: absolute;
-  width: 7.93%;
-  top: calc(50% - 9px);
-  right: 83.86%;
-  left: 8.21%;
-  height: 19px;
-  font-size: 24px;
-}
-.navbar-blue {
-  position: relative;
-  background-color: #2f1893;
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
+.sign-up{
+  height: 22px;
+  letter-spacing: 0;
+  line-height: 22px;
+  min-width: 57px;
   text-align: center;
-  font-size: 16px;
-  color: #fff;
-  font-family: "DM Sans";
+  white-space: nowrap;
 }
 
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+	}
+
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+  .header-buttons2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .header-buttons {
+    display: none;
+  }
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
+}
