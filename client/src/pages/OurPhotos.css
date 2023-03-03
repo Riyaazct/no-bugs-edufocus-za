@@ -146,8 +146,12 @@
         margin: inherit;
 	}
     .imageContainer img {
-        max-width: 600px;
+        max-width: 450px;
     }
+	.imageModal img {
+		height: 80vh;
+		width: 70vw;
+	}
     .carouselContainer {
         max-width: 80vw;
     }
@@ -185,4 +189,11 @@
     .photosContainer hr {
         max-width: 1100px;
     }
+	.imageModal img {
+		width: 50vw;
+		height: 90vh;
+
+		
+		
+	}
 }
