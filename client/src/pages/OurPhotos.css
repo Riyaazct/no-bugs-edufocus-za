@@ -8,7 +8,8 @@
 
 
 .photosContainer {
-	padding: 5px;
+	/* padding: 5px; */
+    position: relative;
 }
 
 .photosContainer h1 {
@@ -16,11 +17,12 @@
 }
 
 .carouselContainer {
-	overflow: hidden;
+	/* overflow: hidden; */
+    width: 100%;
+    margin: auto;
 }
 
 .carouselCard {
-	
     text-align: center;
 }
 
@@ -28,12 +30,15 @@
 	position: relative;
 }
 
-.imageContainer img {
-	width: 90%;
-	height: 400px;
-    /* object-fit: contain; */
-    
+.imageContainer {
+	width: 100%;
+	height: 450px;    
+    background-color: var(--color-green);
 }
+.imageContainer img {
+    max-height: 100%;
+}
+
 .carouselThumbnails img {
 	display: none;
 	width: 70px;
@@ -41,15 +46,15 @@
 }
 .carouselTextContainer {
     background-color: var(--color-green);
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    /* border-top-right-radius: 20px;
+    border-top-left-radius: 20px; */
 }
 
 .carouselText {
 	display: flex;
     justify-content: center;
-    gap: 20px;
-    font-size: 0.8rem;
+    flex-direction: column;
+    line-height: 0.5;
 }
 
 .right {
@@ -58,6 +63,7 @@
 	transform: translateY(-50%);
 	right: 5px;
 	border-radius: 50%;
+    cursor: pointer;
 }
 
 .left {
@@ -66,11 +72,12 @@
 	transform: translateY(-50%);
 	left: 5px;
 	border-radius: 50%;
+    cursor: pointer;
 }
 
-.imageContainer:hover .left,
-.imageContainer:hover .right {
-background-color: #17997b79;
+.carouselCard:hover .left,
+.carouselCard:hover .right {
+background-color: #1d0f9e55;
 }
 
 .formContainer {
@@ -78,6 +85,24 @@ background-color: #17997b79;
     padding: 5px;
     background-color: var(--color-green);
     text-align: center;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+}
+.formContainer select {
+    text-align: center;
+}
+
+.imageModal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* overflow: scroll;     */
+}
+
+.imageModal img {
+    width: 100vw;
+    height: 80vh;
+    /* transform: scale(2); */
 }
