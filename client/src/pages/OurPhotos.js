@@ -154,24 +154,25 @@ const OurPhotos = () => {
 								/>
 							</div>
 						</div>
+						<form className="formContainer">
+							<label className="h2 mt-2" htmlFor="otherEvents">
+								See other events
+							</label>
+							<select
+								className="form-select form-select-lg mb-3"
+								onClick={(e) => handleClick(e)}
+								name="otherEvents"
+								id="otherEvents"
+							>
+								{slide.map((item, index) => (
+									<option key={index} value={index}>
+										{item.event}
+									</option>
+								))}
+							</select>
+						</form>
 					</div>
-					<form className="formContainer">
-						<label className="h2" htmlFor="otherEvents">
-							See other events
-						</label>
-						<select
-							className="form-select form-select-lg mb-3"
-							onClick={(e) => handleClick(e)}
-							name="otherEvents"
-							id="otherEvents"
-						>
-							{slide.map((item, index) => (
-								<option key={index} value={index}>
-									{item.event}
-								</option>
-							))}
-						</select>
-					</form>
+
 					<div className="carouselThumbnails">
 						<img src={slide[2].images[12]} alt="" />
 					</div>
