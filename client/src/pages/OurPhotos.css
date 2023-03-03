@@ -103,7 +103,6 @@
 
 @media only screen and (min-width: 768px) {
 	.carouselCard {
-		border: 2px solid blueviolet;
 		padding: 5px;
 		margin: 5px;
 		max-width: 80vw;
@@ -126,10 +125,6 @@
 		border-top-right-radius: 20px;
 		border-top-left-radius: 20px;
 	}
-
-	.imageContainer {
-		/* height: 550px;     */
-	}
 	.imageContainer img {
 		height: 100%;
 		width: 50vw;
@@ -146,7 +141,6 @@
 
 @media only screen and (min-width: 962px) {
 	.carouselCard {
-		border: 2px solid green;
 		padding: 5px;
 		margin: 5px;
         margin: inherit;
@@ -173,7 +167,6 @@
 @media only screen and (min-width: 1200px) {
 
 	.carouselCard {
-		border: 2px solid coral;
 		padding: 5px;
 		margin: 5px;
 		max-width: 1100px;
