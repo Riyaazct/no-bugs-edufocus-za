@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import "./OurPhotos.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { RxDotFilled } from "react-icons/rx";
+import NavbarBlue from "../components/Navbar/NavbarBlue";
+import Footer from "../components/Footer";
 
 const slide = [
 	{
@@ -79,15 +81,16 @@ const OurPhotos = () => {
 	const [event, setEvent] = useState(0);
 
 	const nextImage = () => {
-		const isLastImage = currentIndex === slide[event].images.length + 1;
+		const isLastImage = currentIndex === slide[event].images.length - 1;
 		const newIndex = isLastImage ? 0 : currentIndex + 1;
 		setCurrentIndex(newIndex);
 	};
 
-
 	const prevImage = () => {
 		const isFirstImage = currentIndex === 0;
-		const newIndex = isFirstImage ? slide[event].images.length - 1 : currentIndex - 1;
+		const newIndex = isFirstImage
+			? slide[event].images.length - 1
+			: currentIndex - 1;
 		setCurrentIndex(newIndex);
 	};
 
@@ -97,23 +100,49 @@ const OurPhotos = () => {
 	};
 
 	return (
-		<div className="photosContainer">
-			<h1>Our Photos</h1>
-			<hr />
-			<div className="carouselContainer">
-				<div className="carouselCard">
-					<h3>{slide[event].event}</h3>
-					<div className="carouselText">
-						<p>{slide[event].date}</p>
-						<p>{slide[event].location}</p>
+		<Fragment>
+			<NavbarBlue />
+			<div className="photosContainer">
+				<h1>Our Photos</h1>
+				<hr />
+				<div className="carouselContainer">
+					<div className="carouselCard">
+						<div className="carouselTextContainer">
+							<h3>{slide[event].event}</h3>
+							<div className="carouselText">
+								<p>{slide[event].date}</p>
+								<p>{slide[event].location}</p>
+							</div>
+						</div>
+
+						<div className="imageContainer">
+							<img src={slide[event].images[currentIndex]} alt="" />
+							<div className="left">
+								<IoIosArrowBack size={40} color="white" onClick={prevImage} />
+							</div>
+							<div className="right">
+								<IoIosArrowForward
+									size={40}
+									color="white"
+									onClick={nextImage}
+								/>
+							</div>
+						</div>
 					</div>
-					<form>
-						<label htmlFor="otherEvents">See other events</label>
+					<form className="formContainer">
+						<label className="h2" htmlFor="otherEvents">
+							See other events
+						</label>
 						<select
+							className="form-select form-select-lg mb-3"
 							onClick={(e) => handleClick(e)}
 							name="otherEvents"
 							id="otherEvents"
 						>
+							{" "}
+							<option selected value={event}>
+								View other events
+							</option>
 							{slide.map((item, index) => (
 								<option key={index} value={index}>
 									{item.event}
@@ -121,21 +150,13 @@ const OurPhotos = () => {
 							))}
 						</select>
 					</form>
-					<div className="imageContainer">
-						<img src={slide[event].images[currentIndex]} alt="" />
-						<div className="left">
-							<IoIosArrowBack size={40} color="white" onClick={prevImage} />
-						</div>
-						<div className="right">
-							<IoIosArrowForward size={40} color="white" onClick={nextImage} />
-						</div>
+					<div className="carouselThumbnails">
+						<img src={slide[2].images[12]} alt="" />
 					</div>
 				</div>
-				<div className="carouselThumbnails">
-					<img src={slide[2].images[12]} alt="" />
-				</div>
 			</div>
-		</div>
+			{/* <Footer /> */}
+		</Fragment>
 	);
 };
 
