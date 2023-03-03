@@ -7,8 +7,9 @@ import Button from "@material-ui/core/Button"
 function Home() {
 
   return <>
+    <NavbarBlue />
     <div className="home-page">
-      <NavbarBlue />
+
       <section class='hero-wrap'>
         <div class='overlay'>
           <div class='content-wrap'>
