@@ -83,6 +83,7 @@
 		"pg": "^8.9.0",
 		"winston": "^3.8.2"
 	},
+	"proxy":"http://localhost:3100",
 	"engines": {
 		"node": "^14 || ^16 || ^18",
 		"npm": "^6 || ^7 || ^8"

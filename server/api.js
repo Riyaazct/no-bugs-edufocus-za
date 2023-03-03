@@ -1,5 +1,6 @@
 import { Router } from "express";
 import db from "./db";
+
 import logger from "./utils/logger";
 
 const router = Router();
@@ -10,29 +11,16 @@ router.get("/", (_, res) => {
 });
 
 router.post("/users", async (req, res) => {
-	
-	try {
-		const {users, email, pwd} = req.body
-		const result = await db.query(
-			"INSERT INTO signup (users, email, pwd) VALUES ($1, $2, $3)",
-			[users, email, pwd]
-
-		);
-
-		res.status(201).json({
-      success: true,
-      message: 'User created successfully',
-      data: result.rows[0]
-    });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({
-      success: false,
-      message: 'Server error'
-    });
-  }
-
-	
+  const { users, email, pwd } = req.body;
+  const query =
+      "INSERT INTO signup (users, email, pwd) VALUES ($1, $2, $3)";
+      db
+      .query(query, [users, email, pwd])
+      .then(() => res.send("User added!"))
+      .catch((error) => {
+            console.error(error);
+            res.status(500).json(error);
+          });
 });
 
 export default router;

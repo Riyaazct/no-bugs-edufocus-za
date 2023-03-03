@@ -6,13 +6,13 @@ import axios from 'axios';
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{6,24}$/;
 const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
-const SIGNUP_URL = `http://localhost:3100/api/users`;
+// const SIGNUP_URL = ;
 function SignUp() {
 
   const userRef = useRef();
   const errRef = useRef();
 
-  const [user, setUser] = useState("");
+  const [users, setUser] = useState("");
   const [validName, setValidName] = useState(false);
   const [userFocus, setUserFocus] = useState(false);
 
@@ -38,11 +38,11 @@ function SignUp() {
 
   //for user name
   useEffect(() => {
-    const result = USER_REGEX.test(user);
+    const result = USER_REGEX.test(users);
     console.log(result);
-    console.log(user);
+    console.log(users);
     setValidName(result);
-  }, [user]);
+  }, [users]);
 
   //for email
   useEffect(() => {
@@ -66,7 +66,7 @@ function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // if button enabled with JS hack
-    const v1 = USER_REGEX.test(user);
+    const v1 = USER_REGEX.test(users);
     const v2 = EMAIL_REGEX.test(email);
     const v3 = PWD_REGEX.test(pwd);
 
@@ -74,15 +74,25 @@ function SignUp() {
       setErrMsg("Invalid Entry");
       return;
     }
+    const newUser = {
+      users,
+      email,
+      pwd
+      
+    };
 
     try {
-      const response = await axios.post(SIGNUP_URL,
-        JSON.stringify({ user, email, pwd }),
+      const response = await axios.post(`/api/users`,
+        
+        JSON.stringify(newUser),
         {
           headers: { 'Content-Type': 'application/json' },
           withCredentials: true
         }
       );
+      const data = await response.data;
+      console.log(data)
+      
       setSuccess(true);
       setUser('');
       setPwd('');
@@ -99,8 +109,6 @@ function SignUp() {
     }
 
   }
-
-
   return (
     <>
       {success ? (
@@ -120,7 +128,7 @@ function SignUp() {
             <label htmlFor="username">
               Username:
               <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
-              <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} />
+              <FontAwesomeIcon icon={faTimes} className={validName || !users ? "hide" : "invalid"} />
             </label>
             <input
               type="text"
@@ -128,14 +136,14 @@ function SignUp() {
               ref={userRef}
               autoComplete="off"
               onChange={(e) => setUser(e.target.value)}
-              value={user}
+              value={users}
               required
               aria-invalid={validName ? "false" : "true"}
               aria-describedby="uidnote"
               onFocus={() => setUserFocus(true)}
               onBlur={() => setUserFocus(false)}
             />
-            <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
+            <p id="uidnote" className={userFocus && users && !validName ? "instructions" : "offscreen"}>
               4 to 24 characters.<br />
               Must begin with a letter.<br />
               Letters, numbers, underscores, hyphens allowed.
