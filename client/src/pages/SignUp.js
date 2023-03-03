@@ -78,12 +78,12 @@ function SignUp() {
       users,
       email,
       pwd
-      
+
     };
 
     try {
       const response = await axios.post(`/api/users`,
-        
+
         JSON.stringify(newUser),
         {
           headers: { 'Content-Type': 'application/json' },
@@ -92,7 +92,7 @@ function SignUp() {
       );
       const data = await response.data;
       console.log(data)
-      
+
       setSuccess(true);
       setUser('');
       setPwd('');
