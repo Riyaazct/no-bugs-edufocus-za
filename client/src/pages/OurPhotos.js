@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./OurPhotos.css";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { RxDotFilled } from "react-icons/rx";
 
 const slide = [
 	{
@@ -73,17 +75,66 @@ const slide = [
 ];
 
 const OurPhotos = () => {
+	const [currentIndex, setCurrentIndex] = useState(0);
+	const [event, setEvent] = useState(0);
+
+	const nextImage = () => {
+		const isLastImage = currentIndex === slide[event].images.length + 1;
+		const newIndex = isLastImage ? 0 : currentIndex + 1;
+		setCurrentIndex(newIndex);
+	};
+
+
+	const prevImage = () => {
+		const isFirstImage = currentIndex === 0;
+		const newIndex = isFirstImage ? slide[event].images.length - 1 : currentIndex - 1;
+		setCurrentIndex(newIndex);
+	};
+
+	const handleClick = (e) => {
+		const newValue = e.target.value;
+		setEvent(newValue);
+	};
+
 	return (
 		<div className="photosContainer">
 			<h1>Our Photos</h1>
-		<div className="carouselContainer">
-			<div className="carouselCard">
-				<h4>{slide[2].event}</h4>
-				<p>{slide[2].date}</p>
-				<p>{slide[2].location}</p>
-				<img src={slide[2].images[12]} alt="" />
+			<hr />
+			<div className="carouselContainer">
+				<div className="carouselCard">
+					<h3>{slide[event].event}</h3>
+					<div className="carouselText">
+						<p>{slide[event].date}</p>
+						<p>{slide[event].location}</p>
+					</div>
+					<form>
+						<label htmlFor="otherEvents">See other events</label>
+						<select
+							onClick={(e) => handleClick(e)}
+							name="otherEvents"
+							id="otherEvents"
+						>
+							{slide.map((item, index) => (
+								<option key={index} value={index}>
+									{item.event}
+								</option>
+							))}
+						</select>
+					</form>
+					<div className="imageContainer">
+						<img src={slide[event].images[currentIndex]} alt="" />
+						<div className="left">
+							<IoIosArrowBack size={40} color="white" onClick={prevImage} />
+						</div>
+						<div className="right">
+							<IoIosArrowForward size={40} color="white" onClick={nextImage} />
+						</div>
+					</div>
+				</div>
+				<div className="carouselThumbnails">
+					<img src={slide[2].images[12]} alt="" />
+				</div>
 			</div>
-		</div>
 		</div>
 	);
 };
