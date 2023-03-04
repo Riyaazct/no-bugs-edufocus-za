@@ -25,8 +25,11 @@ header {
 	background-color: var(--mainColor);
 	color: var(--textColor);
 }
-  
 
+
+.header-buttons2 {
+  display: none;
+}
 /* .header-buttons {
   display: flex;
   justify-content: flex-end;
@@ -50,7 +53,6 @@ nav a:hover {
 .header-buttons2 {
   display: none;
 }
-
 
 header .nav-btn {
 	padding: 5px;
@@ -105,8 +107,6 @@ nav {
   white-space: nowrap;
 }
 
-
-
 @media only screen and (max-width: 1024px) {
 	header .nav-btn {
 		visibility: visible;
@@ -130,6 +130,7 @@ nav {
 
 	header .responsive_nav {
 		transform: translateY(100vh);
+		z-index: 10;
 	}
 
   .header-buttons2 {
@@ -151,7 +152,6 @@ nav {
 	nav a {
 		font-size: 1.5rem;
 	}
-
 	.small-s {
 		display: flex;
 	}
@@ -165,4 +165,5 @@ nav {
 		background-color: var(--mainColor);
 		transition: 1s;
 	}
+}
 }
