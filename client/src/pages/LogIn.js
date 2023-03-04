@@ -14,19 +14,19 @@ function LogIn() {
 
   useEffect(() => {
     userRef.current.focus();
-  }, [])
+  }, []);
 
   useEffect(() => {
     setErrMsg("");
-  }, [user, pwd])
+  }, [user, pwd]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user, pwd);
     setUser("");
     setPwd("");
-    setSuccess(true);  
-  }
+    setSuccess(true);
+  };
   return (
     <>
       {success ? (
@@ -41,7 +41,7 @@ function LogIn() {
         <section className='wrap'>
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <h2>Log in</h2>
-          <form onSubmit={handleSubmit}>
+          <form className="loginForm" onSubmit={handleSubmit}>
             {/* USERNAME */}
             <label htmlFor="username">
               Username:</label>
@@ -52,7 +52,7 @@ function LogIn() {
               autoComplete="off"
               onChange={(e) => setUser(e.target.value)}
               value={user}
-              required 
+              required
               />
             {/* PASSWORD */}
             <label htmlFor="password">
@@ -75,6 +75,6 @@ function LogIn() {
         </section>
       )}
     </>
-  )
+  );
 }
 export default LogIn;

@@ -16,18 +16,17 @@
   --color-darkgreen: #0c5d4a;
 }
 
-html {
+/* html {
 
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
-  color: var(--color-blue);
 }
 
 body {
   min-height: 100vh;
   margin: 0 auto;
   background-color: var(--color-lightergreen);
-}
+} */
 
 .wrap {
   display: flex;
@@ -36,18 +35,18 @@ body {
   padding: 2.5rem;
 }
 
-form {
+.loginForm { 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
   max-width: 300px;
 }
-
+/* change */
 label {
   margin-top: 10px;
 }
-
+/* change */
 input[type="text"],
 input[type="password"] {
   padding: 8px;
@@ -57,7 +56,7 @@ input[type="password"] {
   width: 100%;
   box-sizing: border-box;
 }
-
+/* change */
 button {
   background-color: var(--color-black);
   color: white;
@@ -69,7 +68,7 @@ button {
   margin-bottom: 1rem;
 
 }
-
+/* change */
 button:hover {
   background-color: var(--color-green);
 }
