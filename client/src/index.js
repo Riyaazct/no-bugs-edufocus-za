@@ -1,10 +1,13 @@
-import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-
+import React from "react";
+import ReactDOM from "react-dom";
 import App from "./App";
+import { DarkModeContextProvider } from "./context/darkModeContext";
 
-createRoot(document.getElementById("root")).render(
-	<BrowserRouter>
-		<App />
-	</BrowserRouter>
+ReactDOM.render(
+  <React.StrictMode>
+    <DarkModeContextProvider>
+      <App />
+    </DarkModeContextProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
