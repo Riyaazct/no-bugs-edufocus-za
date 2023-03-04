@@ -11,20 +11,6 @@ router.get("/", (_, res) => {
 });
 
 
-router.post("/users", async (req, res) => {
-  const { users, email, pwd } = req.body;
-  const query =
-      "INSERT INTO signup (users, email, pwd) VALUES ($1, $2, $3)";
-      db
-      .query(query, [users, email, pwd])
-      .then(() => res.send("User added!"))
-      .catch((error) => {
-            console.error(error);
-            res.status(500).json(error);
-          });
-});
-
-
 // Router Link location of About Page
 router.get("/about/this/site", (_, res) =>{
 	console.log("About page Api is working...");
@@ -46,6 +32,21 @@ router.get("/contact-us", (_, res) => {
 
 router.get("/our-people", (_, res) => {
 	console.log("Our People Page API is working....");
+});
+
+
+
+router.post("/users", async (req, res) => {
+  const { users, email, pwd } = req.body;
+  const query =
+      "INSERT INTO signup (users, email, pwd) VALUES ($1, $2, $3)";
+      db
+      .query(query, [users, email, pwd])
+      .then(() => res.send("User added!"))
+      .catch((error) => {
+            console.error(error);
+            res.status(500).json(error);
+          });
 });
 
 
