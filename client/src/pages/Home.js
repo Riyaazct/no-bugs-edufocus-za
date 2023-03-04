@@ -55,7 +55,7 @@ function Home() {
 
     <section className='programmes'>
       <h2>What Do We Do?</h2>
-      <div className="container">
+      <div className="text-container">
         <div className="text">
           <p>We empower and motivate teachers in South African schools by facilitating coaching,
 						 training, mentoring and motivational initiatives, special events and other research-based

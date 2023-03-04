@@ -41,7 +41,7 @@ function LogIn() {
         <section className='wrap'>
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <h2>Log in</h2>
-          <form onSubmit={handleSubmit}>
+          <form className="loginForm" onSubmit={handleSubmit}>
             {/* USERNAME */}
             <label htmlFor="username">
               Username:</label>
