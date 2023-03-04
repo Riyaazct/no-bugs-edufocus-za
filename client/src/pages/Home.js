@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import NavbarBlue from "../components/Navbar/NavbarBlue";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 
 
 
