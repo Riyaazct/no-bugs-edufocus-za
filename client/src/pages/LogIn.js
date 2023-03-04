@@ -14,19 +14,19 @@ function LogIn() {
 
   useEffect(() => {
     userRef.current.focus();
-  }, [])
+  }, []);
 
   useEffect(() => {
     setErrMsg("");
-  }, [user, pwd])
+  }, [user, pwd]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user, pwd);
     setUser("");
     setPwd("");
-    setSuccess(true);  
-  }
+    setSuccess(true);
+  };
   return (
     <>
       {success ? (
@@ -52,7 +52,7 @@ function LogIn() {
               autoComplete="off"
               onChange={(e) => setUser(e.target.value)}
               value={user}
-              required 
+              required
               />
             {/* PASSWORD */}
             <label htmlFor="password">
@@ -75,6 +75,6 @@ function LogIn() {
         </section>
       )}
     </>
-  )
+  );
 }
 export default LogIn;

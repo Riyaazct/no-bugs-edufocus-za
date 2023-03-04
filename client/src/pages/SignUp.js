@@ -2,7 +2,7 @@ import React from "react";
 import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from 'axios';
+import axios from "axios";
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{6,24}$/;
 const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
@@ -34,7 +34,7 @@ function SignUp() {
   //for focus
   useEffect(() => {
     userRef.current.focus();
-  }, [])
+  }, []);
 
   //for user name
   useEffect(() => {
@@ -54,7 +54,7 @@ function SignUp() {
 
   //for password
   useEffect(() => {
-    const result = PWD_REGEX.test(pwd)
+    const result = PWD_REGEX.test(pwd);
     console.log(result);
     console.log(pwd);
     setValidPwd(result);
@@ -77,38 +77,38 @@ function SignUp() {
     const newUser = {
       users,
       email,
-      pwd
+      pwd,
 
     };
 
     try {
-      const response = await axios.post(`/api/users`,
+      const response = await axios.post("/api/users",
 
         JSON.stringify(newUser),
         {
-          headers: { 'Content-Type': 'application/json' },
-          withCredentials: true
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,
         }
       );
       const data = await response.data;
-      console.log(data)
+      console.log(data);
 
       setSuccess(true);
-      setUser('');
-      setPwd('');
-      setMatchPwd('');
+      setUser("");
+      setPwd("");
+      setMatchPwd("");
     } catch (err) {
       if (!err?.response) {
-        setErrMsg('No Server Response');
+        setErrMsg("No Server Response");
       } else if (err.response?.status === 409) {
-        setErrMsg('Username Taken');
+        setErrMsg("Username Taken");
       } else {
-        setErrMsg('Registration Failed')
+        setErrMsg("Registration Failed");
       }
       errRef.current.focus();
     }
 
-  }
+  };
   return (
     <>
       {success ? (
@@ -190,7 +190,7 @@ function SignUp() {
             <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
               6 to 24 characters.<br />
               Must include uppercase and lowercase letters, a number and a special character.<br />
-              Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at 
+              Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at
               symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-
                 label="percent">%</span>
             </p>
@@ -227,6 +227,6 @@ function SignUp() {
       )
       }
     </>
-  )
+  );
 }
 export default SignUp;
