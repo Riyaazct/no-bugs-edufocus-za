@@ -42,8 +42,8 @@ function Home() {
     <section>
       <div className='welcome'>
         <h2>Welcome to EduFocus Projects.</h2>
-        <p>EduFocus Projects NPO provides training, coaching and mentoring interventions to the 
-					 education sector,  in alignment with Goal 4 of the Sustainable Development Goals 
+        <p>EduFocus Projects NPO provides training, coaching and mentoring interventions to the
+					 education sector,  in alignment with Goal 4 of the Sustainable Development Goals
 					  (SDGs, 2015): QUALITY EDUCATION</p>
         <img className='svg1' src='img-home/green.svg' alt='green round shape' />
       </div>
@@ -55,12 +55,12 @@ function Home() {
 
     <section className='programmes'>
       <h2>What Do We Do?</h2>
-      <div className="container">
+      <div className="text-container">
         <div className="text">
-          <p>We empower and motivate teachers in South African schools by facilitating coaching, 
-						 training, mentoring and motivational initiatives, special events and other research-based 
+          <p>We empower and motivate teachers in South African schools by facilitating coaching,
+						 training, mentoring and motivational initiatives, special events and other research-based
 						  activities to amplify the teacher’s voice through reflexive practices.</p>
-          <p>Our customized intervention programmes are dynamic and relevant to the contextual realities 
+          <p>Our customized intervention programmes are dynamic and relevant to the contextual realities
 						 of the 21st century classroom.</p>
         </div>
         <div className='photos'>
@@ -69,7 +69,7 @@ function Home() {
           <img src='img-home/mentor.webp' alt='mentor' /></div>
         </div>
     </section>
-  </>
+  </>;
 
 		// <main role="main">
 		// 	<div>
@@ -85,7 +85,7 @@ function Home() {
 		// 		<Link to="/about/this/site">About</Link>
 		// 	</div>
 		// </main>
-	
+
 }
 
 export default Home;
