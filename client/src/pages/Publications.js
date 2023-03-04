@@ -3,7 +3,7 @@ import "./Publications.css";
 
 const Publications = () => {
 	return (
-		<div className="container">
+		<div className="publications-container">
 			<div className="textContent">
 				<h1>Publications</h1>
 				<p>Page to follow at a later stage</p>
