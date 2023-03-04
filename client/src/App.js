@@ -10,9 +10,9 @@ import LogIn from "./pages/LogIn";
 const App = () => (
 	<Routes>
 		<Route path="/" element={<Home />} />
-		<Route path="/about/this/site" element={<About />} />
+		<Route path="/about" element={<About />} />
 		<Route path="/photos" element={<OurPhotos />} />
-		<Route path="/the-problem" element={<TheProblem />} />
+		<Route path="/problem" element={<TheProblem />} />
 		<Route path="/login" element={<LogIn />} />
 		<Route path="/signup" element={<SignUp />} />
 	</Routes>
