@@ -23,12 +23,12 @@ html {
   color: var(--color-blue);
 }
 
-body {
+/* body {
   background-color: var(--color-lightgreen);
 
   min-height: 100vh;
   margin: 0 auto;
-}
+} */
 
 .wrap {
   display: flex;
@@ -37,13 +37,13 @@ body {
   padding: 2.5rem;
 }
 
-form {
+/* form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
   max-width: 300px;
-}
+} */
 
 label {
   margin-top: 10px;

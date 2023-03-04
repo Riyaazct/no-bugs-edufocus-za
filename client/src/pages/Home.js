@@ -1,7 +1,8 @@
 import React from "react";
 import "./Home.css";
 import NavbarBlue from "../components/Navbar/NavbarBlue";
-import Button from "@material-ui/core/Button"
+import Button from "@material-ui/core/Button";
+
 
 
 function Home() {
@@ -10,13 +11,13 @@ function Home() {
     <NavbarBlue />
     <div className="home-page">
 
-      <section class='hero-wrap'>
-        <div class='overlay'>
-          <div class='content-wrap'>
-            <div class='text-wrap'>
+      <section className='hero-wrap'>
+        <div className='overlay'>
+          <div className='content-wrap'>
+            <div className='text-wrap'>
               <h3>The teacher is at the heart of everything we do</h3>
             </div>
-            <div class='logo-wrap'>
+            <div className='logo-wrap'>
               <img src='img-home/logo.webp' alt='big round logo EduFocus' />
             </div>
             <div className="buttons">
@@ -64,7 +65,7 @@ function Home() {
         </div>
       </section>
     </div>
-  </>
+  </>;
 }
 
 export default Home;
