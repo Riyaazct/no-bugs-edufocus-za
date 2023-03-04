@@ -10,6 +10,7 @@ router.get("/", (_, res) => {
 	res.json({ message: "Hello, world!" });
 });
 
+
 router.post("/users", async (req, res) => {
   const { users, email, pwd } = req.body;
   const query =
@@ -22,5 +23,31 @@ router.post("/users", async (req, res) => {
             res.status(500).json(error);
           });
 });
+
+
+// Router Link location of About Page
+router.get("/about/this/site", (_, res) =>{
+	console.log("About page Api is working...");
+}).post((req, res) => {
+res.send(res);
+});
+
+router.get("/createAccount", (_, res)=> {
+	console.log("Signup page Api is working...");
+});
+
+router.get("/login", (_,res) =>{
+	console.log("Login Pge API is working...");
+});
+
+router.get("/contact-us", (_, res) => {
+	console.log("Contact us page API is working");
+});
+
+router.get("/our-people", (_, res) => {
+	console.log("Our People Page API is working....");
+});
+
+
 
 export default router;
