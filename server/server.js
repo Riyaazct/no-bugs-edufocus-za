@@ -16,3 +16,17 @@ server.on("listening", () => {
 process.on("SIGTERM", () => server.close(() => disconnectDb()));
 
 connectDb().then(() => server.listen(config.port));
+
+const express = require("express");
+const appMailer = express();
+const PORT = process.env.PORT || 5000;
+
+
+
+appMailer.get("/", (req, res) => {
+	res.send("hello!Test");
+});
+
+appMailer.listen(PORT, ()=>{
+	console.log(`appMailer Server running on ${PORT}`);
+});
