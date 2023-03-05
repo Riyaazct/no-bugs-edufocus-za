@@ -6,7 +6,7 @@ import axios from "axios";
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{6,24}$/;
 const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
-// const SIGNUP_URL = ;
+
 function SignUp() {
 
   const userRef = useRef();
