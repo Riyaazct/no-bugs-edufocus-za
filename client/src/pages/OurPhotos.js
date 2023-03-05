@@ -14,7 +14,7 @@ const slide = [
 		date: "12 March 2022",
 		location: "CPUT Hotel School, Granger Bay",
 		images: [
-			"https://drive.google.com/file/d/139d5qnHrUuGluEzOx8RgjnVJoz678lU3/view?usp=share_link",
+			"https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg",
 			"https://drive.google.com/file/d/1YZhBpWlv8-PThQVAx7rWWoIpweO92-ZH/view?usp=share_link",
 			"https://drive.google.com/file/d/1YZhBpWlv8-PThQVAx7rWWoIpweO92-ZH/view?usp=share_link",
 			"/images/gallery/01 launch 2022/04.jpg",
@@ -135,10 +135,7 @@ const OurPhotos = () => {
 
 						<div className="imageContainer">
 							<img
-								src={slide[event].images[currentIndex].replace(
-									/\/file\/d\/(.*)\/.*$/,
-									"/uc?export=view&id=$1"
-								)}
+								src={slide[event].images[currentIndex]}
 								alt=""
 								onClick={() => {
 									setModalopen(true);
