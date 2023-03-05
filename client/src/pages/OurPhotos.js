@@ -15,8 +15,8 @@ const slide = [
 		location: "CPUT Hotel School, Granger Bay",
 		images: [
 			"https://drive.google.com/file/d/139d5qnHrUuGluEzOx8RgjnVJoz678lU3/view?usp=share_link",
-			"/images/gallery/01 launch 2022/02.jpg",
-			"/images/gallery/01 launch 2022/03.jpg",
+			"https://drive.google.com/file/d/1YZhBpWlv8-PThQVAx7rWWoIpweO92-ZH/view?usp=share_link",
+			"https://drive.google.com/file/d/1YZhBpWlv8-PThQVAx7rWWoIpweO92-ZH/view?usp=share_link",
 			"/images/gallery/01 launch 2022/04.jpg",
 			"/images/gallery/01 launch 2022/05.jpg",
 			"/images/gallery/01 launch 2022/06.jpg",
@@ -113,7 +113,6 @@ const OurPhotos = () => {
 		return (
 			<div className="imageModal">
 				<img src={imageUrl} alt="" onClick={closeModal} />
-				{/* <button>Close</button> */}
 			</div>
 		);
 	};
@@ -136,7 +135,10 @@ const OurPhotos = () => {
 
 						<div className="imageContainer">
 							<img
-								src={slide[event].images[currentIndex]}
+								src={slide[event].images[currentIndex].replace(
+									/\/file\/d\/(.*)\/.*$/,
+									"/uc?export=view&id=$1"
+								)}
 								alt=""
 								onClick={() => {
 									setModalopen(true);
