@@ -82,7 +82,7 @@ function SignUp() {
     };
 
     try {
-      const response = await axios.post("/api/users",
+      const response = await axios.post("/api/createAccount",
 
         JSON.stringify(newUser),
         {
