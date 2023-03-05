@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -220,7 +221,7 @@ function SignUp() {
           <p>
             Already have an account?<br />
             <span className="line">
-              <a href="#">Log In</a>
+            <Link to="/login">Log In</Link>   
             </span>
           </p>
         </section>

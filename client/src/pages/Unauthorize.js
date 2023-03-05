@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 const Unauthorized = () => {
   return (
     <div className='unauthorized-page' style={{ textAlign: "center", marginTop: "3rem" }}>

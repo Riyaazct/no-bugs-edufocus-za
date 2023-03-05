@@ -33,7 +33,7 @@ router.get("/our-people", (_, res) => {
   console.log("Our People Page API is working....");
 });
 
-// NEW USER
+// REGISTRATION
 router.post("/createAccount", async (req, res) => {
   const { username, email, password } = req.body;
   // Check if the username already exists
@@ -58,6 +58,30 @@ router.post("/createAccount", async (req, res) => {
       console.error(error);
       res.status(500).json(error);
     });
+});
+
+
+//LOGIN
+router.post("/login", async (req, res) => {
+  const { username, password } = req.body;
+  // Check if the username exists
+  const checkUserQuery = "SELECT * FROM registration WHERE username = $1";
+  const userResult = await db.query(checkUserQuery, [username]);
+  if (userResult.rowCount === 0) {
+    return res.status(400).send("Invalid username or password");
+  }
+  // Compare password hash with user's input
+  const user = userResult.rows[0];
+  const validPwd = await bcrypt.compare(password, user.password);
+  if (!validPwd) {
+    return res.status(400).send("Invalid username or password");
+  }
+  // Login successful, return user data
+  res.send({
+    id: user.id,
+    username: user.username,
+    email: user.email,
+  });
 });
 
 export default router;

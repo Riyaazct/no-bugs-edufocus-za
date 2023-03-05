@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import { useRef, useState, useEffect } from "react";
 import useAuth from "../hooks/useAuth";
 
@@ -7,8 +8,8 @@ function LogIn() {
   const userRef = useRef();
   const errRef = useRef();
 
-  const [user, setUser] = useState("");
-  const [pwd, setPwd] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
@@ -18,13 +19,13 @@ function LogIn() {
 
   useEffect(() => {
     setErrMsg("");
-  }, [user, pwd]);
+  }, [username, password]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(user, pwd);
-    setUser("");
-    setPwd("");
+    console.log(username, password);
+    setUsername("");
+    setPassword("");
     setSuccess(true);
   };
   return (
@@ -50,8 +51,8 @@ function LogIn() {
               id="username"
               ref={userRef}
               autoComplete="off"
-              onChange={(e) => setUser(e.target.value)}
-              value={user}
+              onChange={(e) => setUsername(e.target.value)}
+              value={username}
               required
               />
             {/* PASSWORD */}
@@ -61,15 +62,16 @@ function LogIn() {
             <input
               type="password"
               id="password"
-              onChange={(e) => setPwd(e.target.value)}
-              value={pwd}
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
               required />
             <button>Log in</button>
           </form>
           <p>
             Don't have an account?<br />
             <span className="line">
-               <a href="#">Sign Up</a>
+            <Link to="/signup">Sign up</Link>
+               
             </span>
           </p>
         </section>
