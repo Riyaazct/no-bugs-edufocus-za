@@ -38,7 +38,7 @@ function LogIn() {
           </p>
         </section>
       ) : (
-        <section className='wrap'>
+        <section className='login-wrap'>
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <h2>Log in</h2>
           <form className="loginForm" onSubmit={handleSubmit}>

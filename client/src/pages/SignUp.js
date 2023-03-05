@@ -119,7 +119,7 @@ function SignUp() {
           </p>
         </section>
       ) : (
-        <section className='wrap'>
+        <section className='signup-wrap'>
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <h2>Sign Up</h2>
           <form onSubmit={handleSubmit}>
