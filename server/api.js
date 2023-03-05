@@ -35,22 +35,22 @@ router.get("/our-people", (_, res) => {
 });
 
 router.post("/createAccount", async (req, res) => {
-  const { users, email, pwd } = req.body;
+  const { username, email, password } = req.body;
   // Check if the username already exists
-  const checkUserQuery = "SELECT * FROM signup WHERE users = $1";
-  const userResult = await db.query(checkUserQuery, [users]);
+  const checkUserQuery = "SELECT * FROM registration WHERE username = $1";
+  const userResult = await db.query(checkUserQuery, [username]);
   if (userResult.rowCount > 0) {
     return res.status(400).send("Username already exists");
   }
   // Check if the email already exists
-  const checkEmailQuery = "SELECT * FROM signup WHERE email = $1";
+  const checkEmailQuery = "SELECT * FROM registration WHERE email = $1";
   const emailResult = await db.query(checkEmailQuery, [email]);
   if (emailResult.rowCount > 0) {
     return res.status(400).send("Email already exists");
   }
   // If both checks pass, insert the new record
-  const insertQuery = "INSERT INTO signup (users, email, pwd) VALUES ($1, $2, $3)";
-  db.query(insertQuery, [users, email, pwd])
+  const insertQuery = "INSERT INTO registration (username, email, password) VALUES ($1, $2, $3)";
+  db.query(insertQuery, [username, email, password])
     .then(() => res.send("User added!"))
     .catch((error) => {
       console.error(error);

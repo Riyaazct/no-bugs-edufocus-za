@@ -12,7 +12,7 @@ function SignUp() {
   const userRef = useRef();
   const errRef = useRef();
 
-  const [users, setUser] = useState("");
+  const [username, setUsername] = useState("");
   const [validName, setValidName] = useState(false);
   const [userFocus, setUserFocus] = useState(false);
 
@@ -20,7 +20,7 @@ function SignUp() {
   const [validEmail, setValidEmail] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
 
-  const [pwd, setPwd] = useState("");
+  const [password, setPassword] = useState("");
   const [validPwd, setValidPwd] = useState(false);
   const [pwdFocus, setPwdFocus] = useState(false);
 
@@ -38,11 +38,11 @@ function SignUp() {
 
   //for user name
   useEffect(() => {
-    const result = USER_REGEX.test(users);
+    const result = USER_REGEX.test(username);
     console.log(result);
-    console.log(users);
+    console.log(username);
     setValidName(result);
-  }, [users]);
+  }, [username]);
 
   //for email
   useEffect(() => {
@@ -54,30 +54,30 @@ function SignUp() {
 
   //for password
   useEffect(() => {
-    const result = PWD_REGEX.test(pwd);
+    const result = PWD_REGEX.test(password);
     console.log(result);
-    console.log(pwd);
+    console.log(password);
     setValidPwd(result);
-    const match = pwd === matchPwd;
+    const match = password === matchPwd;
     setValidMatch(match);
-  }, [pwd, matchPwd]);
+  }, [password, matchPwd]);
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     // if button enabled with JS hack
-    const v1 = USER_REGEX.test(users);
+    const v1 = USER_REGEX.test(username);
     const v2 = EMAIL_REGEX.test(email);
-    const v3 = PWD_REGEX.test(pwd);
+    const v3 = PWD_REGEX.test(password);
 
     if (!v1 || !v2 || !v3) {
       setErrMsg("Invalid Entry");
       return;
     }
     const newUser = {
-      users,
+      username,
       email,
-      pwd,
+      password,
 
     };
 
@@ -94,8 +94,8 @@ function SignUp() {
       console.log(data);
 
       setSuccess(true);
-      setUser("");
-      setPwd("");
+      setUsername("");
+      setPassword("");
       setMatchPwd("");
     } catch (err) {
       if (!err?.response) {
@@ -128,7 +128,7 @@ function SignUp() {
             <label htmlFor="username">
               Username:
               <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
-              <FontAwesomeIcon icon={faTimes} className={validName || !users ? "hide" : "invalid"} />
+              <FontAwesomeIcon icon={faTimes} className={validName || !username ? "hide" : "invalid"} />
             </label>
             <input
               type="text"
@@ -136,14 +136,14 @@ function SignUp() {
               ref={userRef}
               autoComplete="off"
               onChange={(e) => setUser(e.target.value)}
-              value={users}
+              value={username}
               required
               aria-invalid={validName ? "false" : "true"}
               aria-describedby="uidnote"
               onFocus={() => setUserFocus(true)}
               onBlur={() => setUserFocus(false)}
             />
-            <p id="uidnote" className={userFocus && users && !validName ? "instructions" : "offscreen"}>
+            <p id="uidnote" className={userFocus && username && !validName ? "instructions" : "offscreen"}>
               4 to 24 characters.<br />
               Must begin with a letter.<br />
               Letters, numbers, underscores, hyphens allowed.
@@ -174,13 +174,13 @@ function SignUp() {
             <label htmlFor="password">
               Password:
               <FontAwesomeIcon icon={faCheck} className={validPwd ? "valid" : "hide"} />
-              <FontAwesomeIcon icon={faTimes} className={validPwd || !pwd ? "hide" : "invalid"} />
+              <FontAwesomeIcon icon={faTimes} className={validPwd || !password ? "hide" : "invalid"} />
             </label>
             <input
               type="password"
               id="password"
-              onChange={(e) => setPwd(e.target.value)}
-              value={pwd}
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
               required
               aria-invalid={validPwd ? "false" : "true"}
               aria-describedby="pwdnote"
