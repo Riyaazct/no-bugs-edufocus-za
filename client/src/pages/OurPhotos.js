@@ -14,7 +14,7 @@ const slide = [
 		date: "12 March 2022",
 		location: "CPUT Hotel School, Granger Bay",
 		images: [
-			"https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg",
+			"/images/gallery/01 launch 2022/01.jpg",
 			"/images/gallery/01 launch 2022/02.jpg",
 			"/images/gallery/01 launch 2022/03.jpg",
 			"/images/gallery/01 launch 2022/04.jpg",
