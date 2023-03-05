@@ -15,8 +15,8 @@ const slide = [
 		location: "CPUT Hotel School, Granger Bay",
 		images: [
 			"https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg",
-			"https://drive.google.com/file/d/1YZhBpWlv8-PThQVAx7rWWoIpweO92-ZH/view?usp=share_link",
-			"https://drive.google.com/file/d/1YZhBpWlv8-PThQVAx7rWWoIpweO92-ZH/view?usp=share_link",
+			"/images/gallery/01 launch 2022/02.jpg",
+			"/images/gallery/01 launch 2022/03.jpg",
 			"/images/gallery/01 launch 2022/04.jpg",
 			"/images/gallery/01 launch 2022/05.jpg",
 			"/images/gallery/01 launch 2022/06.jpg",
