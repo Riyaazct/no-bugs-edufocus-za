@@ -1,9 +1,8 @@
 import { Router } from "express";
 import db from "./db";
-
 import logger from "./utils/logger";
-
 const router = Router();
+const bcrypt = require('bcrypt');
 
 router.get("/", (_, res) => {
   logger.debug("Welcoming everyone...");
@@ -34,6 +33,7 @@ router.get("/our-people", (_, res) => {
   console.log("Our People Page API is working....");
 });
 
+// NEW USER
 router.post("/createAccount", async (req, res) => {
   const { username, email, password } = req.body;
   // Check if the username already exists
@@ -48,9 +48,11 @@ router.post("/createAccount", async (req, res) => {
   if (emailResult.rowCount > 0) {
     return res.status(400).send("Email already exists");
   }
-  // If both checks pass, insert the new record
+  // Hash the password
+  const hashedPwd = await bcrypt.hash(password, 10);
+  // If both checks pass, insert the new record with hashed password
   const insertQuery = "INSERT INTO registration (username, email, password) VALUES ($1, $2, $3)";
-  db.query(insertQuery, [username, email, password])
+  db.query(insertQuery, [username, email, hashedPwd])
     .then(() => res.send("User added!"))
     .catch((error) => {
       console.error(error);

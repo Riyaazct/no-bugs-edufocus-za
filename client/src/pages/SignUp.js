@@ -77,9 +77,9 @@ function SignUp() {
     const newUser = {
       username,
       email,
-      password,
+      password
 
-    };
+    }
 
     try {
       const response = await axios.post("/api/createAccount",
@@ -87,7 +87,7 @@ function SignUp() {
         JSON.stringify(newUser),
         {
           headers: { "Content-Type": "application/json" },
-          withCredentials: true,
+          withCredentials: true
         }
       );
       const data = await response.data;
