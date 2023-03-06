@@ -86,31 +86,3 @@ const Mission = () => {
 };
 
 export default Mission;
-
-// // CONTAINER
-//         <div className="visionMainContainer">
-
-// 			{/* TITLE */}
-// 			<h1 className="visionH1">OUR VISION</h1>
-// 			<hr className="visionHr" color="1e0f9e" size="5" />
-
-// 			{/* CONTAINER FOR IMAGE AND TEXT */}
-//             <div className="visionContentContainer">
-
-//                 {/* IMAGE */}
-// 				<div className="visionImage">
-// 					<img src="/images/vision.jpg" alt=".." />
-//                 {/* OVERLAY */}
-// 				<div className="visionOverlay"></div>
-//                 </div>
-//                 {/* TEXT / PARAGRAPH */}
-// 				<div className="visionParagraph">
-// 					<p>
-// 						To become the leading service provider of intervention initiatives
-// 						for teachers, in order to fulfill Goal 4 of the SDGs: "Ensuring
-// 						inclusive and equitable quality education and promote lifelong
-// 						learning opportunities for all".
-// 					</p>
-// 				</div>
-// 			</div>
-// 		</div>
