@@ -20,11 +20,13 @@ const App = () => (
 		<Route path="/problem" element={<TheProblem />} />
 		<Route path="/login" element={<LogIn />} />
 		<Route path="/signup" element={<SignUp />} />
-		<Route path="/unauthorized" element={<Unauthorized />} />
+		<Route path="/unauthorized" element={<Unauthorized />} 
+		/>
+		
 		{/* protected routes */}
-		<Route element={<RequireAuth />}>
+		{/* <Route element={<RequireAuth />}> */}
 		<Route path="/member" element={<Member />} />
-		</Route>
+		{/* </Route> */}
 		{/* error route */}
 		<Route path="*" element={<Error />} />
 	</Routes>

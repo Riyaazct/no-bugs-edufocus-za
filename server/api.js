@@ -23,6 +23,7 @@ router.get("/createAccount", (_, res) => {
 
 router.get("/login", (_, res) => {
   console.log("Login Pge API is working...");
+  res.json({ message: "Hello, I am login!" });
 });
 
 router.get("/contact-us", (_, res) => {

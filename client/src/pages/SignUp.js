@@ -30,7 +30,7 @@ function SignUp() {
   const [matchFocus, setMatchFocus] = useState(false);
 
   const [errMsg, setErrMsg] = useState("");
-  const [success, setSuccess] = useState(false);
+ 
 
   //for focus
   useEffect(() => {
@@ -94,8 +94,8 @@ function SignUp() {
       const data = await response.data;
       console.log(data);
 
-      setSuccess(true);
       setUsername("");
+      setEmail("");
       setPassword("");
       setMatchPwd("");
     } catch (err) {
@@ -112,14 +112,14 @@ function SignUp() {
   };
   return (
     <>
-      {success ? (
+      {/* {success ? (
         <section className="success">
           <h1>Success!</h1>
           <p>
             <a href="#">Sign In</a>
           </p>
         </section>
-      ) : (
+      ) : ( */}
         <section className='signup-wrap'>
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <h2>Sign Up</h2>
@@ -136,7 +136,7 @@ function SignUp() {
               id="username"
               ref={userRef}
               autoComplete="off"
-              onChange={(e) => setUser(e.target.value)}
+              onChange={(e) => setUsername(e.target.value)}
               value={username}
               required
               aria-invalid={validName ? "false" : "true"}
@@ -225,8 +225,8 @@ function SignUp() {
             </span>
           </p>
         </section>
-      )
-      }
+      {/* )
+      } */}
     </>
   );
 }
