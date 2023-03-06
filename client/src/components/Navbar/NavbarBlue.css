@@ -24,7 +24,6 @@ header {
 	padding: 0 2rem;
 	background-color: var(--mainColor);
 	color: var(--textColor);
-	
 }
   
 .header-buttons2 {
@@ -97,7 +96,6 @@ nav {
   min-width: 57px;
   text-align: center;
   white-space: nowrap;
-	
 }
 
 @media only screen and (max-width: 1024px) {

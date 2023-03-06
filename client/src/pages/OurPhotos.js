@@ -113,6 +113,7 @@ const OurPhotos = () => {
 		return (
 			<div className="imageModal">
 				<img src={imageUrl} alt="" onClick={closeModal} />
+				{/* <button>Close</button> */}
 			</div>
 		);
 	};
