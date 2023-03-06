@@ -1,6 +1,7 @@
 import "./about.css";
 import Mission from "./Mission-Vision";
 import NavbarBlue from "../components/Navbar/NavbarBlue";
+// import Footer from "../components/Footer";
 
 const About = () => (
 	<main role="main">
@@ -44,6 +45,7 @@ const About = () => (
 			</div>
 		</div>
 		<Mission />
+		{/* <Footer /> */}
 	</main>
 );
 
