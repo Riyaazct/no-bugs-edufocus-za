@@ -1,8 +1,25 @@
 import { Router } from "express";
+import session from 'express-session';
+import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
 import db from "./db";
 import logger from "./utils/logger";
 const router = Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt");
+
+// add middleware
+router.use(bodyParser.urlencoded({ extended: true }));
+router.use(bodyParser.json());
+router.use(cookieParser());
+router.use(session({
+  key: "user_id"
+  secret: ["£123", "&123"],
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    expires: 60 * 60 * 24,
+  },
+}));
 
 router.get("/", (_, res) => {
   logger.debug("Welcoming everyone...");
