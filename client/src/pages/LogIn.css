@@ -28,6 +28,7 @@ body {
   background-color: var(--color-lightergreen);
 } */
 
+
 .wrap {
   display: flex;
   flex-direction: column;
