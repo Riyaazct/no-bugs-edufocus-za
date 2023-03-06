@@ -14,6 +14,7 @@ const slide = [
 		date: "12 March 2022",
 		location: "CPUT Hotel School, Granger Bay",
 		images: [
+
 			"api/images/vision.jpg",
 			"api/images/gallery/01 launch 2022/02.jpg",
 			"api/images/gallery/01 launch 2022/03.jpg",
@@ -29,6 +30,7 @@ const slide = [
 			"api/images/gallery/01 launch 2022/013.jpg",
 			"api/images/gallery/01 launch 2022/014.jpg",
 			"api/images/gallery/01 launch 2022/015.jpg",
+
 		],
 	},
 	{
@@ -113,7 +115,6 @@ const OurPhotos = () => {
 		return (
 			<div className="imageModal">
 				<img src={imageUrl} alt="" onClick={closeModal} />
-				{/* <button>Close</button> */}
 			</div>
 		);
 	};
