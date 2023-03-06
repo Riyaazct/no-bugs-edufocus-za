@@ -41,6 +41,11 @@
   align-items: center;
 }
 
+.message:hover {
+	background-color: yellow;}
+.big-logo img {
+  width: 60%;
+  max-width: 100%;
 .content-wrap {
   width: 100%;
   display: flex;
@@ -355,5 +360,4 @@
     width: 9rem;
     margin-top: -16rem;
   }
-
 }
