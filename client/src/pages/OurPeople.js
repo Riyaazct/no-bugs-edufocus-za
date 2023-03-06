@@ -4,7 +4,7 @@ import NavbarBlue from "../components/Navbar/Header";
 const OurPeople = () => {
   return (
     <div className="our-people">
-    
+
       <div className="member-1">
         <div className="name">
           <div className="designer-who-makes">
@@ -35,12 +35,12 @@ const OurPeople = () => {
       </div>
       <div className="member-12">
         <div className="name2">
-          <div className="designer-who-makes2">{`Cherith is a teacher with a Bachelor's in Education from the Western Cape Education Department. She is currently pursuing her B.Ed Honours degree in Language & Literacy at the University of the Western Cape and is committed to being a lifelong learner`}</div>
+          <div className="designer-who-makes2">{"Cherith is a teacher with a Bachelor's in Education from the Western Cape Education Department. She is currently pursuing her B.Ed Honours degree in Language & Literacy at the University of the Western Cape and is committed to being a lifelong learner"}</div>
           <b className="product-manager2">Treasurer</b>
           <div className="nicole-fisher2">Cherith Wareley</div>
         </div>
         <div className="userpic">
-          <img className="mask-icon" alt="" src="https://i.ibb.co/8PVPWS1/cherith.jpg"/>
+          <img className="mask-icon" alt="" src="https://i.ibb.co/8PVPWS1/cherith.jpg" />
         </div>
       </div>
       <div className="member-13">
@@ -59,7 +59,7 @@ const OurPeople = () => {
       </div>
       <div className="member-14">
         <div className="name1">
-          <div className="designer-who-makes1">{`Jade (Damonse) Glenn has an Honours in Educational Psychology and a Bachelor of Education degree in English and Life Orientation from UWC. `}</div>
+          <div className="designer-who-makes1">{"Jade (Damonse) Glenn has an Honours in Educational Psychology and a Bachelor of Education degree in English and Life Orientation from UWC. "}</div>
           <b className="product-manager4">Volunteer</b>
           <div className="nicole-fisher4">Jade Damonse</div>
         </div>
@@ -81,11 +81,11 @@ const OurPeople = () => {
           <div className="nicole-fisher5">Henry Esau</div>
         </div>
         <div className="userpic">
-          <img className="mask-icon" alt="" src="https://i.ibb.co/0qfhzH4/Henry.png"/>
+          <img className="mask-icon" alt="" src="https://i.ibb.co/0qfhzH4/Henry.png" />
         </div>
       </div>
 
-     
+
       <div className="header">
         <NavbarBlue />
         <div>

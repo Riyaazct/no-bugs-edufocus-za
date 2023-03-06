@@ -55,7 +55,7 @@ function NavbarBlue() {
           </div>
         </div>
       </div>
-     
+
 		</header>
 	);
 }

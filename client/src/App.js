@@ -1,8 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 
-// import About from "./pages/About";
+import About from "./pages/About";
 import Home from "./pages/Home";
 import OurPeople from "./pages/OurPeople";
+import OurPhotos from "./pages/OurPhotos";
+import TheProblem from "./pages/TheProblem";
+import LogIn from "./pages/LogIn";
+import SignUp from "./pages/SignUp";
 
 const App = () => (
 	<Routes>
