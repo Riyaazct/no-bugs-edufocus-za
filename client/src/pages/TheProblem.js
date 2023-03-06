@@ -9,7 +9,7 @@ const TheProblem = () => {
 			<div className="theProblemContent">
 				<div className="backgroundDiv"></div>
 
-					<img src="/images/theproblem.jpg" alt="" />
+					<img src="api/images/theproblem.jpg" alt="" />
 
 				<div className="theProblemTextContainer">
 					<p>
