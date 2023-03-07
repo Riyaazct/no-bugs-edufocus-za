@@ -41,9 +41,9 @@
 //   );
 // };
 
-import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdb-react-ui-kit";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -140,9 +140,9 @@ export default function Footer() {
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
                 <MDBIcon color='secondary' icon='home' className='me-2' />
-                
+
                 <a href='https://www.facebook.com/groups/www.edufocusprojects.co.za' className='text-reset'>
-                  <MDBIcon fab icon="facebook" />Facebook 
+                  <MDBIcon fab icon="facebook" />Facebook
                 </a>
               </p>
               <p>
@@ -160,11 +160,11 @@ export default function Footer() {
         </MDBContainer>
       </section>
 
-      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+      <div className='text-center p-4' style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
         © 2023 Copyright:  Edufocus
       </div>
     </MDBFooter>
   );
-};
+}
 
 

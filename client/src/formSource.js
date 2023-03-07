@@ -41,7 +41,7 @@ export const userInputs = [
       placeholder: "USA",
     },
   ];
-  
+
   export const productInputs = [
     {
       id: 1,
@@ -74,4 +74,3 @@ export const userInputs = [
       placeholder: "in stock",
     },
   ];
-  
