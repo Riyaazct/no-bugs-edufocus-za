@@ -32,7 +32,8 @@ const OurPhotos = () => {
 			.catch((err) => {
 				console.log(err);
 			});
-		}, []);
+	}, []);
+
 	// function to go to next image
 	const nextImage = () => {
 		const isLastImage = currentIndex === slide[event].images.length - 1;
@@ -61,8 +62,6 @@ const OurPhotos = () => {
 			</div>
 		);
 	};
-
-	console.log(slide[event]);
 
 	return (
 		<Fragment>

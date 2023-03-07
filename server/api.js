@@ -50,10 +50,11 @@ router.post("/users", async (req, res) => {
           });
 });
 
-
+// route for images stored in server
 const imagesRoot = path.join(__dirname, "images");
 router.use("/images", express.static(imagesRoot));
 
+// photo carousel data in database
 router.get("/photos", async (req, res) => {
 	try {
 		const result = await db.query("select * from photos");
