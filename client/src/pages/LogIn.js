@@ -1,19 +1,20 @@
 import React from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
-import useAuth from "../hooks/useAuth";
+// import useAuth from "../hooks/useAuth";
 import axios from "axios";
+axios.defaults.withCredentials = true;
 
 function LogIn() {
-  const { setAuth } = useAuth();
+  // const { setAuth } = useAuth();
   const userRef = useRef();
   const errRef = useRef();
-
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
-
-  const navigate = useNavigate();
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [roleInfo, setRoleInfo] = useState("");
   useEffect(() => {
     userRef.current.focus();
   }, []);
@@ -22,35 +23,55 @@ function LogIn() {
     setErrMsg("");
   }, [username, password]);
 
+  // Handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post("/api/login",
-        { username, password },
-        {
-          headers: { 'Content-Type': 'application/json' },
-          withCredentials: true
-        }
-      );
-      const data = await response.data;
-      console.log(data);
-      setUsername('');
-      setPassword('');
-      navigate("/member");
 
-    } catch (err) {
-      if (!err?.response) {
-        setErrMsg('No Server Response');
-      } else if (err.response?.status === 400) {
-        setErrMsg('Missing Username or Password');
-      } else if (err.response?.status === 401) {
-        setErrMsg('Unauthorized');
-      } else {
-        setErrMsg('Login Failed');
+    e.preventDefault();
+    console.log(navigate)
+    try {
+      // Make a POST request to the server using Axios
+      const response = await axios.post("/api/login", { username, password }, {
+        headers: {
+          'Content-Type':
+            'application/json'
+        }, withCredentials: true
+      });
+      const { user, message, loggedIn } = response.data;
+      const info = response.data.user.role;
+      console.log(info);
+      if (message) {
+        setErrMsg(message);
+      } else if (loggedIn) {
+        // Update the logged-in state
+        setLoggedIn(true);
+        setRoleInfo(info);
+        if (info == "admin") {
+          setUsername("");
+          setPassword("");
+          navigate("/adm");
+        } else if (info == "member") {
+          setUsername("");
+          setPassword("");
+          navigate("/member");
+          console.log(navigate);
+        }
       }
+    } catch (err) {
+      // Handle errors from the server or network
+      if (!err?.response) {
+        setErrMsg("No Server Response");
+      } else if (err.response?.status === 400) {
+        setErrMsg("Missing Username or Password");
+      } else if (err.response?.status === 401) {
+        setErrMsg("Unauthorized");
+      } else {
+        setErrMsg("Login Failed");
+      }
+
       errRef.current.focus();
     }
   };
+
   return (
     <>
       <section className='login-wrap'>
@@ -81,12 +102,12 @@ function LogIn() {
             required />
           <button>Log in</button>
         </form>
-        <p>
+        <div>
           Don't have an account?<br />
           <span className="line">
             <Link to="/signup">Sign up</Link>
           </span>
-        </p>
+        </div>
       </section>
     </>
   );
