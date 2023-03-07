@@ -2,7 +2,6 @@ import { Router } from "express";
 import db from "./db";
 import path from "path";
 import logger from "./utils/logger";
-import { getImage } from "./images";
 import express from "express";
 
 const router = Router();
