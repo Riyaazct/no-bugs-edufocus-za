@@ -17,7 +17,7 @@ const About = () => (
 				<div className="aboutImgOverlay"></div>
 				{/* IMAGE */}
 				<div className="aboutOurStoryImg">
-					<img src="/images/our-story.jpg" alt=".." />
+					<img src="api/images/our-story.jpg" alt=".." />
 				</div>
 				{/* PARAGRAPHS(split into two) */}
 				<div className="ourStoryP">
