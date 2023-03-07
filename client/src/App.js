@@ -10,6 +10,7 @@ import Member from "./pages/Member";
 import Error from "./pages/Error";
 import Unauthorized from "./pages/Unauthorize";
 import RequireAuth from "./components/RequireAuth";
+import Administrator from "./pages/Administrator";
 
 const App = () => (
 	<Routes>
@@ -20,12 +21,12 @@ const App = () => (
 		<Route path="/problem" element={<TheProblem />} />
 		<Route path="/login" element={<LogIn />} />
 		<Route path="/signup" element={<SignUp />} />
-		<Route path="/unauthorized" element={<Unauthorized />} 
-		/>
+		<Route path="/unauthorized" element={<Unauthorized />} />
 		
 		{/* protected routes */}
 		{/* <Route element={<RequireAuth />}> */}
 		<Route path="/member" element={<Member />} />
+		<Route path="/adm" element={<Administrator />} />
 		{/* </Route> */}
 		{/* error route */}
 		<Route path="*" element={<Error />} />

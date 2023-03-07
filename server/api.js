@@ -7,13 +7,13 @@ import logger from "./utils/logger";
 const router = Router();
 const bcrypt = require("bcrypt");
 
-// add middleware
+// middleware
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 router.use(cookieParser());
 router.use(session({
-  key: "user_id"
-  secret: ["£123", "&123"],
+  // key: "user_id"
+  secret: "£123",
   resave: false,
   saveUninitialized: false,
   cookie: {
@@ -21,13 +21,17 @@ router.use(session({
   },
 }));
 
+// roles
+const roles = {
+  admin: 'admin',
+  member: 'member',
+};
+
 router.get("/", (_, res) => {
   logger.debug("Welcoming everyone...");
   res.json({ message: "Hello, world!" });
 });
 
-
-// Router Link location of About Page
 router.get("/about/this/site", (_, res) => {
   console.log("About page Api is working...");
 }).post((req, res) => {
@@ -36,6 +40,26 @@ router.get("/about/this/site", (_, res) => {
 
 router.get("/createAccount", (_, res) => {
   console.log("Signup page Api is working...");
+});
+router.get("/member", (req, res) => {
+  // const user = req.session.user;
+  // console.log(user)
+  // if (user && user.role === 'member') {
+  //   res.json('Welcome to the member page!');
+  // } else {
+  //   res.status(401).send('You are not authorized to access this page.');
+  // }
+  res.json('Welcome to member page!');
+});
+
+router.get("/adm", (_, res) => {
+  // const userRole = req.user.role;
+  // if (userRole === 'admin') {
+  //   res.json('Welcome to the admin page!');
+  // } else {
+  //   res.status(401).send('You are not authorized to access this page.');
+  // }
+  res.json('Welcome to the administrator page!');
 });
 
 router.get("/login", (_, res) => {
@@ -78,28 +102,42 @@ router.post("/createAccount", async (req, res) => {
     });
 });
 
-
-//LOGIN
 router.post("/login", async (req, res) => {
-  const { username, password } = req.body;
-  // Check if the username exists
-  const checkUserQuery = "SELECT * FROM registration WHERE username = $1";
-  const userResult = await db.query(checkUserQuery, [username]);
-  if (userResult.rowCount === 0) {
-    return res.status(400).send("Invalid username or password");
+  try {
+    const { username, password } = req.body;
+    // Check if the username exists
+    const checkUserQuery = "SELECT * FROM registration WHERE username = $1";
+    const userResult = await db.query(checkUserQuery, [username]);
+    if (userResult.rowCount === 0) {
+      return res.status(400).send("Invalid username or password");
+    }
+    // Compare password hash with user's input
+    const user = userResult.rows[0];
+    const validPwd = await bcrypt.compare(password, user.password);
+    if (!validPwd) {
+      return res.status(400).send("Invalid username or password");
+    }
+    // set Cache-Control header
+    res.setHeader("Cache-Control", "no-cache");
+    // Login successful, store user data in session
+    req.session.user = {
+      id: user.id,
+      username: user.username,
+      email: user.email,
+      role: user.role,
+    };
+    console.log(user);
+
+    res.status(200).json({
+      user: user,
+      message: 'Success',
+    });
+    
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("An error occurred while processing your request.");
   }
-  // Compare password hash with user's input
-  const user = userResult.rows[0];
-  const validPwd = await bcrypt.compare(password, user.password);
-  if (!validPwd) {
-    return res.status(400).send("Invalid username or password");
-  }
-  // Login successful, return user data
-  res.send({
-    id: user.id,
-    username: user.username,
-    email: user.email,
-  });
+
 });
 
 export default router;

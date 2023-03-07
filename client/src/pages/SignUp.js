@@ -112,14 +112,6 @@ function SignUp() {
   };
   return (
     <>
-      {/* {success ? (
-        <section className="success">
-          <h1>Success!</h1>
-          <p>
-            <a href="#">Sign In</a>
-          </p>
-        </section>
-      ) : ( */}
         <section className='signup-wrap'>
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <h2>Sign Up</h2>
@@ -225,8 +217,6 @@ function SignUp() {
             </span>
           </p>
         </section>
-      {/* )
-      } */}
     </>
   );
 }
