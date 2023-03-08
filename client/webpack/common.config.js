@@ -5,7 +5,11 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.js$/,
+				test: /\.s[ac]ss$/i,
+				use: ["style-loader", "css-loader", "sass-loader"],
+			},
+			{
+				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
 				use: {
 					loader: "babel-loader",
@@ -14,6 +18,7 @@ module.exports = {
 					},
 				},
 			},
+
 			{
 				test: /\.(png|svg|jpe?g|gif)$/,
 				loader: "file-loader",
