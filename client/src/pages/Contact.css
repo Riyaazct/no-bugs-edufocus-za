@@ -14,99 +14,57 @@ body {
     font-weight: 400;
 } 
 
-.fakenav {
-      z-index: -150;
-    display: flex;
-    width: 100vw;
-    justify-content: space-between;
-    align-items: baseline;
-    height: 100px;
-    left: 0px;
-    top: 0px;
-    right:0px;
-    background: #FFFFFF;
-    border: 1px solid #FFFFFF;
+.contactsection {
+    height: 2000px;
+    margin: 20px;
 }
 
-.fakenavlist {
-    display:none;
-}
-
-.fakebutton {
-    position:  relative;
-    bottom: 10px;
-    background-color: #1E0F9E;
-    color: #FFFFFF;
-    font-family: 'Plus Jakarta Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-}
-
-
-.navsiteheading {
+.contactintro {
     position: relative;
-    margin: 0 auto;
-    top: 18px;
-    font-weight: 600;
-    line-height: 150%;
-    letter-spacing: 0.02em;
+    display: inline-block;
+    text-align: center;
+}
+
+.contactcentered {
+    position: absolute;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
 }
 
 h2 {
     font-family: 'Raleway';
     font-style: normal; 
-    font-size: 40px; 
+    font-size:24px;
     color: #000000;
 }
 
-.contactintro {
-    text-align: center;
-      margin-top: 50px;
-}
-.contactsection {
-    height: 2000px;
-}
-
 .contactintroimage {
-    margin: 15px auto;
-    top:0px;
-    position: relative;
+    margin: 50px auto;
     width: 50%;
     height: auto;
 }
 
 .contactintroheading {
-    position: absolute;
-    top: 140px;
-    left: 20px;
-    right: 20px;
     font-style: normal;
     font-weight: 700;
-    font-size:32px;
     line-height: 150%;
     letter-spacing: 0.02em;
     color: #1E0F9E;
 }
 
-.contactsocialcontainer {
-    width: 80%;
-    position: absolute;
-    left: 10%;
-    right:10%;
-    top: 200px;
-    text-align: center;
-}
-
 .contactintroblurb {
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 150%;
     letter-spacing: 0.02em;
+}
+
+.contactsocialcontainer {
+    width: 80%;
+    text-align: center;
+    margin: 150px auto 50px;
 }
 
 .contactsocialmedia {
@@ -129,20 +87,17 @@ h2 {
   display: grid;
   align-self: start;
   text-align: center;
+  font-size: 14px;
 }
 
 .contactformsection {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contactformheading {
-    position: relative;
-    top:50px;
-}
-.contactform{
-    position: absolute;
-    top:600px;
+.contactform {
+   padding-left:250px;
 }
 
 .formitem{
@@ -150,51 +105,56 @@ h2 {
         width: 300px
     }
 
+.buttonstyling {
+    background-color: #1E0F9E;
+    color: #FFFFFF;
+    padding: 20px;
+    border: none;
+}
+
 /* Media Queries */
-
-
 /* only 2 breakpoints general mobile and then laptop */
 /*laptop breakpoint */
-/* @media only screen and (min-width: 376px) { */
-@media only screen and (min-width: 768px) {
-   .fakenavlist {
-        margin-right:36px;
-        height: 40px;
-        display: flex;
-        gap: 20px;
-        list-style: none;
-        font-family: 'Plus Jakarta Sans';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 150%;
+
+
+@media only screen and (min-width: 375px) {
+
+    .coontactsection {
+        width: 100vh;
     }
 
-    .navsiteheading {
+    .contactintro {    
+        display: block;
         position: relative;
-        margin: 0;
-        top: 18px;
-        left: 57px;
-    }  
+        margin: 100px auto 0px;
+    } 
+
     
-    .contactintroimage {
-        margin: 15px 0 0 200px;
-        /* position: relative; */
-    }
-    .contactintroheading {
+    .contactcentered {
         position: absolute;
-        top: 200px;
-        left: 470px;    
-        font-size: 48px;
-    }    
+        top:25%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+    }
+
+    .contactintroimage {
+        margin: 15px auto;
+        height: 200px;
+        width: auto;
+    }
+
+    .contactintroheading {
+        font-size: 36px;
+    } 
+
     .contactsocialcontainer {
         width: 620px;
-        position: absolute;
-        top: 300px;
-        left: 550px;
+        margin: 50px auto;
+        bottom: 200px;
     }
     .contactintroblurb {
-        font-size: 30px; 
+        font-size: 24px; 
     }
 
     .contactsocialmedia {
@@ -203,34 +163,22 @@ h2 {
         row-gap: 1em; 
     }
 
-    .contactformheading {
-    position: absolute;
-    top:600px;
+    .contactform{
+           width: 500px;
     }
 
-.contactform{
-    position: absolute;
-    top:700px;
-    left: 550px;
-    width: 500px;
-}
+    .contactform input{
+        height: 30px;
+        width: 300px;
+    }
 
-.contactform input{
-      height: 30px;
-      width: 300px;
-}
+    #inline-message {
+        height:100px;
+    }
 
-#inline-message {
-    height:100px;
-}
-
-.formnewsletter{
-display: flex;
-column-gap: 10px;
+    .formnewsletter{
+        display: flex;
+        column-gap: 10px;
     }
 }
 
-/* only breakpoints general ipad */
-
-/* @media only screen and (min-width: 375px) and (max-width: endofipad) {
-} */

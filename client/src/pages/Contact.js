@@ -64,31 +64,22 @@ const Contact = () => {
 
 	return (
 		<section className="contactsection">
-			<section className="fakenav">
-				<h2 className="navsiteheading">Edufocus</h2>
-				<div className="fakenavlist">
-					<li> Home </li>
-					<li> About </li>
-					<li> Programmes </li>
-					<li> Support </li>
-					<li> Gallery </li>
-					<li> Contact </li>
-					<li> Register </li>
-					<button className="fakebutton"> Login </button>
-				</div>
-			</section>
 			<section className="contactintro">
 				<img
 					className="contactintroimage"
 					src="/contact/greenblob.png"
 					alt="green blob"
 				/>
-				<h2 className="contactintroheading">Get in touch with us.</h2>
-				<div className="contactsocialcontainer">
+				<div className="contactcentered">
+					<h2 className="contactintroheading">Get in touch with us.</h2>
 					<p className="contactintroblurb">
 						Click here to see what we've been up to and join our social media
 						community!{" "}
 					</p>
+				</div>
+			</section>
+			<section className="contactsocialcontainer">
+
 					<section className="contactsocialmedia">
 						<a
 							href="https://www.youtube.com/@EduFocusProjects_NPO"
@@ -131,13 +122,13 @@ const Contact = () => {
 							Click here for our Eight Dimensions of Wellness Programme Overview
 						</p>
 					</section>
-				</div>
 			</section>
 			<section className="contactformsection">
 				<h2 className="contactformheading">Have a question? Want to donate?</h2>
 				<form
 					className="contactform"
 					onSubmit={handleSubmit}
+					action="contact"
 					method="POST"
 				>
 					<div className="formitem">
@@ -203,7 +194,7 @@ const Contact = () => {
 					</div>
 					<div className="formitem">
 						<div>
-							<button className="fakebutton" type="submit">
+							<button className="buttonstyling" type="submit">
 								Send Message
 							</button>
 						</div>
