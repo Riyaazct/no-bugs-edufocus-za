@@ -14,7 +14,7 @@ function LogIn() {
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
-  const [roleInfo, setRoleInfo] = useState("");
+  // const [roleInfo, setRoleInfo] = useState("");
   useEffect(() => {
     userRef.current.focus();
   }, []);
@@ -27,7 +27,6 @@ function LogIn() {
   const handleSubmit = async (e) => {
 
     e.preventDefault();
-    console.log(navigate)
     try {
       // Make a POST request to the server using Axios
       const response = await axios.post("/api/login", { username, password }, {
@@ -36,80 +35,80 @@ function LogIn() {
             'application/json'
         }, withCredentials: true
       });
-      const { user, message, loggedIn } = response.data;
-      const info = response.data.user.role;
-      console.log(info);
-      if (message) {
-        setErrMsg(message);
-      } else if (loggedIn) {
-        // Update the logged-in state
-        setLoggedIn(true);
-        setRoleInfo(info);
-        if (info == "admin") {
-          setUsername("");
-          setPassword("");
-          navigate("/adm");
-        } else if (info == "member") {
-          setUsername("");
-          setPassword("");
-          navigate("/member");
-          console.log(navigate);
-        }
+      const { user, message } = response.data;
+      const infoRole = response.data.user.role;
+      const msg = response.data.message;
+      console.log(infoRole);
+      if (msg) {
+        setErrMsg(msg);
       }
-    } catch (err) {
-      // Handle errors from the server or network
-      if (!err?.response) {
-        setErrMsg("No Server Response");
-      } else if (err.response?.status === 400) {
-        setErrMsg("Missing Username or Password");
-      } else if (err.response?.status === 401) {
-        setErrMsg("Unauthorized");
-      } else {
-        setErrMsg("Login Failed");
+      
+      if (infoRole === "admin") {
+        setUsername("");
+        setPassword("");
+        navigate("/adm");
+      } else if (infoRole === "member") {
+        setUsername("");
+        setPassword("");
+        navigate("/member");
+        
       }
-
-      errRef.current.focus();
+      
+  } catch (err) {
+    // Handle errors from the server or network
+    if (!err?.response) {
+      setErrMsg("No Server Response");
+    } else if (err.response?.status === 400) {
+      setErrMsg("Missing Username or Password");
+    } else if (err.response?.status === 401) {
+      setErrMsg("Unauthorized");
+    } else {
+      setErrMsg("Login Failed");
     }
-  };
 
-  return (
-    <>
-      <section className='login-wrap'>
-        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-        <h2>Log in</h2>
-        <form className="loginForm" onSubmit={handleSubmit}>
-          {/* USERNAME */}
-          <label htmlFor="username">
-            Username:</label>
-          <input
-            type="text"
-            id="username"
-            ref={userRef}
-            autoComplete="off"
-            onChange={(e) => setUsername(e.target.value)}
-            value={username}
-            required
-          />
-          {/* PASSWORD */}
-          <label htmlFor="password">
-            Password:
-          </label>
-          <input
-            type="password"
-            id="password"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-            required />
-          <button>Log in</button>
-        </form>
-        <div>
-          Don't have an account?<br />
-          <span className="line">
-            <Link to="/signup">Sign up</Link>
-          </span>
-        </div>
-      </section>
-    </>
-  );
+    errRef.current.focus();
+  }
+};
+
+return (
+  <>
+    <section className='login-wrap'>
+      <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+      <h2>Log in</h2>
+      <form className="loginForm" onSubmit={handleSubmit}>
+        {/* USERNAME */}
+        <label htmlFor="username">
+          Username:</label>
+        <input
+          type="text"
+          id="username"
+          ref={userRef}
+          autoComplete="off"
+          onChange={(e) => setUsername(e.target.value)}
+          value={username}
+          required
+        />
+        {/* PASSWORD */}
+        <label htmlFor="password">
+          Password:
+        </label>
+        <input
+          type="password"
+          id="password"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+          required />
+        <button>Log in</button>
+      </form>
+      <div>
+        Don't have an account?<br />
+        <span className="line">
+          <Link to="/signup">Sign up</Link>
+        </span>
+      </div>
+    </section>
+
+  </>
+);
 }
 export default LogIn;

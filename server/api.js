@@ -21,11 +21,7 @@ router.use(session({
   },
 }));
 
-// roles
-const roles = {
-  admin: 'admin',
-  member: 'member',
-};
+
 
 router.get("/", (_, res) => {
   logger.debug("Welcoming everyone...");
@@ -42,23 +38,10 @@ router.get("/createAccount", (_, res) => {
   console.log("Signup page Api is working...");
 });
 router.get("/member", (req, res) => {
-  // const user = req.session.user;
-  // console.log(user)
-  // if (user && user.role === 'member') {
-  //   res.json('Welcome to the member page!');
-  // } else {
-  //   res.status(401).send('You are not authorized to access this page.');
-  // }
   res.json('Welcome to member page!');
 });
 
 router.get("/adm", (_, res) => {
-  // const userRole = req.user.role;
-  // if (userRole === 'admin') {
-  //   res.json('Welcome to the admin page!');
-  // } else {
-  //   res.status(401).send('You are not authorized to access this page.');
-  // }
   res.json('Welcome to the administrator page!');
 });
 
@@ -78,6 +61,7 @@ router.get("/our-people", (_, res) => {
 // REGISTRATION
 router.post("/createAccount", async (req, res) => {
   const { username, email, password } = req.body;
+
   // Check if the username already exists
   const checkUserQuery = "SELECT * FROM registration WHERE username = $1";
   const userResult = await db.query(checkUserQuery, [username]);
@@ -93,7 +77,7 @@ router.post("/createAccount", async (req, res) => {
   // Hash the password
   const hashedPwd = await bcrypt.hash(password, 10);
   // If both checks pass, insert the new record with hashed password
-  const insertQuery = "INSERT INTO registration (username, email, password) VALUES ($1, $2, $3)";
+ const insertQuery = "INSERT INTO registration (username, email, password) VALUES ($1, $2, $3)";
   db.query(insertQuery, [username, email, hashedPwd])
     .then(() => res.send("User added!"))
     .catch((error) => {
@@ -132,7 +116,8 @@ router.post("/login", async (req, res) => {
       user: user,
       message: 'Success',
     });
-    
+
+
   } catch (err) {
     console.error(err);
     res.status(500).send("An error occurred while processing your request.");

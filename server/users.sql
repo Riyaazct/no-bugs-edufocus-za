@@ -7,7 +7,7 @@ CREATE TABLE registration (
 );
 INSERT INTO registration (username, email, password, role)
 VALUES ('edufocus',  'edufocus@gmail.com', 'Edufocus1!','admin');
-INSERT INTO registration (username, email, password, user_role) 
+INSERT INTO registration (username, email, password, user) 
 VALUES ('mirela', 'mirela@gmail.com', 'Mirela1!', 'member');
 
 
