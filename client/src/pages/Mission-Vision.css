@@ -1,0 +1,197 @@
+/* MOBILE VIEW */
+.visionCard {
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+hr {
+	margin-top: 0;
+	margin-bottom: 20px;
+	
+}
+
+.visionCardTitle {
+	margin-top: 5%;
+	margin-left: 10px;
+}
+
+.visionCardImage {
+	margin-bottom: 4%;
+}
+
+.visionCardContent img {
+	width: 100%;
+}
+
+.visionCardContent li {
+	list-style: none;
+	font-size: 1.1rem;
+}
+
+.visionCard:first-child ul,
+.visionCard:nth-child(2) ul {
+	padding-left: 5px;
+	padding-right: 25px;
+}
+
+.visionCard:nth-child(3) li {
+	list-style: circle;
+	padding: 15px;
+}
+
+.visionCard .readMoreButton {
+	text-align: center;
+}
+
+.readMoreButton {
+	border: none;
+	background-color: unset;
+	color: #17997a;
+	font-size: 1.3rem;
+	font-weight: 500;
+	width: 100%;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* 576px */
+@media only screen and (min-width: 576px) {
+
+		.visionCardContent li {
+		margin-left: 5px;
+	}
+} 
+/* END OF MOBILE VIEW */
+
+
+
+/* 768px */
+@media only screen and (min-width: 768px) {
+
+	.visionCardContainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		padding-left: 30px;
+		padding-right: 30px;
+		gap: 10px;
+        margin: 0px auto ;
+		height: 80vh;
+	}
+
+	.visionCard {
+		margin-top: 100px;
+		padding: 4px;
+		}
+
+	.visionCardTitle {
+		font-size: 1.4rem;
+		margin: auto;		
+	}
+
+	.visionCard img {
+		height: 180px;
+		object-fit: cover;
+		border-radius: 5px;
+	}
+
+	.visionCardContent ul {
+		text-align: left;
+		
+	}
+	.visionCardContent li {
+		font-size: 1rem;
+	}
+
+	.visionCard:first-child ul,
+	.visionCard:nth-child(2) ul {
+		padding: 0;
+		
+	}
+
+	.visionCard:nth-child(3) li {
+		list-style: none;
+		padding-left: 0px;
+		padding-right: 0;
+		
+	}
+
+	.visionCard:nth-child(3) li:first-child {
+		padding-top: 0;
+	}
+
+	/* FOR SETTING THE BOTTOM BORDER ON THE LIST ITEMS IN THE OUR OBJECTIVES CARD */
+	.bottomBorderLi {
+		border-bottom: 1px solid #1d0f9e3d;
+	}
+
+	.visionCard:nth-child(3) ul {
+		padding: 0px;
+	}
+
+	.readMoreButton {
+		font-size: medium;
+		width: max-content;
+
+	}
+
+	.visionHr {
+		width: 100%;
+		background-color: #1e0f9e;
+	}
+
+	.seeMoreButtonContainer {
+	text-align: end;
+}
+}
+
+
+
+/* 1050px  SCREEN*/
+@media only screen and (min-width: 1050px) {
+	.visionCardContainer {
+		max-width: 95%;
+		gap: 30px;
+	}
+	.visionCardTitle {
+		font-size: 1.6rem;
+	}
+
+	.visionCard li {
+	font-size: 1.14rem;
+	max-width: 450px;
+}
+
+.visionCardContent img {
+	height: 200px;
+}
+
+.readMoreButton {
+	font-size: 1.25rem;
+}
+}
+
+/* 1400px screen size */
+@media only screen and (min-width: 1400px) {
+	.visionCardContainer {
+		max-width: 90%;
+		gap: 50px;
+	}
+
+	.visionCardTitle {
+		font-size: 2rem;
+}
+
+	.visionCard li {
+	font-size: 1.3rem;
+}
+
+.visionCardContent img {
+	height: 280px;
+}
+
+.readMoreButton {
+	font-size: 1.45rem;
+}
+}

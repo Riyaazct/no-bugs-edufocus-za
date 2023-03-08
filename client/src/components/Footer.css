@@ -1,0 +1,222 @@
+.rectangle {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100px;
+  background-color: #e93a7d;
+}
+.sign-up {
+  position: absolute;
+  top: calc(50% - 13px);
+  left: calc(50% - 31px);
+  line-height: 26px;
+  font-weight: 500;
+}
+.middle-fill {
+  position: absolute;
+  height: 9.8%;
+  width: 12.14%;
+  top: 17.65%;
+  right: 8.21%;
+  bottom: 72.55%;
+  left: 79.64%;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.ebooks,
+.infographics,
+.podcasts,
+.tools,
+.videos {
+  position: absolute;
+  top: calc(50% + 106.7px);
+  left: 0;
+  line-height: 26px;
+}
+.ebooks,
+.infographics,
+.tools,
+.videos {
+  top: calc(50% + 60.7px);
+}
+.ebooks,
+.infographics,
+.tools {
+  top: calc(50% + 14.7px);
+}
+.ebooks,
+.infographics {
+  top: calc(50% - 31.3px);
+}
+.ebooks {
+  top: calc(50% - 77.3px);
+}
+.company {
+  top: calc(50% - 132.7px);
+  left: 0.68%;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+.company,
+.menu-2,
+.team {
+  position: absolute;
+}
+.menu-2 {
+  width: 10.43%;
+  top: calc(50% - 165px);
+  right: 31.43%;
+  left: 58.14%;
+  height: 265.4px;
+}
+.team {
+  top: calc(50% + 83.7px);
+  left: 0;
+  line-height: 26px;
+}
+.integrations {
+  position: absolute;
+  top: calc(50% + 37.7px);
+}
+.features,
+.integrations,
+.templates {
+  left: 0;
+  line-height: 26px;
+}
+.templates {
+  position: absolute;
+  top: calc(50% - 8.3px);
+}
+.features {
+  top: calc(50% - 54.3px);
+}
+.about,
+.features,
+.menu-1 {
+  position: absolute;
+}
+.about {
+  top: calc(50% - 109.7px);
+  left: 1.27%;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+.menu-1 {
+  width: 5.64%;
+  top: calc(50% - 165px);
+  right: 50.43%;
+  left: 43.93%;
+  height: 219.4px;
+}
+.privacy-policy,
+.terms-of-service {
+  position: absolute;
+  top: calc(50% + 66.2px);
+  left: 7.64%;
+  line-height: 26px;
+}
+.privacy-policy {
+  left: 50.14%;
+}
+.sign-up1 {
+  position: absolute;
+  top: calc(50% - 11px);
+  left: calc(50% - 38px);
+  line-height: 22px;
+  font-weight: 500;
+}
+.middle-fill1,
+.rectangle2 {
+  position: absolute;
+  height: 97.56%;
+  width: 33.33%;
+  top: 2.44%;
+  right: 0;
+  bottom: 0;
+  left: 66.67%;
+}
+.rectangle2 {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 100px;
+  border: 2px solid #1e0e62;
+  box-sizing: border-box;
+  opacity: 0.2;
+  mix-blend-mode: normal;
+}
+.your-email {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  opacity: 0.4;
+}
+.small-white-outline {
+  position: absolute;
+  height: 97.56%;
+  width: 63.89%;
+  top: 0;
+  right: 36.11%;
+  bottom: 2.44%;
+  left: 0;
+  text-align: left;
+  color: #1e0e62;
+}
+.middle-fill-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 41px;
+  text-align: center;
+  color: #fff;
+}
+.copyrights {
+  position: absolute;
+  width: 25.71%;
+  top: calc(50% - 2px);
+  right: 67.86%;
+  left: 6.43%;
+  height: 184.4px;
+}
+.edufocus-child {
+  position: absolute;
+  top: 49px;
+  left: 115px;
+  background-color: #d9d9d9;
+  width: 200px;
+  height: 109px;
+}
+.edufocus-item {
+  position: absolute;
+  top: 49px;
+  left: 95px;
+  width: 262px;
+  height: 155px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.edufocus {
+  position: fixed;
+  background-color: #17997A;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 16px;
+  color: #1e0e62;
+  font-family: "DM Sans";
+  padding: 80px 60px;
+  bottom: 0;
+}
