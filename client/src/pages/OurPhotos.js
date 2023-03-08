@@ -49,7 +49,7 @@ const OurPhotos = () => {
 			: currentIndex - 1;
 		setCurrentIndex(newIndex);
 	};
-	// CLICK EVEN HANDLER FOR SELECT ELEMENT
+	// CLICK EVENT HANDLER FOR SELECT ELEMENT
 	const handleClick = (e) => {
 		const newValue = e.target.value;
 		setEvent(newValue);
