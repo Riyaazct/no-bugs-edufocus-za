@@ -1,5 +1,4 @@
 import http from "http";
-
 import app from "./app";
 import { connectDb, disconnectDb } from "./db";
 import config from "./utils/config";
@@ -16,3 +15,4 @@ server.on("listening", () => {
 process.on("SIGTERM", () => server.close(() => disconnectDb()));
 
 connectDb().then(() => server.listen(config.port));
+

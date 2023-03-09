@@ -1,9 +1,14 @@
 import { Router } from "express";
-import session from 'express-session';
-import bodyParser from 'body-parser';
-import cookieParser from 'cookie-parser';
+import session from "express-session";
+import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 import db from "./db";
+
+import path from "path";
 import logger from "./utils/logger";
+import express from "express";
+
+
 const router = Router();
 const bcrypt = require("bcrypt");
 
@@ -37,11 +42,11 @@ router.get("/createAccount", (_, res) => {
   console.log("Signup page Api is working...");
 });
 router.get("/member", (req, res) => {
-  res.json('Welcome to member page!');
+  res.json("Welcome to member page!");
 });
 
 router.get("/adm", (_, res) => {
-  res.json('Welcome to the administrator page!');
+  res.json("Welcome to the administrator page!");
 });
 
 router.get("/login", (_, res) => {
@@ -85,6 +90,7 @@ router.post("/createAccount", async (req, res) => {
     });
 });
 
+
 router.post("/login", async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -113,8 +119,26 @@ router.post("/login", async (req, res) => {
 
     res.status(200).json({
       user: user,
-      message: 'Success',
+      message: "Success",
     });
+
+// route for images stored in server
+const imagesRoot = path.join(__dirname, "images");
+router.use("/images", express.static(imagesRoot));
+
+// photo carousel data in database
+router.get("/photos", async (req, res) => {
+	try {
+		const result = await db.query("select * from photos");
+		res.json(result.rows);
+	} catch (error) {
+		console.error(error);
+		res.status(500).json(error);
+	}
+});
+
+
+
   } catch (err) {
     console.error(err);
     res.status(500).send("An error occurred while processing your request.");
@@ -123,15 +147,15 @@ router.post("/login", async (req, res) => {
 
 
 // Logout endpoint
-router.post('/logout', (req, res) => {
+router.post("/logout", (req, res) => {
   // Destroy the session
   req.session.destroy((err) => {
-    if (err) {  
-      res.status(500).send('Error logging out');
+    if (err) {
+      res.status(500).send("Error logging out");
     } else {
       // Remove the session cookie
-      res.clearCookie('connect.sid');
-      res.status(200).send('Logged out successfully');
+      res.clearCookie("connect.sid");
+      res.status(200).send("Logged out successfully");
     }
   });
 });
