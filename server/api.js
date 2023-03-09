@@ -3,7 +3,12 @@ import session from 'express-session';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import db from "./db";
+
+import path from "path";
 import logger from "./utils/logger";
+import express from "express";
+
+
 const router = Router();
 const bcrypt = require("bcrypt");
 
@@ -86,6 +91,7 @@ router.post("/createAccount", async (req, res) => {
     });
 });
 
+
 router.post("/login", async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -116,6 +122,22 @@ router.post("/login", async (req, res) => {
       user: user,
       message: 'Success',
     });
+
+// route for images stored in server
+const imagesRoot = path.join(__dirname, "images");
+router.use("/images", express.static(imagesRoot));
+
+// photo carousel data in database
+router.get("/photos", async (req, res) => {
+	try {
+		const result = await db.query("select * from photos");
+		res.json(result.rows);
+	} catch (error) {
+		console.error(error);
+		res.status(500).json(error);
+	}
+});
+
 
 
   } catch (err) {
