@@ -28,4 +28,4 @@ function createDatabaseUrl() {
 // DB_NAME=cyf_poqg
 // DB_PASSWORD=YEmXa47TQTYWDe1li2RFft9InpWl3cTW
 // DB_PORT=5432
-// DB_USERNAME=cyf_poqg_user (edited) 
+// DB_USERNAME=cyf_poqg_user (edited)
