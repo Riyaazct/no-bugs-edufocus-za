@@ -1,8 +1,8 @@
 import "./single.scss";
 import Sidebar from "../../components4dash/sidebar/Sidebar";
 import Navbar from "../../components4dash/navbar/Navbar";
-import Chart from "../../components4dash/chart/Chart";
-import List from "../../components4dash/table/Table";
+import Chart from "../../components4dash/chart/Chart.jsx";
+import List from "../../components4dash/table/Table.jsx";
 
 const Single = () => {
   return (

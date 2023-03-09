@@ -10,9 +10,20 @@ import { userRows } from "../../datatablesource";
 import { useState } from "react";
 
 const List = () => {
-  const [data, setData] = useState(userRows);
-  const rows = data;
+  const [data, setData] = useState([]);
+  
+  
+  useEffect(() => {
+    axios.get('/users')
+      .then(response => {
+        setData(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
 
+  const rows = data;
 
   
   return (

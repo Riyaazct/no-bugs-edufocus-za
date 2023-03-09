@@ -1,3 +1,4 @@
+
 export const userColumns = [
   { field: "id", headerName: "ID", width: 70 },
   {
@@ -38,7 +39,7 @@ export const userColumns = [
   },
 ];
 
-//temporary data
+// temporary data
 export const userRows = [
   {
     id: 1,

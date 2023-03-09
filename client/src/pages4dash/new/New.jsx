@@ -6,6 +6,19 @@ import { useState } from "react";
 
 const New = ({ inputs, title }) => {
   const [file, setFile] = useState("");
+  const [formData, setFormData] = useState({});
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const userId = '123'; // Replace with the actual userId
+    const response = await axios.put(`/api/users/${userId}`, formData);
+    console.log(response.data); // User updated successfully
+  };
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   return (
     <div className="new">
