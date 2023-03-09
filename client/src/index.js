@@ -1,13 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./pages/LogIn.css";
+import "./pages/SignUp.css";
 import App from "./App";
-import { DarkModeContextProvider } from "./context/darkModeContext";
+import { AuthProvider } from "./context/AuthProvider";
+// import { DarkModeContextProvider } from "./context4dash/darkModeContext";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <DarkModeContextProvider>
-      <App />
-    </DarkModeContextProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
+createRoot(document.getElementById("root")).render(
+	<BrowserRouter>
+	<AuthProvider>
+	<App />
+	</AuthProvider>
+	</BrowserRouter>
 );

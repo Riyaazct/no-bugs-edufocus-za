@@ -1,6 +1,7 @@
 import "./about.css";
 import Mission from "./Mission-Vision";
 import NavbarBlue from "../components/Navbar/NavbarBlue";
+// import Footer from "../components/Footer";
 
 const About = () => (
 	<main role="main">
@@ -17,7 +18,7 @@ const About = () => (
 				<div className="aboutImgOverlay"></div>
 				{/* IMAGE */}
 				<div className="aboutOurStoryImg">
-					<img src="/images/our-story.jpg" alt=".." />
+					<img src="api/images/our-story.jpg" alt=".." />
 				</div>
 				{/* PARAGRAPHS(split into two) */}
 				<div className="ourStoryP">
@@ -44,6 +45,7 @@ const About = () => (
 			</div>
 		</div>
 		<Mission />
+		{/* <Footer /> */}
 	</main>
 );
 

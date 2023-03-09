@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@600&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #000;
+  --color-blue: #1E0F9E;
+  --color-lightgreen: #6AE3C6;
+  --color-lightergreen: #98E4D2;
+  --color-green: #17997A;
+  --color-darkgreen: #0c5d4a;
+}
+
+/* html {
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--color-lightergreen);
+} */
+
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.loginForm { 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 300px;
+}
+/* change */
+label {
+  margin-top: 10px;
+}
+/* change */
+input[type="text"],
+input[type="password"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* change */
+button {
+  background-color: var(--color-black);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 1rem;
+
+}
+/* change */
+button:hover {
+  background-color: var(--color-green);
+}
+
