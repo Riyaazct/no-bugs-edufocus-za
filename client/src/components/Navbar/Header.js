@@ -22,8 +22,8 @@ function NavbarBlue() {
 				<a href="/Ourpeople/this/a/team">Our People</a>
 
 				<div className="small-s">
-					<a href="/#">Login</a>
-					<a href="/#">Sign Up</a>
+					<a href="/login">Login</a>
+					<a href="/signup">Sign Up</a>
 				</div>
 
 				<button className="nav-btn nav-close-btn" onClick={showNavbar}>

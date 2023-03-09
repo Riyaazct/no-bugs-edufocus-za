@@ -3,6 +3,7 @@ import Mission from "./Mission-Vision";
 // import NavbarBlue from "../components/Navbar/NavbarBlue";
 import Header from "../components/Navbar/Header";
 // import Footer from "../components/Footer";
+import TheProblem from "./TheProblem";
 
 const About = () => (
 	<main role="main">
@@ -46,6 +47,7 @@ const About = () => (
 			</div>
 		</div>
 		<Mission />
+		<TheProblem />
 		{/* <Footer /> */}
 	</main>
 );
