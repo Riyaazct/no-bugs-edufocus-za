@@ -1,11 +1,13 @@
 import "./about.css";
 import Mission from "./Mission-Vision";
-import NavbarBlue from "../components/Navbar/NavbarBlue";
+// import NavbarBlue from "../components/Navbar/NavbarBlue";
+import Header from "../components/Navbar/Header";
 // import Footer from "../components/Footer";
+import TheProblem from "./TheProblem";
 
 const About = () => (
 	<main role="main">
-		<NavbarBlue />
+		<Header />
 		<div className="main-container">
 			{/* TITLE */}
 			<div className="aboutOurStoryH1">
@@ -45,6 +47,7 @@ const About = () => (
 			</div>
 		</div>
 		<Mission />
+		<TheProblem />
 		{/* <Footer /> */}
 	</main>
 );

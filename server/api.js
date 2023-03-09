@@ -50,31 +50,20 @@ router.post("/users", async (req, res) => {
           });
 });
 
-// Route to images
-// router.get("/images/:imageName", (req, res) => {
-//   const imageName = req.params.imageName;
-//   const imagePath = getImage(imageName);
-//   res.sendFile(imagePath);
-// });
-
-
-// const imagesRoot = path.join(__dirname, "images");
-// router.use("/images", express.static(imagesRoot));
-
+// route for images stored in server
 const imagesRoot = path.join(__dirname, "images");
-router.use(
-	"/images",
-	express.static(imagesRoot, {
-		index: false,
-		redirect: false,
-		setHeaders: (res, path) => {
-			if (path.endsWith(".jpg")) {
-				res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
-			}
-		},
-	})
-);
+router.use("/images", express.static(imagesRoot));
 
+// photo carousel data in database
+router.get("/photos", async (req, res) => {
+	try {
+		const result = await db.query("select * from photos");
+		res.json(result.rows);
+	} catch (error) {
+		console.error(error);
+		res.status(500).json(error);
+	}
+});
 
 
 
