@@ -28,11 +28,11 @@ const App = () => (
 		<Route path="/signup" element={<SignUp />} />
 
 		<Route path="/unauthorized" element={<Unauthorized />} />
-		<Route element={<RequireAuth />}> 
+		<Route element={<RequireAuth />}>
 		<Route path="/member" element={<Member />} />
 		<Route path="/adm" element={<Administrator />} />
-		</Route> 
-		
+		</Route>
+
 		<Route path="*" element={<Error />} />
 
 		<Route path="/contact" element={<Contact />} />

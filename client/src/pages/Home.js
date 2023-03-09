@@ -1,12 +1,12 @@
 import React from "react";
 import "./Home.css";
-import NavbarBlue from "../components/Navbar/NavbarBlue";
+import Header from "../components/Navbar/Header";
 import Button from "@mui/material/Button";
 
 function Home() {
 	return (
 		<>
-			<NavbarBlue />
+			<Header />
 			<div className="home-page">
 				<section className="hero-wrap">
 					<div className="overlay">
