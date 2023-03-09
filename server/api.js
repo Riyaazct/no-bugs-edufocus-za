@@ -50,16 +50,18 @@ router.post("/users", async (req, res) => {
           });
 });
 
-// Route to images
-// router.get("/images/:imageName", (req, res) => {
-//   const imageName = req.params.imageName;
-//   const imagePath = getImage(imageName);
-//   res.sendFile(imagePath);
-// });
 
 
-// const imagesRoot = path.join(__dirname, "images");
-// router.use("/images", express.static(imagesRoot));
+router.get('/users', async (req, res) => {
+	try {
+		const { rows } = await pool.query('SELECT * FROM users');
+		res.json(rows);
+	} catch (err) {
+		console.error(err);
+		res.status(500).json({ message: 'Internal server error' });
+	}
+});
+
 
 const imagesRoot = path.join(__dirname, "images");
 router.use(
