@@ -1,5 +1,5 @@
 import "./Contact.css";
-import "./../index.css";
+import NavbarBlue from "../components/Navbar/NavbarBlue";
 import React, { useState } from "react";
 
 const Contact = () => {
@@ -63,6 +63,8 @@ const Contact = () => {
 
 
 	return (
+		<main role="main">
+		<NavbarBlue />
 		<section className="contactsection">
 			<section className="contactintro">
 				<img
@@ -202,6 +204,7 @@ const Contact = () => {
 				</form>
 			</section>
 		</section>
+		</main>
 	);
 
 };
