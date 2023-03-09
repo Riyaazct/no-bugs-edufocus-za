@@ -124,5 +124,25 @@ router.post("/login", async (req, res) => {
   }
 
 });
+// router.get("/login", (req, res) => {
+//   if (req.session.user) {
+//     res.send({ loggedIn: true, user: req.session.user });
+//   } else {
+//     res.send({ loggedIn: false });
+//   }
+// });
 
+// Logout endpoint
+router.post('/logout', (req, res) => {
+  // Destroy the session
+  req.session.destroy((err) => {
+    if (err) {  
+      res.status(500).send('Error logging out');
+    } else {
+      // Remove the session cookie
+      res.clearCookie('connect.sid');
+      res.status(200).send('Logged out successfully');
+    }
+  });
+});
 export default router;

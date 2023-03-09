@@ -1,20 +1,19 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
-// import useAuth from "../hooks/useAuth";
+import useAuth from "../hooks/useAuth";
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
 function LogIn() {
-  // const { setAuth } = useAuth();
+  const { setAuth } = useAuth();
   const userRef = useRef();
   const errRef = useRef();
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
-  // const [roleInfo, setRoleInfo] = useState("");
+  
   useEffect(() => {
     userRef.current.focus();
   }, []);
@@ -22,7 +21,6 @@ function LogIn() {
   useEffect(() => {
     setErrMsg("");
   }, [username, password]);
-
   // Handle form submission
   const handleSubmit = async (e) => {
 
@@ -36,6 +34,7 @@ function LogIn() {
         }, withCredentials: true
       });
       const { user, message } = response.data;
+      setAuth(response.data.user);
       const infoRole = response.data.user.role;
       const msg = response.data.message;
       console.log(infoRole);
@@ -105,6 +104,7 @@ return (
         <span className="line">
           <Link to="/signup">Sign up</Link>
         </span>
+       
       </div>
     </section>
 
