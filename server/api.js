@@ -22,7 +22,6 @@ router.use(session({
 }));
 
 
-
 router.get("/", (_, res) => {
   logger.debug("Welcoming everyone...");
   res.json({ message: "Hello, world!" });
@@ -116,21 +115,12 @@ router.post("/login", async (req, res) => {
       user: user,
       message: 'Success',
     });
-
-
   } catch (err) {
     console.error(err);
     res.status(500).send("An error occurred while processing your request.");
   }
-
 });
-// router.get("/login", (req, res) => {
-//   if (req.session.user) {
-//     res.send({ loggedIn: true, user: req.session.user });
-//   } else {
-//     res.send({ loggedIn: false });
-//   }
-// });
+
 
 // Logout endpoint
 router.post('/logout', (req, res) => {
