@@ -7,7 +7,7 @@ const Unauthorized = () => {
       <p>You have attempted to access a page for witch you are not authorized.</p>
       <Link to="/">Visit Our Home Page</Link>
     </div>
-  )
-}
+  );
+};
 
 export default Unauthorized;
