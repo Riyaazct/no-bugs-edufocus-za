@@ -1,5 +1,5 @@
 import "./Contact.css";
-// import "./../index.css";
+import NavbarBlue from "../components/Navbar/NavbarBlue";
 import React, { useState } from "react";
 
 const Contact = () => {
@@ -63,11 +63,13 @@ const Contact = () => {
 
 
 	return (
+		<main role="main">
+		<NavbarBlue />
 		<section className="contactsection">
 			<section className="contactintro">
 				<img
 					className="contactintroimage"
-					src="api/images/contact/greenblob.png"
+					src="/api/images/contact/greenblob.png"
 					alt="green blob"
 				/>
 				<div className="contactcentered">
@@ -79,48 +81,49 @@ const Contact = () => {
 				</div>
 			</section>
 			<section className="contactsocialcontainer">
-				<section className="contactsocialmedia">
-					<a
-						href="https://www.youtube.com/@EduFocusProjects_NPO"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img
-							className="contactintroicon contactintrogriditem"
-							src="api/images/contact/youtube.svg"
-							alt="youtube icon"
-						/>
-					</a>
-					<a
-						href="https://www.facebook.com/groups/www.edufocusprojects.co.za"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img
-							className="contactintroicon contactintrogriditem"
-							src="api/images/contact/facebook.svg"
-							alt="facebook icon"
-						/>
-					</a>
-					<a
-						href="https://acrobat.adobe.com/link/review?uri=urn%3Aaaid%3Ascds%3AUS%3A1e5659ff-bbfc-3803-b8b5-e60db9e520bb"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img
-							className="contactintroicon contactintrogriditem"
-							src="api/images/contact/dimensions8.png"
-							alt="8 dimenions of healing icon"
-						/>
-					</a>
-					<p className="contactintroicondesc contactintrogriditem">
-						Please click here to watch all our videos
-					</p>
-					<p className="contactintroicondesc contactintrogriditem"></p>
-					<p className="contactintroicondesc contactintrogriditem">
-						Click here for our Eight Dimensions of Wellness Programme Overview
-					</p>
-				</section>
+
+					<section className="contactsocialmedia">
+						<a
+							href="https://www.youtube.com/@EduFocusProjects_NPO"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<img
+								className="contactintroicon contactintrogriditem"
+								src="api/images/contact/youtube.svg"
+								alt="youtube icon"
+							/>
+						</a>
+						<a
+							href="https://www.facebook.com/groups/www.edufocusprojects.co.za"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<img
+								className="contactintroicon contactintrogriditem"
+								src="api/images/contact/facebook.svg"
+								alt="facebook icon"
+							/>
+						</a>
+						<a
+							href="https://acrobat.adobe.com/link/review?uri=urn%3Aaaid%3Ascds%3AUS%3A1e5659ff-bbfc-3803-b8b5-e60db9e520bb"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<img
+								className="contactintroicon contactintrogriditem"
+								src="api/images/contact/dimensions8.png"
+								alt="8 dimensions of healing icon"
+							/>
+						</a>
+						<p className="contactintroicondesc contactintrogriditem">
+							Please click here to watch all our videos
+						</p>
+						<p className="contactintroicondesc contactintrogriditem"></p>
+						<p className="contactintroicondesc contactintrogriditem">
+							Click here for our Eight Dimensions of Wellness Programme Overview
+						</p>
+					</section>
 			</section>
 			<section className="contactformsection">
 				<h2 className="contactformheading">Have a question? Want to donate?</h2>
@@ -201,6 +204,7 @@ const Contact = () => {
 				</form>
 			</section>
 		</section>
+		</main>
 	);
 
 };
