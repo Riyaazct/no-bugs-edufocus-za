@@ -43,7 +43,7 @@ function NavbarBlue() {
 						</span>
 					</div>
 				</div>
-				<Link to="signup" className="no-link">
+				<Link to="/signup" className="no-link">
 				<div className="small-fill">
 					<div className="sign-up valign-text-middle dmsans-medium-white-16px">
 						<span>
