@@ -13,7 +13,7 @@ function LogIn() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
-  
+
   useEffect(() => {
     userRef.current.focus();
   }, []);
@@ -29,9 +29,9 @@ function LogIn() {
       // Make a POST request to the server using Axios
       const response = await axios.post("/api/login", { username, password }, {
         headers: {
-          'Content-Type':
-            'application/json'
-        }, withCredentials: true
+          "Content-Type":
+            "application/json",
+        }, withCredentials: true,
       });
       const { user, message } = response.data;
       setAuth(response.data.user);
@@ -41,7 +41,7 @@ function LogIn() {
       if (msg) {
         setErrMsg(msg);
       }
-      
+
       if (infoRole === "admin") {
         setUsername("");
         setPassword("");
@@ -50,9 +50,9 @@ function LogIn() {
         setUsername("");
         setPassword("");
         navigate("/member");
-        
+
       }
-      
+
   } catch (err) {
     // Handle errors from the server or network
     if (!err?.response) {
@@ -104,7 +104,7 @@ return (
         <span className="line">
           <Link to="/signup">Sign up</Link>
         </span>
-       
+
       </div>
     </section>
 

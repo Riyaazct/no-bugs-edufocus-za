@@ -6,8 +6,8 @@ const Administrator = () => {
     <div>
     Temporary administrator page
     </div>
-  )
-}
+  );
+};
 
 
 
