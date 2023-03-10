@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@600&display=swap');
 
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --color-black: #000;
   --color-blue: #1E0F9E;
@@ -16,52 +9,49 @@
   --color-darkgreen: #0c5d4a;
 }
 
-/* html {
-
+.login-wrap {
   font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
-}
-
-body {
-  min-height: 100vh;
-  margin: 0 auto;
-  background-color: var(--color-lightergreen);
-} */
-
-
-.wrap {
+  font-size: 0.9rem;
+  color: var(--color-blue);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2.5rem;
+  padding: 1rem;
+  background-color: var(--color-lightergreen);
+  min-height: 100vh;
+  margin: 0 auto;
 }
 
-.loginForm { 
+.login-wrap h2 {
+  font-size: 1.5rem;
+}
+
+.login-wrap form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
 }
-/* change */
-label {
+
+.login-wrap label {
   margin-top: 10px;
 }
-/* change */
-input[type="text"],
-input[type="password"] {
-  padding: 8px;
+
+.login-wrap input[type="text"],
+.login-wrap input[type="password"] {
+  padding: 3px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 5px;
   width: 100%;
   box-sizing: border-box;
 }
-/* change */
-button {
+
+.login-wrap button {
   background-color: var(--color-black);
   color: white;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -69,8 +59,7 @@ button {
   margin-bottom: 1rem;
 
 }
-/* change */
-button:hover {
+
+.login-wrap button:hover {
   background-color: var(--color-green);
 }
-
