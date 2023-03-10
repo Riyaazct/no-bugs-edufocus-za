@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import Header from "../components/Navbar/Header";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 function Home() {
 	return (
@@ -11,66 +12,59 @@ function Home() {
 				<section className="hero-wrap">
 					<div className="overlay">
 						<div className="content-wrap">
-							<div className="text-wrap">
+							<div className="left-box">
+								<h2>Edu Focus</h2>
 								<h3>The teacher is at the heart of everything we do</h3>
+								<div className="buttons">
+									<Button
+										variant="contained"
+										color="primary"
+										size="large"
+										style={{ margin: "10px" }}
+									>
+										Partner with us
+									</Button>
+									<Button
+										variant="contained"
+										color="secondary"
+										size="large"
+										style={{ margin: "10px" }}
+									>
+										Support
+									</Button>
+								</div>
 							</div>
-							<div className="logo-wrap">
-								<img src="api/images/home/logo.webp" alt="big round logo EduFocus" />
-							</div>
-							<div className="buttons">
-								<Button
-									variant="contained"
-									color="secondary"
-									size="large"
-									style={{ margin: "10px" }}
-								>
-									Programmes
-								</Button>
-								<Button
-									variant="contained"
-									color="primary"
-									size="large"
-									style={{ margin: "10px" }}
-								>
-									Partner with us
-								</Button>
-								<Button
-									variant="contained"
-									color="secondary"
-									size="large"
-									style={{ margin: "10px" }}
-								>
-									Support
-								</Button>
+							<div className="right-box">
+								<div className="logo-wrap">
+									<img src="api/images/home/logo.webp" alt="big round logo EduFocus" />
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section>
-					<div className="welcome">
+				<section className="welcome">
+					<div className="welcome-text">
 						<h2>Welcome to EduFocus Projects.</h2>
 						<p>
 							EduFocus Projects NPO provides training, coaching and mentoring
 							interventions to the education sector, in alignment with Goal 4 of
 							the Sustainable Development Goals (SDGs, 2015): QUALITY EDUCATION
 						</p>
-						<img
-							className="svg1"
-							src="api/images/home/green.svg"
-							alt="green round shape"
-						/>
+						<Button
+							variant="contained"
+							color="secondary"
+							size="large"
+							style={{ margin: "10px" }}
+						>
+							Programmes
+						</Button>
 					</div>
-					<div className="second-hero">
+					<div className="welcome-img">
 						<img
 							src="api/images/home/hero-second.png"
 							alt="group of three people looking at a paper"
 						/>
 					</div>
-					<img
-						className="svg2"
-						src="api/images/home/blue.svg"
-						alt="blue elliptical shape"
-					/>
 				</section>
 				<section className="programmes">
 					<h3>What Do We Do?</h3>
@@ -88,9 +82,27 @@ function Home() {
 							</p>
 						</div>
 						<div className="photos">
-							<img src="api/images/home/coaching.webp" alt="coaching" />
-							<img src="api/images/home/training.webp" alt="training" />
-							<img src="api/images/home/mentor.webp" alt="mentor" />
+							<div className="coaching">
+								<h4>Coaching programmes</h4>
+								<img src="api/images/home/coaching.webp" alt="coaching" />
+								<p>
+									<Link to="/">Find out more...</Link>
+								</p>
+							</div>
+							<div className="training">
+								<h4>Training programmes</h4>
+								<img src="api/images/home/training.webp" alt="training" />
+								<p>
+									<Link to="/">Find out more...</Link>
+								</p>
+							</div>
+							<div className="mentor">
+								<h4>Mentoring programmes</h4>
+								<img src="api/images/home/mentor.webp" alt="mentor" />
+								<p>
+									<Link to="/">Find out more...</Link>
+								</p>
+							</div>
 						</div>
 					</div>
 				</section>
