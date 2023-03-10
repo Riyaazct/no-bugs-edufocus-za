@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,7 +31,7 @@ function SignUp() {
   const [matchFocus, setMatchFocus] = useState(false);
 
   const [errMsg, setErrMsg] = useState("");
- 
+
 
   //for focus
   useEffect(() => {
@@ -79,9 +79,9 @@ function SignUp() {
     const newUser = {
       username,
       email,
-      password
+      password,
 
-    }
+    };
 
     try {
       const response = await axios.post("/api/createAccount",
@@ -89,7 +89,7 @@ function SignUp() {
         JSON.stringify(newUser),
         {
           headers: { "Content-Type": "application/json" },
-          withCredentials: true
+          withCredentials: true,
         }
       );
       const data = await response.data;
@@ -215,7 +215,7 @@ function SignUp() {
           <p>
             Already have an account?<br />
             <span className="line">
-            <Link to="/login">Log In</Link>   
+            <Link to="/login">Log In</Link>
             </span>
           </p>
         </section>
