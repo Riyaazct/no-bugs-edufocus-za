@@ -16,6 +16,17 @@
 	--textColor: #eee;
 }
 
+.pageActive  {
+		background-color: #17997a;
+		height:55px;
+		padding: 5px;
+		border-radius: 25px;
+	}
+	.pageActive a {
+		color: #1e0f9e;
+		font-weight: bold;
+	}
+
 header {
 	display: flex;
 	align-items: center;

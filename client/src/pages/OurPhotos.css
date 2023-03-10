@@ -99,6 +99,7 @@
 }
 /* MEDIA QUERIES */
 @media only screen and (min-width: 768px) {
+	
 	.carouselCard {
 		padding: 5px;
 		margin: 5px;

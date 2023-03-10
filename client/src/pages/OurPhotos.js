@@ -5,7 +5,7 @@ import axios from "axios";
 import "./OurPhotos.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // import { RxDotFilled } from "react-icons/rx";
-import NavbarBlue from "../components/Navbar/NavbarBlue";
+import Header from "../components/Navbar/Header";
 // import Footer from "../components/Footer";
 
 
@@ -68,7 +68,7 @@ const OurPhotos = () => {
 		<Fragment>
 		{loading ? (<h3>Loading...</h3>) : (<>
 
-				<NavbarBlue />
+				<Header />
 			<div className="photosContainer">
 				<h1>Our Photos</h1>
 				<hr />
