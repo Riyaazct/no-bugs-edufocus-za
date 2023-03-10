@@ -1,13 +1,13 @@
 import React from "react";
 import "./Home.css";
-import Header from "../components/Navbar/Header";
+import Headers from "../components/Navbar/Header";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
 function Home() {
 	return (
 		<>
-			<Header />
+			<Headers />
 			<div className="home-page">
 				<section className="hero-wrap">
 					<div className="overlay">
