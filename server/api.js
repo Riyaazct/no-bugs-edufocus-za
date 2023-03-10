@@ -7,6 +7,21 @@ import logger from "./utils/logger";
 // import images route from file
 import imageRoutes from "./imageRoutes";
 
+//contact form imports and getting tokens and google oauth
+
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
+
+const oauth2Client = new OAuth2(
+process.env.CLIENT_ID,
+process.env.CLIENT_SECRET,
+"https://developers.google.com/oauthplayground");
+
+oauth2Client.setCredentials({ refresh_token:process.env.Refresh_Token });
+const accessToken = oauth2Client.getAccessToken();
+
+//++++++++++++++++++++
+
 const router = Router();
 const bcrypt = require("bcrypt");
 
@@ -26,7 +41,6 @@ router.use(session({
 
 //router for images displayed on pages
 router.use("/", imageRoutes);
-
 
 router.get("/", (_, res) => {
   logger.debug("Welcoming everyone...");
@@ -55,13 +69,83 @@ router.get("/login", (_, res) => {
   res.json({ message: "Hello, I am login!" });
 });
 
-router.get("/contact-us", (_, res) => {
-  console.log("Contact us page API is working");
-});
-
 router.get("/our-people", (_, res) => {
   console.log("Our People Page API is working....");
 });
+
+
+//***********************/
+//CONTACT PAGE
+
+//   message object from frontend
+//   const [contactmsg, setContactmsg] = useState({
+//   fullname: "",
+//   email: "",
+//   messagetype: "",
+//   message: "",
+//  });
+
+//general get for testing purpose
+router.get("/contact", (_, res) => {
+  console.log("Contact Page API is working...");
+  res.json({ message: "Hello, I am Contact" });
+});
+
+router.post("/contact",(req,response)=>{
+
+  //email sample
+  const output=`
+  <p>You have a new contact request</p>
+  <img class="email" src="cid:email" alt="email-image">
+  <h3>Contact details</h3>
+  <ul>
+  <li>FirstName: ${req.body.fullname}</li>
+  <li>TelNum: ${req.body.email}</li>
+  <li>Email: ${req.body.messagetype}</li>
+  <li>Message: ${req.body.message}</li>
+  </ul>`;
+
+  //sending mail using SMTP and nodemailer
+  const smtpTrans = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      type:"OAuth2",
+      user:process.env.GMAIL_USER,
+      clientId:process.env.CLIENT_ID,
+      clientSecret:process.env.CLIENT_SECRET,
+      refreshToken:process.env.REFRESH_TOKEN,
+      accessToken:accessToken,
+    },
+  });
+
+  //email with content
+  const mailOpts = {
+    from:process.env.GMAIL_USER,
+    to:process.env.RECIPIENT,
+    subject:"New message from Edufocus Website Contact form",
+    html:output,
+    attachments: [{
+    filename: "email.jpg",
+    // path:__dirname + '/public/images/email.jpg',cid: 'email' //same cid value as in the html img src`
+    }] };
+    //send email
+    smtpTrans.sendMail(mailOpts,(error,res)=>{
+     if(error){
+     console.log(error);
+     } else{
+      console.log("Message sent: " + res.message);
+      response.status(200).send(200);
+      }
+    //smtpTrans.close();
+     });
+  });
+//****************************/
+
+
+
+
 
 // REGISTRATION
 router.post("/createAccount", async (req, res) => {
