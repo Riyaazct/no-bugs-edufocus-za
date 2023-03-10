@@ -44,7 +44,8 @@ function NavbarBlue() {
 				</div>
 
 				<div className="small-fill">
-					<div className="sign-up valign-text-middle dmsans-medium-white-16px">
+				
+				<div className="sign-up valign-text-middle dmsans-medium-white-16px">
 						<span>
 							<span className="dmsans-medium-white-16px">Sign Up</span>
 						</span>
