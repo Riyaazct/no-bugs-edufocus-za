@@ -7,6 +7,11 @@
   --color-green: #17997A;
 }
 
+ a {
+  text-decoration: none;
+  
+}
+
 .home-page {
   min-height: 100vh;
   margin: 0 auto;

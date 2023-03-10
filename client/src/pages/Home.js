@@ -16,32 +16,34 @@ function Home() {
 								<h2>Edu Focus</h2>
 								<h3>The teacher is at the heart of everything we do</h3>
 								<div className="buttons">
-									<Link to="/contact">
-									<Button
-										variant="contained"
-										color="primary"
-										size="large"
-										style={{ margin: "10px" }}
-									>
-										Partner with us
+									<Link to="/contact" className="buttonLink">
+										<Button
+											variant="contained"
+											color="primary"
+											size="large"
+											style={{ margin: "10px" }}
+										>
+											Partner with us
 										</Button>
 									</Link>
-									<Link to="/contact">
-
-									<Button
-										variant="contained"
-										color="secondary"
-										size="large"
-										style={{ margin: "10px" }}
+									<Link to="/contact" className="buttonLink">
+										<Button
+											variant="contained"
+											color="secondary"
+											size="large"
+											style={{ margin: "10px" }}
 										>
-										Support
-									</Button>
-										</Link>
+											Support
+										</Button>
+									</Link>
 								</div>
 							</div>
 							<div className="right-box">
 								<div className="logo-wrap">
-									<img src="api/images/home/logo.webp" alt="big round logo EduFocus" />
+									<img
+										src="api/images/home/logo.webp"
+										alt="big round logo EduFocus"
+									/>
 								</div>
 							</div>
 						</div>
