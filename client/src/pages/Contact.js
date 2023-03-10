@@ -69,7 +69,7 @@ const Contact = () => {
 			<section className="contactintro">
 				<img
 					className="contactintroimage"
-					src="/api/images/contact/greenblob.png"
+					src="api/images/contact/greenblob.png"
 					alt="green blob"
 				/>
 				<div className="contactcentered">
