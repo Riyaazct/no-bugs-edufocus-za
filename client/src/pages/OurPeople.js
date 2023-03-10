@@ -17,8 +17,8 @@ const OurPeople = () => {
 				<div className="userpic">
 					<img
 						className="mask-icon"
-						alt="/"
-						src="api/images/our-people/Dorothy.jpg"
+						alt="."
+						src="/api/images/ourPeople/dorothy.jpg"
 					/>
 				</div>
 			</div>
@@ -35,8 +35,8 @@ const OurPeople = () => {
 				<div className="userpic">
 					<img
 						className="mask-icon"
-						alt=""
-						src="api/images/our-people/grace.png"
+						alt="."
+						src="/api/images/ourPeople/grace.jpg"
 					/>
 				</div>
 			</div>
@@ -54,7 +54,7 @@ const OurPeople = () => {
 					<img
 						className="mask-icon"
 						alt=""
-						src="api/images/our-people/cherith.jpg"
+						src="/api/images/ourPeople/cherith.jpg"
 					/>
 				</div>
 			</div>
@@ -72,7 +72,7 @@ const OurPeople = () => {
 					<img
 						className="mask-icon"
 						alt=""
-						src="api/images/our-people/faith.jpg"
+						src="/api/images/ourPeople/faith.jpg"
 					/>
 				</div>
 			</div>
@@ -90,7 +90,7 @@ const OurPeople = () => {
 					<img
 						className="mask-icon"
 						alt=""
-						src="api/images/our-people/Jade.png"
+						src="/api/images/ourPeople/jade.jpg"
 					/>
 				</div>
 			</div>
@@ -111,7 +111,7 @@ const OurPeople = () => {
 					<img
 						className="mask-icon"
 						alt=""
-						src="api/images/our-people/Henry.png"
+						src="/api/images/ourPeople/henry.jpg"
 					/>
 				</div>
 			</div>
