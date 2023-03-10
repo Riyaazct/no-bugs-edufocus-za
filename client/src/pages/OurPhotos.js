@@ -33,6 +33,7 @@ const OurPhotos = () => {
 				console.log(err);
 			});
 	}, []);
+	console.log(slide);
 
 	// function to go to next image
 	const nextImage = () => {
