@@ -16,6 +16,7 @@ function Home() {
 								<h2>Edu Focus</h2>
 								<h3>The teacher is at the heart of everything we do</h3>
 								<div className="buttons">
+									<Link to="/contact">
 									<Button
 										variant="contained"
 										color="primary"
@@ -23,15 +24,19 @@ function Home() {
 										style={{ margin: "10px" }}
 									>
 										Partner with us
-									</Button>
+										</Button>
+									</Link>
+									<Link to="/contact">
+
 									<Button
 										variant="contained"
 										color="secondary"
 										size="large"
 										style={{ margin: "10px" }}
-									>
+										>
 										Support
 									</Button>
+										</Link>
 								</div>
 							</div>
 							<div className="right-box">

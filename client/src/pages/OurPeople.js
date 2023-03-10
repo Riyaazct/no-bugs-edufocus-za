@@ -17,7 +17,7 @@ const OurPeople = () => {
 				<div className="userpic">
 					<img
 						className="mask-icon"
-						alt=""
+						alt="/"
 						src="api/images/our-people/Dorothy.jpg"
 					/>
 				</div>

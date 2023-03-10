@@ -80,6 +80,7 @@ nav {
 }
 
 .small-fill {
+	z-index: -1;
   align-items: flex-start;
   background-color: var(--secondaryColor);
   border-radius: 100px;
@@ -88,7 +89,9 @@ nav {
   justify-content: flex-end;
   min-width: 92px;
   padding: 8px 16.9px;
+  
 }
+
 
 .small-white-outline {
   align-items: flex-start;
@@ -106,8 +109,9 @@ nav {
   min-width: 57px;
   text-align: center;
   white-space: nowrap;
-	
+  color: black;
 }
+
 
 @media only screen and (max-width: 1024px) {
 	header .nav-btn {
