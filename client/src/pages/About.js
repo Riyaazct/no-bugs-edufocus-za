@@ -1,8 +1,7 @@
 import "./about.css";
 import Mission from "./Mission-Vision";
-// import NavbarBlue from "../components/Navbar/NavbarBlue";
 import Header from "../components/Navbar/Header";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 import TheProblem from "./TheProblem";
 
 const About = () => (
@@ -48,7 +47,7 @@ const About = () => (
 		</div>
 		<Mission />
 		<TheProblem />
-		{/* <Footer /> */}
+		<Footer />
 	</main>
 );
 
