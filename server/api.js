@@ -1,3 +1,4 @@
+
 import { Router } from "express";
 import session from "express-session";
 import bodyParser from "body-parser";
@@ -6,20 +7,23 @@ import db from "./db";
 import logger from "./utils/logger";
 // import images route from file
 import imageRoutes from "./imageRoutes";
+import nodemailer from "nodemailer";
 
 //contact form imports and getting tokens and google oauth
 
 const { google } = require("googleapis");
+const dotenv = require("dotenv");
+dotenv.config();
 const OAuth2 = google.auth.OAuth2;
 
 const oauth2Client = new OAuth2(
-process.env.CLIENT_ID,
-process.env.CLIENT_SECRET,
-"https://developers.google.com/oauthplayground");
+  process.env.Client_ID,
+  process.env.Client_Secret,
+  "https://developers.google.com/oauthplayground"
+);
 
 oauth2Client.setCredentials({ refresh_token:process.env.Refresh_Token });
 const accessToken = oauth2Client.getAccessToken();
-
 //++++++++++++++++++++
 
 const router = Router();
@@ -86,6 +90,7 @@ router.get("/our-people", (_, res) => {
 //  });
 
 //general get for testing purpose
+
 router.get("/contact", (_, res) => {
   console.log("Contact Page API is working...");
   res.json({ message: "Hello, I am Contact" });
@@ -113,9 +118,9 @@ router.post("/contact",(req,response)=>{
     auth: {
       type:"OAuth2",
       user:process.env.GMAIL_USER,
-      clientId:process.env.CLIENT_ID,
-      clientSecret:process.env.CLIENT_SECRET,
-      refreshToken:process.env.REFRESH_TOKEN,
+      clientId:process.env.Client_ID,
+      clientSecret:process.env.Client_Secret,
+      refreshToken:process.env.Refresh_Token,
       accessToken:accessToken,
     },
   });
@@ -126,21 +131,22 @@ router.post("/contact",(req,response)=>{
     to:process.env.RECIPIENT,
     subject:"New message from Edufocus Website Contact form",
     html:output,
-    attachments: [{
-    filename: "email.jpg",
-    // path:__dirname + '/public/images/email.jpg',cid: 'email' //same cid value as in the html img src`
-    }] };
+    // attachments: [{
+    // filename: "email.jpg",
+    // // path:__dirname + '/public/images/email.jpg',cid: 'email' //same cid value as in the html img src`
+    // }]
+  };
     //send email
-    smtpTrans.sendMail(mailOpts,(error,res)=>{
-     if(error){
-     console.log(error);
-     } else{
+  smtpTrans.sendMail(mailOpts,(error,res)=>{
+    if(error){
+    console.log(error);
+    } else{
       console.log("Message sent: " + res.message);
       response.status(200).send(200);
-      }
-    //smtpTrans.close();
-     });
+    }
+   //smtpTrans.close();
   });
+});
 //****************************/
 
 
