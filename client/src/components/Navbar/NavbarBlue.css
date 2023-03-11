@@ -63,6 +63,10 @@ nav a:hover {
 	display: none;
 }
 
+.dmsans-medium-white-16px span {
+	display: none;
+}
+
 .header-buttons2 {
   display: none;
 }
