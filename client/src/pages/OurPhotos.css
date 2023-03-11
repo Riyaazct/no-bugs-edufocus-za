@@ -88,26 +88,26 @@
 
 .imageModal {
 	position: absolute;
-	top: 0;
-	bottom: 0;
+	bottom: -15px;
 	left: 50%;
 	transform: translateX(-50%);
-	/* overflow: scroll;     */
 }
 
 .imageModal img {
 	width: 100vw;
-	height: 80vh;
-	/* transform: scale(2); */
+	height: 85vh;
 }
-
+/* MEDIA QUERIES */
 @media only screen and (min-width: 768px) {
+	
 	.carouselCard {
 		padding: 5px;
 		margin: 5px;
 		max-width: 80vw;
 		margin: auto;
 	}
+	
+
 	.photosContainer h1 {
 		font-size: 2.4rem;
 	}
@@ -121,6 +121,7 @@
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
 	}
+	
 	.carouselTextContainer {
 		border-top-right-radius: 20px;
 		border-top-left-radius: 20px;
@@ -130,7 +131,7 @@
 		width: 50vw;
 	}
 	.imageModal img {
-		height: 110vh;
+		width: 80vw;
 	}
     .photosContainer hr {
         max-width: 80vw;
@@ -173,7 +174,7 @@
 	.carouselCard {
 		padding: 5px;
 		margin: 5px;
-		max-width: 1100px;
+		max-width: 70%;
         margin: auto;
 	}
     .photosContainer h1 {
