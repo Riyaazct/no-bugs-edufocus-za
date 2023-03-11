@@ -3,6 +3,10 @@ import "./NavbarBlue.css";
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+import * as React from 'react';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
 function NavbarBlue() {
 	const navRef = useRef();
 
@@ -45,24 +49,10 @@ function NavbarBlue() {
 			<button className="nav-btn" onClick={showNavbar}>
 				<FaBars />
 			</button>
-
-			<div className="header-buttons">
-				<div className="small-white-outline">
-					<div className="sign-up valign-text-middle dmsans-medium-white-16px">
-						<span>
-							<span className="dmsans-medium-white-16px">Sign in</span>
-						</span>
-					</div>
-				</div>
-
-				<div className="small-fill">
-					<div className="sign-up valign-text-middle dmsans-medium-white-16px">
-						<span>
-							<span className="dmsans-medium-white-16px">Sign Up</span>
-						</span>
-					</div>
-				</div>
-			</div>
+			 <Stack spacing={2} direction="row">
+			      <Button variant="contained">Contained</Button>
+			      <Button variant="outlined">Outlined</Button>
+			    </Stack>
 		</header>
 	);
 }
