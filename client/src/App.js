@@ -14,6 +14,7 @@ import Administrator from "./pages/Administrator";
 import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import TrainingMaterialsManagement from "./components/TrainingMaterialsManagement";
 
 
 const App = () => (
@@ -36,6 +37,8 @@ const App = () => (
 		<Route path="*" element={<Error />} />
 
 		<Route path="/contact" element={<Contact />} />
+
+		<Route path="/admin/training-material" element={<TrainingMaterialsManagement />} />
 
 	</Routes>
 );
