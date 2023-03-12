@@ -32,16 +32,17 @@ const TrainingMaterialsManagement = () => {
 
 	return (
 		<div className="trainingMaterialsPage">
-			<h2>TrainingMaterialsManagement</h2>
+			<h2>Training Material Management</h2>
 			<table>
 				<thead>
 					<tr>
-						<th>id</th>
-						<th>title</th>
-						<th>description</th>
-						<th>file_path</th>
-						<th>date_uploaded</th>
-						<th>user_id</th>
+						<th>Id</th>
+						<th>Title</th>
+						<th>Description</th>
+						<th>Date</th>
+						<th>File_path</th>
+						<th>Date_uploaded</th>
+						<th>Uploaded by User</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -49,8 +50,9 @@ const TrainingMaterialsManagement = () => {
 						<tr key={material.id}>
 							<td>{material.title}</td>
 							<td>{material.description}</td>
-							<td>{material.file_path}</td>
 							<td>{material.date}</td>
+							<td>{material.file_path}</td>
+							<td>{material.uploaded}</td>
 							<td>{material.user_id}</td>
 							<td>
 								<button onClick={() => deleteMaterial(material.id)}>

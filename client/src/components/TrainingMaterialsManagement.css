@@ -1,0 +1,36 @@
+.trainingMaterialsPage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.trainingMaterialsPage h2 {
+    margin-bottom: 20px;
+}
+
+.trainingMaterialsPage table {
+    width: 100%;
+    /* border-collapse: collapse; */
+}
+
+.trainingMaterialsPage th,
+.trainingMaterialsPage td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.trainingMaterialsPage th {
+    background-color: #f2f2f2;
+}
+
+.trainingMaterialsPage button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.trainingMaterialsPage button:hover {
+    background-color: #c82333;
+}
