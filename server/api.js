@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import db from "./db";
 import logger from "./utils/logger";
 import imageRoutes from "./imageRoutes";
+const multer = require("multer");
 
 const router = Router();
 const bcrypt = require("bcrypt");

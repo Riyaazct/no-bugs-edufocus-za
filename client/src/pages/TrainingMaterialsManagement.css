@@ -29,6 +29,8 @@
     color: white;
     border: none;
     cursor: pointer;
+    padding: 4px;
+    border-radius: 5px;
 }
 
 .trainingMaterialsPage button:hover {

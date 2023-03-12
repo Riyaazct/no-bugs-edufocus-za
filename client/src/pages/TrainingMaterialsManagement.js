@@ -44,6 +44,7 @@ const TrainingMaterialsManagement = () => {
 						<th>File_path</th>
 						<th>Date_uploaded</th>
 						<th>Uploaded by User</th>
+						<th>Manage Data</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -56,7 +57,7 @@ const TrainingMaterialsManagement = () => {
 							<td>{material.file_path}</td>
 							<td>{material.uploaded}</td>
 							<td>{material.user_id}</td>
-							<td>
+							<td >
 								<button onClick={() => deleteMaterial(material.id)}>
 									Delete
 								</button>
