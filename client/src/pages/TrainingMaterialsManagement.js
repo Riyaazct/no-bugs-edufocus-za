@@ -13,17 +13,18 @@ const TrainingMaterialsManagement = () => {
 	// function to get materials from api
 	const getMaterials = async () => {
 		try {
-			const response = await axios.get("/api/materials");
+			const response = await axios.get("/api/training_material");
 			setMaterials(response.data);
 		} catch (error) {
 			console.error(error);
 		}
 	};
 
-	// function to delete material for the button
+
+	// function to delete training material.
 	const deleteMaterial = async (id) => {
 		try {
-			await axios.delete(`/api/materials/${id}`);
+			await axios.delete(`/api/training_material/${id}`);
 			setMaterials(materials.filter((material) => material.id !== id));
 		} catch (error) {
 			console.error(error);
@@ -48,6 +49,7 @@ const TrainingMaterialsManagement = () => {
 				<tbody>
 					{materials.map((material) => (
 						<tr key={material.id}>
+							<td>{material.id}</td>
 							<td>{material.title}</td>
 							<td>{material.description}</td>
 							<td>{material.date}</td>

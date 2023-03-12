@@ -4,7 +4,6 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import db from "./db";
 import logger from "./utils/logger";
-// import images route from file
 import imageRoutes from "./imageRoutes";
 
 const router = Router();
@@ -24,8 +23,65 @@ router.use(session({
   },
 }));
 
+
 //router for images displayed on pages
 router.use("/", imageRoutes);
+
+// photo carousel data in database
+router.get("/photos", async (req, res) => {
+	try {
+		const result = await db.query("select * from photos");
+		res.json(result.rows);
+	} catch (error) {
+		console.error(error);
+		res.status(500).json(error);
+	}
+});
+
+//API Endpoint to get all training material
+router.get("/training_material", (req, res) => {
+    db.query("SELECT * FROM training_material", (err, result) => {
+        if(err) {
+            console.error(err);
+            res.status(500).json({ error: "Internal Server Error" });
+            return;
+        } res.json(result.rows);
+    });
+});
+
+// API endpoint to get a specific training material by id
+router.get("/training_material/:id", (req, res) => {
+    const id = req.params.id;
+    db.query("SELECT * FROM training_material WHERE id = $1", [id], (err, result) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ error: "Internal Server Error" });
+            return;
+        }
+        if (result.rows.length === 0) {
+            res.status(404).json({ error: "Training material not found" });
+            return;
+        }
+        res.json(result.rows[0]);
+    });
+});
+
+router.delete("/training_material/:id", (req, res) => {
+  const id = req.params.id;
+  db.query("delete from training_material where id = $1", [id], (err, result) => {
+    if (err) {
+      console.error(err);
+      res.status(500).json({ error: "Internal server error" });
+      return;
+    }
+     res.json({ Message: "Training material deleted successfully" });
+  } );
+});
+
+
+
+
+
 
 router.get("/", (_, res) => {
   logger.debug("Welcoming everyone...");
@@ -142,21 +198,6 @@ router.post("/logout", (req, res) => {
       res.status(200).send("Logged out successfully");
     }
   });
-});
-
-// // route for images stored in server
-// const imagesRoot = path.join(__dirname, "images");
-// router.use("/images", express.static(imagesRoot));
-
-// photo carousel data in database
-router.get("/photos", async (req, res) => {
-	try {
-		const result = await db.query("select * from photos");
-		res.json(result.rows);
-	} catch (error) {
-		console.error(error);
-		res.status(500).json(error);
-	}
 });
 
 export default router;

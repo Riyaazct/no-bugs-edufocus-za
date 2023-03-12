@@ -14,7 +14,7 @@ import Administrator from "./pages/Administrator";
 import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import TrainingMaterialsManagement from "./components/TrainingMaterialsManagement";
+import TrainingMaterialsManagement from "./pages/TrainingMaterialsManagement";
 
 
 const App = () => (
