@@ -2,17 +2,15 @@ import React from "react";
 import { Route, Navigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
-export default function PrivateRoute({ element: Component, infoRole, ...rest }) {
-  const { isAuthenticated, user } = useAuth();
-
+function PrivateRoute({ element: Component, role, ...rest }) {
+  const { isAuthenticated, isAuthorized } = useAuth();
   if (!isAuthenticated) {
-    return <Navigate to="/unauthorized" replace />;
+    return <Navigate to="/login" />;
   }
-
-  if (infoRole && user.role !== infoRole) {
-    return <Navigate to="/unauthorized" replace />;
+  if (!isAuthorized(role)) {
+    return <Navigate to="/unauthorized" />;
   }
-
-  return <Route {...rest} element={<Component />} />;
+  return <Route {...rest} render={(props) => <Component {...props} />} />;
 }
 
+export default PrivateRoute;

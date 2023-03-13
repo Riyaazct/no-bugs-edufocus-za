@@ -277,7 +277,7 @@
 }
 
 /* TABLET */
-@media only screen and (min-width: 767px) and (max-width: 1024px) {
+@media only screen and (min-width: 767px) {
   .hero-wrap {
     height: 40vh;
   }
@@ -300,3 +300,52 @@
 
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  
+  .content-wrap {
+    flex-direction: row;
+    gap: 5rem;  
+  }
+  .left-box h2 {
+    font-size: 1.2rem;  
+  }
+  
+  .left-box h3 {
+    font-size: 1.2rem;
+  }
+  .logo-wrap img {
+    max-width: 50%;
+    height: auto;
+  }
+  .left-box .buttons button {
+    width: 8rem;
+    font-size: 0.6rem;
+  }
+  
+  .welcome {
+    flex-direction: row;
+    margin-top: 2rem; 
+  }
+  .welcome-img img {
+    width: 100%;
+    height: auto;
+  }
+  .welcome-text h2 {
+    font-size: 1.5rem;
+    margin-top: -3rem;
+  }
+  
+  .welcome-text p {
+    font-size: 0.9rem;  
+  }
+  .welcome button {
+    font-size: 0.7rem;
+  }
+  .programmes h3 {
+    margin-top: -3rem;
+    font-size: 1.3rem;  
+  }
+  .photos>div>img {
+   max-width: 200px;  
+  }  
+}
