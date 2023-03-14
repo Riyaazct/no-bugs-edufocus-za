@@ -1,5 +1,5 @@
 import "./OurPeople.css";
-import NavbarBlue from "../components/Navbar/Header";
+import Header from "../components/Navbar/Header";
 
 const OurPeople = () => {
   return (
@@ -117,7 +117,7 @@ const OurPeople = () => {
 			</div>
 
 			<div className="header">
-				<NavbarBlue />
+				<Header />
 				<div>
 					<h1>Our Team</h1>
 				</div>

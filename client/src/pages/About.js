@@ -4,6 +4,7 @@ import Header from "../components/Navbar/Header";
 import Footer from "../components/Footer";
 import TheProblem from "./TheProblem";
 
+
 const About = () => (
 	<main role="main">
 		<Header />
@@ -47,6 +48,7 @@ const About = () => (
 		</div>
 		<Mission />
 		<TheProblem />
+
 		<Footer />
 	</main>
 );
