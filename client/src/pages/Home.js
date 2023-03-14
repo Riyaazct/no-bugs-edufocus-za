@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Headers from "../components/Navbar/Header";
+import Footer from "../components/Footer";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
@@ -23,7 +24,7 @@ function Home() {
 											size="large"
 											style={{ margin: "10px" }}
 										>
-											Partner with us
+											Programmes
 										</Button>
 									</Link>
 									<Link to="/contact" className="buttonLink">
@@ -63,7 +64,7 @@ function Home() {
 							size="large"
 							style={{ margin: "10px" }}
 						>
-							Programmes
+							Partner with us
 						</Button>
 					</div>
 					<div className="welcome-img">
@@ -114,6 +115,7 @@ function Home() {
 					</div>
 				</section>
 			</div>
+			<Footer/>
 		</>
 	);
 }
