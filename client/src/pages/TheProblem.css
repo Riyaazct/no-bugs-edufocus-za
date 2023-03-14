@@ -1,0 +1,189 @@
+@media screen and (max-width: 768px) {
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+}
+
+.theProblemContent {
+	display: flex;
+	flex-direction: column;
+}
+
+.mainContainer {
+	width: 100%;
+	padding-top: 10px;
+}
+
+.mainContainer h1 {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+.mainContainer hr {
+	margin-bottom: 30px;
+}
+
+.theProblemContent img {
+	width: 100%;
+}
+
+.theProblemTextContainer {
+	padding: 12px;
+	background-color: #17997b;
+}
+
+.theProblemContent p {
+	font-size: 1.1em;
+	line-height: 1.5;
+}
+
+.theProblemContent p:first-child {
+	padding-top: 10px;
+}
+
+/* media queries  */
+@media only screen and (min-width: 768px) {
+	.mainContainer {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	.theProblemContent {
+		margin: auto;
+		max-width: 700px;
+	}
+
+	.theProblemContent img {
+		border-top-right-radius: 15px;
+		border-top-left-radius: 15px;
+	}
+
+	.theProblemContent p {
+		font-size: 1.3rem;
+		background-color: unset;
+		line-height: 1.2;
+	}
+	.mainContainer hr {
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.mainContainer {
+		height: 100vh;
+	}
+
+		.theProblemContent {
+		position: relative;
+		flex-direction: row;
+		height: fit-content;
+		max-width: 80%;
+		margin-top: 100px;
+		gap: 10px;
+	}
+
+	.theProblemContent img {
+		max-height: max-content;
+		max-width: 360px;
+		border-radius: unset;
+		height: 280px;
+		
+	}
+	.theProblemTextContainer {
+		height: fit-content;
+		padding: 10px;
+		background-color: unset;
+		max-width: 50%;
+		margin-top: 50px;		
+	}
+
+	.theProblemTextContainer p {
+		margin-top: 30px;
+		font-size: 1.13rem;
+		color: black;
+		line-height: 1.05;
+		margin-top: 22px;
+	}
+
+	.backgroundDiv {
+		position: absolute;
+		width: 80%;
+		height: 580px;
+		background-color: #17997b;
+		z-index: -1;
+		top: 55px;
+		left: 155px;
+		border-radius: 5px;
+	}
+	.mainContainer hr {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (min-width: 1150px) {
+
+	
+	.mainContainer {
+		max-width: 1250px;
+		margin: auto;
+	}
+
+		
+	.theProblemContent img {
+		height: 80%;
+		max-width: 430px;
+	}
+	.theProblemTextContainer {
+		max-width: 80%;
+		margin-top: 80px;
+	}
+
+	.theProblemTextContainer p {
+		font-size: 1.2rem;
+		padding-right: 15px;
+	}
+
+	.backgroundDiv {
+		top: 100px;
+		left: 200px;
+		height: 90%;
+
+	}
+}
+
+@media only screen and (min-width: 1450px) {
+
+	.theProblemContent {
+		max-width: 1200px;
+	}
+
+	.theProblemContent img {
+		height: 350px;
+		width: unset;
+	}
+	.theProblemTextContainer {
+		max-width: 50%;
+	}
+
+	.theProblemTextContainer p {
+		font-size: 1.25rem;
+	}
+
+	.backgroundDiv {
+		left: 180px;
+		max-width: 75%;
+	}
+
+	.backgroundDiv {
+		max-width: 75%;
+		height: 85%;
+	}
+
+}

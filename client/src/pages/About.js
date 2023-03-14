@@ -1,10 +1,12 @@
 import "./about.css";
 import Mission from "./Mission-Vision";
-import NavbarBlue from "../components/Navbar/NavbarBlue";
+import Header from "../components/Navbar/Header";
+import Footer from "../components/Footer";
+import TheProblem from "./TheProblem";
 
 const About = () => (
 	<main role="main">
-		<NavbarBlue />
+		<Header />
 		<div className="main-container">
 			{/* TITLE */}
 			<div className="aboutOurStoryH1">
@@ -17,7 +19,7 @@ const About = () => (
 				<div className="aboutImgOverlay"></div>
 				{/* IMAGE */}
 				<div className="aboutOurStoryImg">
-					<img src="/images/our-story.jpg" alt=".." />
+					<img src="api/images/our-story.jpg" alt=".." />
 				</div>
 				{/* PARAGRAPHS(split into two) */}
 				<div className="ourStoryP">
@@ -44,6 +46,8 @@ const About = () => (
 			</div>
 		</div>
 		<Mission />
+		<TheProblem />
+		<Footer />
 	</main>
 );
 

@@ -16,6 +16,18 @@
 	--textColor: #eee;
 }
 
+.pageActive  {
+		background-color: #17997a;
+		height:55px;
+		padding: 5px;
+		
+		border-radius: 25px;
+	}
+	.pageActive a {
+		color: #1e0f9e;
+		font-weight: bold;
+	}
+
 header {
 	display: flex;
 	align-items: center;
@@ -24,8 +36,10 @@ header {
 	padding: 0 2rem;
 	background-color: var(--mainColor);
 	color: var(--textColor);
+	
 }
-  
+
+
 .header-buttons2 {
   display: none;
 }
@@ -43,6 +57,18 @@ nav a {
 
 nav a:hover {
 	color: var(--secondaryColor);
+}
+
+.small-s{
+	display: none;
+}
+
+.dmsans-medium-white-16px span {
+	display: none;
+}
+
+.header-buttons2 {
+  display: none;
 }
 
 header .nav-btn {
@@ -70,6 +96,7 @@ nav {
 }
 
 .small-fill {
+	z-index: -1;
   align-items: flex-start;
   background-color: var(--secondaryColor);
   border-radius: 100px;
@@ -78,7 +105,9 @@ nav {
   justify-content: flex-end;
   min-width: 92px;
   padding: 8px 16.9px;
+  
 }
+
 
 .small-white-outline {
   align-items: flex-start;
@@ -86,7 +115,7 @@ nav {
   display: flex;
   height: 40px;
   min-width: 92px;
-   padding: 8px 16.9px;
+  padding: 8px 16.9px;
 }
 
 .sign-up{
@@ -96,7 +125,9 @@ nav {
   min-width: 57px;
   text-align: center;
   white-space: nowrap;
+  color: black;
 }
+
 
 @media only screen and (max-width: 1024px) {
 	header .nav-btn {
@@ -104,7 +135,7 @@ nav {
 		opacity: 1;
 	}
 
-	header nav {
+	header nav{
 		position: fixed;
 		top: -100vh;
 		left: 0;
@@ -121,6 +152,7 @@ nav {
 
 	header .responsive_nav {
 		transform: translateY(100vh);
+		z-index: 10;
 	}
 
   .header-buttons2 {
@@ -142,4 +174,18 @@ nav {
 	nav a {
 		font-size: 1.5rem;
 	}
+	.small-s {
+		display: flex;
+	}
+
+	.small-s {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+	}
 }
+

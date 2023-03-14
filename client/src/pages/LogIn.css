@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@600&display=swap');
+
+:root {
+  --color-black: #000;
+  --color-blue: #1E0F9E;
+  --color-lightgreen: #6AE3C6;
+  --color-lightergreen: #98E4D2;
+  --color-green: #17997A;
+  --color-darkgreen: #0c5d4a;
+}
+
+.login-wrap {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  color: var(--color-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-lightergreen);
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.login-wrap h2 {
+  font-size: 1.5rem;
+}
+
+.login-wrap form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 200px;
+}
+
+.login-wrap label {
+  margin-top: 10px;
+}
+
+.login-wrap input[type="text"],
+.login-wrap input[type="password"] {
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-wrap button {
+  background-color: var(--color-black);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 1rem;
+
+}
+
+.login-wrap button:hover {
+  background-color: var(--color-green);
+}
