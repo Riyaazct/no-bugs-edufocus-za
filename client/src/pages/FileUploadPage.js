@@ -7,6 +7,7 @@ const FileUploadPage = () => {
 	const [fileUploadProgress, setFileUploadProgress] = useState(0);
 	const [alertMessage, setAlertMessage] = useState("");
 
+	// useEffect to initiate timeout for the progress bar
 	useEffect(() => {
 		let progressTimeout;
 
@@ -21,6 +22,7 @@ const FileUploadPage = () => {
 		};
 	}, [fileUploadProgress]);
 
+	// UseEfect to initiate timeout for the alert message.
 	useEffect(() => {
 		let alertTimeout;
 
@@ -35,14 +37,41 @@ const FileUploadPage = () => {
 		};
 	}, [alertMessage]);
 
+	// Function to store the selected file to state.
 	const handleFileSelect = (event) => {
 		setSelectedFile(event.target.files[0]);
 	};
+
+	// const handleFileUpload = () => {
+	// 	if (selectedFile) {
+	// 		const formData = new FormData();
+	// 		formData.append("file", selectedFile);
+
+	// 		axios
+	// 			.post("/api/training_material", formData, {
+	// 				onUploadProgress: (progressEvent) => {
+	// 					setFileUploadProgress(
+	// 						Math.round((progressEvent.loaded / progressEvent.total) * 100)
+	// 					);
+	// 				},
+	// 			})
+	// 			.then(() => {
+	// 				setAlertMessage("File uploaded successfully!");
+	// 				setSelectedFile(null);
+	// 			})
+	// 			.catch(() => {
+	// 				setAlertMessage("An error occurred while uploading the file.");
+	// 			});
+	// 	}
+	// };
 
 	const handleFileUpload = () => {
 		if (selectedFile) {
 			const formData = new FormData();
 			formData.append("file", selectedFile);
+			formData.append("title", document.getElementById("title").value);
+			formData.append("description", document.getElementById("description").value);
+			formData.append("date", document.getElementById("date").value);
 
 			axios
 				.post("/api/training_material", formData, {
@@ -53,21 +82,45 @@ const FileUploadPage = () => {
 					},
 				})
 				.then(() => {
-					setAlertMessage("File uploaded successfully!");
+					setAlertMessage("File uploaded successfully");
 					setSelectedFile(null);
 				})
 				.catch(() => {
-					setAlertMessage("An error occurred while uploading the file.");
+					setAlertMessage("An error occured while uploading the file");
 				});
 		}
 	};
 
+
+
 	return (
 		<div className="file-upload-page">
 			<div className="file-upload-container">
-				<h1>Upload a File</h1>
-				<input type="file" onChange={handleFileSelect} />
-				<button onClick={handleFileUpload}>Upload</button>
+
+					<h5>Upload Training Material</h5>
+					<label htmlFor="title">Title:</label>
+					<input className="titleInput" type="text" name="title" id="title" />
+					<label htmlFor="description">Description:</label>
+					<textarea
+						className="textArea"
+						name="description"
+						id="description"
+						cols="30"
+						rows="5"
+					></textarea>
+					<label htmlFor="date">Date:</label>
+					<input className="dateInput" type="date" name="" id="date" />
+
+					<input
+						className="fileInput"
+						type="file"
+						onChange={handleFileSelect}
+					/>
+
+
+				<button className="btn btn-primary btn-sm" onClick={handleFileUpload}>
+					Upload
+				</button>
 				{fileUploadProgress > 0 && (
 					<div className="progress-bar-container">
 						<div

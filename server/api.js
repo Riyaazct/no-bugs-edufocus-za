@@ -26,22 +26,51 @@ router.use(session({
 }));
 
 // FILE UPLOAD ENDPOINT
-router.post("/training_material", (req, res) => {
+// router.post("/training_material", (req, res) => {
+// 	if (req.files === null) {
+// 		return res.status(400).json({ msg: "No file uploaded" });
+// 	}
+
+// 	const file = req.files.file;
+
+// 	file.mv(`${__dirname}/training_material/${file.name}`, (err) => {
+// 		if (err) {
+// 			console.error(err);
+// 			return res.status(500).send(err);
+// 		}
+
+// 		res.json({ fileName: file.name, filePath: `/training_material/${file.name}` });
+// 	});
+// });
+
+router.post("/training_material", async (req, res) => {
 	if (req.files === null) {
 		return res.status(400).json({ msg: "No file uploaded" });
 	}
-
+	const { title, description, date } = req.body;
 	const file = req.files.file;
+	const filePath = `/training_material/${file.name}`;
 
-	file.mv(`${__dirname}/training_material/${file.name}`, (err) => {
-		if (err) {
-			console.error(err);
-			return res.status(500).send(err);
-		}
+	try {
+		// Insert record into database
+		const query =
+			"INSERT INTO training_material(title, description, date, file_path) VALUES ($1,$2,$3,$4)";
+		await db.query(query, [title, description, date, filePath]);
 
-		res.json({ fileName: file.name, filePath: `/training_material/${file.name}` });
-	});
+		// Save file to Server
+		file.mv(`${__dirname}/training_material/${file.name}`, (err) => {
+			if (err) {
+				console.error(err);
+				return res.status(500).send(err);
+			}
+			res.json({ fileName: file.name, filePath });
+		});
+	} catch (error) {
+		console.error(error);
+		res.status(500).json({ error: "Internal server error" });
+	}
 });
+
 
 
 
