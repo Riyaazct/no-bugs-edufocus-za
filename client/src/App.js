@@ -8,7 +8,7 @@ import Member from "./pages/Member";
 import Error from "./pages/Error";
 import Unauthorized from "./pages/Unauthorize";
 import Administrator from "./pages/Administrator";
-import PrivateRoute from "./pages/PrivateRoute";
+import { PrivateRoute } from "./pages/PrivateRoute";
 import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -25,8 +25,12 @@ const App = () => (
 		<Route path="/signup" element={<SignUp />} />
 		<Route path="/contact" element={<Contact />} />
 		<Route path="/unauthorized" element={<Unauthorized />} />
-		<Route path="/member" element={<PrivateRoute role="member" element={<Member />} />} />
-		<Route path="/adm" element={<PrivateRoute role="admin" element={<Administrator />} />} />
+		<Route element={<PrivateRoute role='admin' />}>
+			<Route path="/adm" element={<Administrator />} />
+		</Route>
+		<Route element={< PrivateRoute role='member' />}>
+			<Route path="/member" element={<Member />} />
+		</Route>
 		<Route path="*" element={<Error />} />
 	</Routes>
 );

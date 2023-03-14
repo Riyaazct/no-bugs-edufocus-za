@@ -1,16 +1,22 @@
 import React from "react";
-import { Route, Navigate } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
 
-function PrivateRoute({ element: Component, role, ...rest }) {
-  const { isAuthenticated, isAuthorized } = useAuth();
-  if (!isAuthenticated) {
-    return <Navigate to="/login" />;
-  }
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
+import Administrator from "./Administrator";
+import Member from "./Member";
+export const PrivateRoute = () => {
+  const { isAuthorized, auth } = useAuth();
+  const { role } = auth; 
   if (!isAuthorized(role)) {
     return <Navigate to="/unauthorized" />;
   }
-  return <Route {...rest} render={(props) => <Component {...props} />} />;
-}
+  return <>
+  {
+   role==='member'?<Member />:<Administrator /> 
+  }
+  </>;
+};
 
-export default PrivateRoute;
+
+
+

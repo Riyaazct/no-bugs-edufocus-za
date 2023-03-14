@@ -119,7 +119,7 @@ router.post("/login", async (req, res) => {
 
     res.status(200).json({
       user: user,
-      message: "Success",
+      message: `${username}`,
     });
 
 
