@@ -12,8 +12,7 @@ import { PrivateRoute } from "./pages/PrivateRoute";
 import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import Partners from "./pages/Partners";
-import "./pages/Partners.css";
+
 
 
 
@@ -24,8 +23,6 @@ const App = () => (
 		<Route path="/" element={<Home />} />
 		<Route path="/Ourpeople/this/a/team" element={<OurPeople />} />
 
-		<Route path="/about/this/site" element={<About />} />
-		<Route path="/partners" element={<Partners />} />
 		<Route path="/about" element={<About />} />
 		<Route path="/photos" element={<OurPhotos />} />
 		{/* <Route path="/problem" element={<TheProblem />} /> */}
@@ -43,7 +40,6 @@ const App = () => (
 
 		<Route path="/contact" element={<Contact />} />
 
-		<Route path="/partners" element={<Partners />} />
 	</Routes>
 );
 
