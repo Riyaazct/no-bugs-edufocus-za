@@ -5,6 +5,7 @@ import "./TrainingMaterialsManagement.css";
 const TrainingMaterialsManagement = () => {
 	const [materials, setMaterials] = useState([]);
 
+
 	// set materials state to material data from api on page load.
 	useEffect(() => {
 		getMaterials();
@@ -30,6 +31,7 @@ const TrainingMaterialsManagement = () => {
 			console.error(error);
 		}
 	};
+
 
 	return (
 		<div className="trainingMaterialsPage">

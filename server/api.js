@@ -5,12 +5,13 @@ import cookieParser from "cookie-parser";
 import db from "./db";
 import logger from "./utils/logger";
 import imageRoutes from "./imageRoutes";
-const multer = require("multer");
 
+const fileUpload = require("express-fileupload");
 const router = Router();
 const bcrypt = require("bcrypt");
 
 // middleware
+router.use(fileUpload());
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 router.use(cookieParser());
@@ -23,6 +24,28 @@ router.use(session({
     expires: 60 * 60 * 24,
   },
 }));
+
+// FILE UPLOAD ENDPOINT
+router.post("/training_material", (req, res) => {
+	if (req.files === null) {
+		return res.status(400).json({ msg: "No file uploaded" });
+	}
+
+	const file = req.files.file;
+
+	file.mv(`${__dirname}/training_material/${file.name}`, (err) => {
+		if (err) {
+			console.error(err);
+			return res.status(500).send(err);
+		}
+
+		res.json({ fileName: file.name, filePath: `/training_material/${file.name}` });
+	});
+});
+
+
+
+
 
 
 //router for images displayed on pages
@@ -39,7 +62,7 @@ router.get("/photos", async (req, res) => {
 	}
 });
 
-//API Endpoint to get all training material
+//API Endpoint to get all training materials;
 router.get("/training_material", (req, res) => {
     db.query("SELECT * FROM training_material", (err, result) => {
         if(err) {
@@ -66,10 +89,10 @@ router.get("/training_material/:id", (req, res) => {
         res.json(result.rows[0]);
     });
 });
-
+// delete training material by ID on button click in front-end.
 router.delete("/training_material/:id", (req, res) => {
   const id = req.params.id;
-  db.query("delete from training_material where id = $1", [id], (err, result) => {
+  db.query("delete from training_material where id = $1", [id], (err) => {
     if (err) {
       console.error(err);
       res.status(500).json({ error: "Internal server error" });

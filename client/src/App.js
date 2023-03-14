@@ -15,6 +15,7 @@ import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import TrainingMaterialsManagement from "./pages/TrainingMaterialsManagement";
+import FileUploadPage from "./pages/FileUploadPage";
 
 
 const App = () => (
@@ -39,6 +40,7 @@ const App = () => (
 		<Route path="/contact" element={<Contact />} />
 
 		<Route path="/admin/training-material" element={<TrainingMaterialsManagement />} />
+		<Route path="/admin/training-material/add" element={<FileUploadPage />} />
 
 	</Routes>
 );
