@@ -24,7 +24,7 @@ function Home() {
 											size="large"
 											style={{ margin: "10px" }}
 										>
-											Partner with us
+											Programmes
 										</Button>
 									</Link>
 									<Link to="/contact" className="buttonLink">
@@ -64,7 +64,7 @@ function Home() {
 							size="large"
 							style={{ margin: "10px" }}
 						>
-							Programmes
+							Partner with us
 						</Button>
 					</div>
 					<div className="welcome-img">
