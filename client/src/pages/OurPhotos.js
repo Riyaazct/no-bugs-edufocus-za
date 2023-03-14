@@ -1,87 +1,17 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
+import axios from "axios";
 import "./OurPhotos.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { RxDotFilled } from "react-icons/rx";
-import NavbarBlue from "../components/Navbar/NavbarBlue";
-import Footer from "../components/Footer";
+// import { RxDotFilled } from "react-icons/rx";
+import Header from "../components/Navbar/Header";
+// import Footer from "../components/Footer";
 
-// DATA FOR CAROUSEL(TO BE MOVED TO THE DATABASE AND ACCESSED VIA API)
-const slide = [
-	{
-		event: "EduFocus Projects Launch",
-		date: "12 March 2022",
-		location: "CPUT Hotel School, Granger Bay",
-		images: [
 
-			"api/images/vision.jpg",
-			"api/images/gallery/01 launch 2022/02.jpg",
-			"api/images/gallery/01 launch 2022/03.jpg",
-			"api/images/gallery/01 launch 2022/04.jpg",
-			"api/images/gallery/01 launch 2022/05.jpg",
-			"api/images/gallery/01 launch 2022/06.jpg",
-			"api/images/gallery/01 launch 2022/07.jpg",
-			"api/images/gallery/01 launch 2022/08.jpg",
-			"api/images/gallery/01 launch 2022/09.jpg",
-			"api/images/gallery/01 launch 2022/010.jpg",
-			"api/images/gallery/01 launch 2022/011.jpg",
-			"api/images/gallery/01 launch 2022/012.jpg",
-			"api/images/gallery/01 launch 2022/013.jpg",
-			"api/images/gallery/01 launch 2022/014.jpg",
-			"api/images/gallery/01 launch 2022/015.jpg",
-
-		],
-	},
-	{
-		event: "Teachers' Tea Time with a Difference",
-		date: "27 August 2022",
-		location: "Ottery Youth Centre",
-		images: [
-			"api/images/gallery/02 teachers' tea time with a difference 2022/01.jpg",
-			"api/images/gallery/02 teachers' tea time with a difference 2022/02.jpg",
-			"api/images/gallery/02 teachers' tea time with a difference 2022/03.jpg",
-			"api/images/gallery/02 teachers' tea time with a difference 2022/04.jpg",
-			"api/images/gallery/02 teachers' tea time with a difference 2022/05.jpg",
-			"api/images/gallery/02 teachers' tea time with a difference 2022/06.jpg",
-			"api/images/gallery/02 teachers' tea time with a difference 2022/07.jpg",
-		],
-	},
-	{
-		event: "EduFocus Projects Inaugural Gala & Awards Event",
-		date: "05 November 2022",
-		location: "Krystal Beach Hotel",
-		images: [
-			"api/images/gallery/03 inaugural  gala & awards event 2022/01.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/02.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/03.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/04.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/05.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/06.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/07.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/08.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/09.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/010.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/011.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/012.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/013.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/014.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/015.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/016.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/017.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/018.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/019.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/020.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/021.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/022.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/023.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/024.jpg",
-			"api/images/gallery/03 inaugural  gala & awards event 2022/025.jpg",
-		],
-	},
-];
 
 const OurPhotos = () => {
+	const [slide, setSlide] = useState([]);
 	//state for image carousel
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [event, setEvent] = useState(0);
@@ -89,6 +19,21 @@ const OurPhotos = () => {
 	// state for modal
 	const [selectedImage, setSelectedImage] = useState(null);
 	const [modalOpen, setModalopen] = useState(false);
+
+	const [loading, setLoading] = useState(true);
+
+	// UseEffect to get the data from the API
+	useEffect(() => {
+		axios.get("/api/photos")
+			.then((res) => {
+				setSlide(res.data);
+				setLoading(false);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	}, []);
+	console.log(slide);
 
 	// function to go to next image
 	const nextImage = () => {
@@ -105,7 +50,7 @@ const OurPhotos = () => {
 			: currentIndex - 1;
 		setCurrentIndex(newIndex);
 	};
-	// CLICK EVEN HANDLER FOR SELECT ELEMENT
+	// CLICK EVENT HANDLER FOR SELECT ELEMENT
 	const handleClick = (e) => {
 		const newValue = e.target.value;
 		setEvent(newValue);
@@ -121,7 +66,9 @@ const OurPhotos = () => {
 
 	return (
 		<Fragment>
-			<NavbarBlue />
+		{loading ? (<h3>Loading...</h3>) : (<>
+
+				<Header />
 			<div className="photosContainer">
 				<h1>Our Photos</h1>
 				<hr />
@@ -152,7 +99,7 @@ const OurPhotos = () => {
 									size={40}
 									color="white"
 									onClick={nextImage}
-								/>
+									/>
 							</div>
 						</div>
 						<form className="formContainer">
@@ -174,18 +121,19 @@ const OurPhotos = () => {
 						</form>
 					</div>
 
-					<div className="carouselThumbnails">
-						<img src={slide[2].images[12]} alt="" />
-					</div>
+					{/* <div className="carouselThumbnails">
+						<img src={slide[event].images[event]} alt="" />
+					</div> */}
 				</div>
 				{modalOpen && (
 					<ImageModal
-						imageUrl={selectedImage}
+					imageUrl={selectedImage}
 						closeModal={() => setModalopen(false)}
 					/>
 				)}
 			</div>
 			{/* <Footer /> */}
+			</>)}
 		</Fragment>
 	);
 };
