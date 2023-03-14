@@ -3,7 +3,7 @@ import Mission from "./Mission-Vision";
 import Header from "../components/Navbar/Header";
 import Footer from "../components/Footer";
 import TheProblem from "./TheProblem";
-import Partners from "./Partners";
+
 
 const About = () => (
 	<main role="main">
@@ -48,7 +48,7 @@ const About = () => (
 		</div>
 		<Mission />
 		<TheProblem />
-		<Partners />
+
 		<Footer />
 	</main>
 );
