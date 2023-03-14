@@ -4,6 +4,8 @@ import Header from "../components/Navbar/Header";
 import Footer from "../components/Footer";
 import TheProblem from "./TheProblem";
 
+import Publications from "./Publications";
+
 
 const About = () => (
 	<main role="main">
@@ -48,6 +50,8 @@ const About = () => (
 		</div>
 		<Mission />
 		<TheProblem />
+
+		<Publications />
 
 		<Footer />
 	</main>
