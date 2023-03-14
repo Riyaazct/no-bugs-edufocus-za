@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import NavbarBlue from "../components/Navbar/NavbarBlue";
+import NavbarBlue from "../components/Navbar/Header";
 import Button from "@mui/material/Button";
 
 function Home() {

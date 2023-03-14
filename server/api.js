@@ -37,30 +37,56 @@ router.get("/our-people", (_, res) => {
 
 
 
-router.post("/users", async (req, res) => {
-  const { users, email, pwd } = req.body;
-  const query =
-      "INSERT INTO signup (users, email, pwd) VALUES ($1, $2, $3)";
-      db
-      .query(query, [users, email, pwd])
-      .then(() => res.send("User added!"))
-      .catch((error) => {
-            console.error(error);
-            res.status(500).json(error);
-          });
-});
+// router.post("/users", async (req, res) => {
+//   const { users, email, pwd } = req.body;
+//   const query =
+//       "INSERT INTO signup (users, email, pwd) VALUES ($1, $2, $3)";
+//       db
+//       .query(query, [users, email, pwd])
+//       .then(() => res.send("User added!"))
+//       .catch((error) => {
+//             console.error(error);
+//             res.status(500).json(error);
+//           });
+// });
 
 
 
-router.get('/users', async (req, res) => {
-	try {
-		const { rows } = await pool.query('SELECT * FROM users');
-		res.json(rows);
-	} catch (err) {
-		console.error(err);
-		res.status(500).json({ message: 'Internal server error' });
-	}
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const imagesRoot = path.join(__dirname, "images");

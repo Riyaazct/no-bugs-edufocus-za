@@ -2,6 +2,8 @@ import "./list.scss"
 import Sidebar from "../../components4dash/sidebar/Sidebar"
 import Navbar from "../../components4dash/navbar/Navbar"
 import Datatable from "../../components4dash/datatable/Datatable"
+import React from 'react';
+
 
 const List = () => {
   return (

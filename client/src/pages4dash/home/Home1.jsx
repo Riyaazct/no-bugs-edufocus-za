@@ -6,7 +6,7 @@ import Featured from "../../components4dash/featured/Featured";
 import Chart from "../../components4dash/chart/Chart";
 import Table from "../../components4dash/table/Table";
 
-const Dash = () => {
+const Home1 = () => {
   return (
     <div className="home">
       <Sidebar />
@@ -31,4 +31,4 @@ const Dash = () => {
   );
 };
 
-export default Dash;
+export default Home1;

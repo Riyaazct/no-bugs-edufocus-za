@@ -1,6 +1,6 @@
 import "./about.css";
 import Mission from "./Mission-Vision";
-import NavbarBlue from "../components/Navbar/NavbarBlue";
+import NavbarBlue from "../components/Navbar/Header";
 // import Footer from "../components/Footer";
 
 const About = () => (

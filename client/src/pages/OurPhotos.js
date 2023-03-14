@@ -4,7 +4,7 @@ import React, { Fragment, useState } from "react";
 import "./OurPhotos.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // import { RxDotFilled } from "react-icons/rx";
-import NavbarBlue from "../components/Navbar/NavbarBlue";
+import NavbarBlue from "../components/Navbar/Header";
 // import Footer from "../components/Footer";
 
 // DATA FOR CAROUSEL(TO BE MOVED TO THE DATABASE AND ACCESSED VIA API)

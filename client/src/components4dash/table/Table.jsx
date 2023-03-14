@@ -8,20 +8,21 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { userRows } from "../../datatablesource";
 import { useState } from "react";
+import React from "react";
 
 const List = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(userRows);
   
   
-  useEffect(() => {
-    axios.get('/users')
-      .then(response => {
-        setData(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios.get('/users')
+  //     .then(response => {
+  //       setData(response.data);
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //     });
+  // }, []);
 
   const rows = data;
 

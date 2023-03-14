@@ -10,7 +10,7 @@ const Dash = () => {
   return (
     <div className="home">
       <Sidebar />
-      <div className="homeContainer">
+        <div className="homeContainer">
         <Navbar />
         <div className="widgets">
           <Widget type="user" />
