@@ -14,10 +14,15 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 
 
+
+
+
+
 const App = () => (
 	<Routes>
 		<Route path="/" element={<Home />} />
 		<Route path="/Ourpeople/this/a/team" element={<OurPeople />} />
+
 		<Route path="/about" element={<About />} />
 		<Route path="/photos" element={<OurPhotos />} />
 		{/* <Route path="/problem" element={<TheProblem />} /> */}
@@ -28,10 +33,13 @@ const App = () => (
 		<Route element={<PrivateRoute role='admin' />}>
 			<Route path="/adm" element={<Administrator />} />
 		</Route>
-		<Route element={< PrivateRoute role='member' />}>
+		<Route element={<PrivateRoute role='member' />}>
 			<Route path="/member" element={<Member />} />
 		</Route>
 		<Route path="*" element={<Error />} />
+
+		<Route path="/contact" element={<Contact />} />
+
 	</Routes>
 );
 
