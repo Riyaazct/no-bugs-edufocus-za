@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./FileUploadPage.css";
 
-const FileUploadPage = () => {
+const FileUploadPage = ({ getMaterials }) => {
 	const [selectedFile, setSelectedFile] = useState(null);
 	const [fileUploadProgress, setFileUploadProgress] = useState(0);
 	const [alertMessage, setAlertMessage] = useState("");
@@ -41,30 +41,10 @@ const FileUploadPage = () => {
 	const handleFileSelect = (event) => {
 		setSelectedFile(event.target.files[0]);
 	};
+	// set a variable with current date to use for date input element.
+	const today = new Date().toISOString().substr(0, 10);
 
-	// const handleFileUpload = () => {
-	// 	if (selectedFile) {
-	// 		const formData = new FormData();
-	// 		formData.append("file", selectedFile);
-
-	// 		axios
-	// 			.post("/api/training_material", formData, {
-	// 				onUploadProgress: (progressEvent) => {
-	// 					setFileUploadProgress(
-	// 						Math.round((progressEvent.loaded / progressEvent.total) * 100)
-	// 					);
-	// 				},
-	// 			})
-	// 			.then(() => {
-	// 				setAlertMessage("File uploaded successfully!");
-	// 				setSelectedFile(null);
-	// 			})
-	// 			.catch(() => {
-	// 				setAlertMessage("An error occurred while uploading the file.");
-	// 			});
-	// 	}
-	// };
-
+// Function to handle the file upload
 	const handleFileUpload = () => {
 		if (selectedFile) {
 			const formData = new FormData();
@@ -84,6 +64,7 @@ const FileUploadPage = () => {
 				.then(() => {
 					setAlertMessage("File uploaded successfully");
 					setSelectedFile(null);
+					getMaterials(); // update page to reflect added material
 				})
 				.catch(() => {
 					setAlertMessage("An error occured while uploading the file");
@@ -109,7 +90,7 @@ const FileUploadPage = () => {
 						rows="5"
 					></textarea>
 					<label htmlFor="date">Date:</label>
-					<input className="dateInput" type="date" name="" id="date" />
+					<input className="dateInput" type="date" name="" id="date" min={today} defaultValue={today} />
 
 					<input
 						className="fileInput"

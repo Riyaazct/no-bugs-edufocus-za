@@ -5,6 +5,7 @@ import FileUploadPage from "./FileUploadPage";
 
 const TrainingMaterialsManagement = () => {
 	const [materials, setMaterials] = useState([]);
+	const [addMaterialActive, setAddMaterialActive] = useState(false);
 
 
 	// set materials state to material data from api on page load.
@@ -37,15 +38,19 @@ const TrainingMaterialsManagement = () => {
 	return (
 		<>
 			<div className="trainingMaterialsPageHeading">
-
 				<h2>Training Material Management</h2>
-				<button type="button" className="btn btn-info">
-					Info
+				<button
+					type="button"
+					className="btn btn-outline-primary"
+					onClick={() => setAddMaterialActive(!addMaterialActive)}
+				>
+					{addMaterialActive
+						? "CLOSE"
+						: "Add new Training Material"}
 				</button>
 			</div>
-				<FileUploadPage />
+			{addMaterialActive && <FileUploadPage getMaterials = {getMaterials} />}
 			<div className="trainingMaterialsPage">
-
 				<table>
 					<thead>
 						<tr>
