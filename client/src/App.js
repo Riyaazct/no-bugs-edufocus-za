@@ -14,6 +14,10 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 
 
+
+
+
+
 const App = () => (
 	<Routes>
 		<Route path="/" element={<Home />} />
@@ -33,6 +37,9 @@ const App = () => (
 			<Route path="/member" element={<Member />} />
 		</Route>
 		<Route path="*" element={<Error />} />
+
+		<Route path="/contact" element={<Contact />} />
+
 	</Routes>
 );
 
