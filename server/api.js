@@ -96,19 +96,24 @@ router.get("/contact", (_, res) => {
   res.json({ message: "Hello, I am Contact" });
 });
 
-router.post("/contact",(req,response)=>{
+router.post("/contact",(req, res)=>{
+
+  const { fullname, email, messagetype, message } = req.body;
 
   //email sample
   const output=`
   <p>You have a new contact request</p>
-  <img class="email" src="cid:email" alt="email-image">
   <h3>Contact details</h3>
   <ul>
-  <li>FirstName: ${req.body.fullname}</li>
-  <li>TelNum: ${req.body.email}</li>
-  <li>Email: ${req.body.messagetype}</li>
-  <li>Message: ${req.body.message}</li>
+  <li>FirstName: ${fullname}</li>
+  <li>Email: ${email}</li>
+  <li>Message Type: ${messagetype}</li>
+  <li>Message : ${message}</li>
   </ul>`;
+
+  //res.send(output);
+
+  console.log({ output });
 
   //sending mail using SMTP and nodemailer
   const smtpTrans = nodemailer.createTransport({
@@ -131,27 +136,18 @@ router.post("/contact",(req,response)=>{
     to:process.env.RECIPIENT,
     subject:"New message from Edufocus Website Contact form",
     html:output,
-    // attachments: [{
-    // filename: "email.jpg",
-    // // path:__dirname + '/public/images/email.jpg',cid: 'email' //same cid value as in the html img src`
-    // }]
   };
     //send email
   smtpTrans.sendMail(mailOpts,(error,res)=>{
     if(error){
     console.log(error);
     } else{
-      console.log("Message sent: " + res.message);
-      response.status(200).send(200);
+      res.status(200).send("Message sent successfully");
     }
    //smtpTrans.close();
   });
 });
 //****************************/
-
-
-
-
 
 // REGISTRATION
 router.post("/createAccount", async (req, res) => {
@@ -185,6 +181,9 @@ router.post("/createAccount", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const { username, password } = req.body;
+    let theObj = req.body.fullname;
+    res.send("theObj");
+
     // Check if the username exists
     const checkUserQuery = "SELECT * FROM registration WHERE username = $1";
     const userResult = await db.query(checkUserQuery, [username]);
