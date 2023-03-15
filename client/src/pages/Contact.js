@@ -1,6 +1,8 @@
 import "./Contact.css";
-import Header from "../components/Navbar/Header";
-import React, { useState } from "react";
+import NavbarBlue from "../components/Navbar/NavbarBlue";
+import { useState } from "react";
+import axios from "axios";
+
 
 const Contact = () => {
 
@@ -43,33 +45,40 @@ const Contact = () => {
 		setContactmsg({ ...contactmsg });
 	}
 
-	 function handleSubmit(event) {
-			event.preventDefault();
-
-			console.log("Sending data to server");
-
-			fetch("https://httpstat.us/200", {
-				method: "POST",
-				body: JSON.stringify({
-					username: username,
-					email: email,
-					password: password,
-				}),
-				headers: {
-					"Content-Type": "application/json",
-				},
+   const handleSubmit = async(event) => {
+      	event.preventDefault();
+		const enquiryBody = { ...contactmsg };
+		console.log("Sending data to server");
+		setValues({
+			fullname: "",
+			email: "",
+			messagetype: "",
+			message: "",
+		});
+		try {
+			const response = await axios.post("/api/contact",
+			JSON.stringify( enquiryBody ),
+			{
+				headers: { "Content-Type": "application/json" },
+				withCredentials: true,
 			});
+			const data = await response.data;
+			console.log(data);
+		} catch (err) {
+			if (!err?.response) {
+			console.log("No Server Response");
+			}
 		}
-
+	};
 
 	return (
 		<main role="main">
-		<Header />
+		<NavbarBlue />
 		<section className="contactsection">
 			<section className="contactintro">
 				<img
 					className="contactintroimage"
-					src="api/images/contact/greenblob.png"
+					src="/api/images/contact/greenblob.png"
 					alt="green blob"
 				/>
 				<div className="contactcentered">
@@ -141,6 +150,9 @@ const Contact = () => {
 							<input
 								id="inline-full-name"
 								type="text"
+								minLength="3"
+								maxLength="40"
+								required
 								name="fullname"
 								placeholder="Enter Full Name"
 								value={contactmsg.fullname}
@@ -156,6 +168,7 @@ const Contact = () => {
 							<input
 								id="inline-email"
 								type="email"
+								required
 								name="email"
 								placeholder="Enter Email Address"
 								value={contactmsg.email}
@@ -183,15 +196,18 @@ const Contact = () => {
 							<label htmlFor="inline-customer-message">Message Details</label>
 						</div>
 						<div>
-							<input
+							<textarea rows = "5" cols = "60" name = "description"
 								className="contactmessagebox"
 								id="inline-message"
 								type="text"
 								name="message"
-								placeholder="Enter Query Here"
+								minLength="3"
+								maxLength="100"
+								required
 								value={contactmsg.message}
 								onChange={handleMessageChange}
-							/>
+							>Enter Query Here
+							</textarea>
 						</div>
 					</div>
 					<div className="formitem">
@@ -208,8 +224,5 @@ const Contact = () => {
 	);
 
 };
-
-
-
 
 export default Contact;
