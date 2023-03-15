@@ -9,10 +9,10 @@ body {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
+    font-size: 16px;
 } 
 
 .contactsection {
-    height: 2000px;
     margin: 20px;
 }
 
@@ -22,11 +22,12 @@ body {
     text-align: center;
 }
 
-/* .contactcentered {
+.contactcentered {
+    position: absolute;
     left:50%;
     transform: translate(-50%, -50%);
     z-index: 999;
-} */
+}
 
 h2 {
     font-family: 'Raleway';
@@ -53,60 +54,9 @@ h2 {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
-}
-
-.contactsocialcontainer {
-    width: 80%;
-    text-align: center;
-    margin: 150px auto 50px;
-}
-
-.contactsocialmedia {
-    display:grid;
-    column-gap: 2px;
-    align-items: center;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    row-gap: 1em;   
-}
-
-.contactintroicon {
-    width:60px;
-    height: 60px;
-}
-
-.contactintroicondesc {
-  margin:0;
-  display: grid;
-  align-self: start;
-  text-align: center;
-  font-size: 14px;
-}
-
-.contactformsection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contactform {
-   padding-left:250px;
-}
-
-.formitem{
-        margin-bottom: 20px;
-        width: 300px
-    }
-
-.buttonstyling {
-    background-color: #1E0F9E;
-    color: #FFFFFF;
-    padding: 20px;
-    border: none;
 }
 
 /* Media Queries */
@@ -152,30 +102,6 @@ h2 {
     }
     .contactintroblurb {
         font-size: 24px; 
-    }
-
-    .contactsocialmedia {
-        column-gap: 4px;
-        grid-template-columns: 1fr 1fr 1fr;
-        row-gap: 1em; 
-    }
-
-    .contactform{
-           width: 500px;
-    }
-
-    .contactform input{
-        height: 30px;
-        width: 300px;
-    }
-
-    #inline-message {
-        height:100px;
-    }
-
-    .formnewsletter{
-        display: flex;
-        column-gap: 10px;
     }
 }
 

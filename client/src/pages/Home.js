@@ -17,7 +17,7 @@ function Home() {
 								<h2>Edu Focus</h2>
 								<h3>The teacher is at the heart of everything we do</h3>
 								<div className="buttons">
-									<Link to="/contact" className="buttonLink">
+									<Link to="/ourprogrammes" className="buttonLink">
 										<Button
 											variant="contained"
 											color="primary"
@@ -115,7 +115,7 @@ function Home() {
 					</div>
 				</section>
 			</div>
-			<Footer/>
+			<Footer />
 		</>
 	);
 }
