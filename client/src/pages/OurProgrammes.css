@@ -2,7 +2,6 @@
 
 body {
     margin: 0 auto;
-    /* height: 2000px; */
     max-width: 100%;
     box-sizing: border-box;
     color:#000000;
@@ -12,37 +11,35 @@ body {
     font-size: 16px;
 } 
 
-.contactsection {
+.ourprogrammes {
     margin: 20px;
 }
 
-.contactintro {
+.ourprogrammesintro {
     position: relative;
     display: inline-block;
     text-align: center;
 }
 
-.contactcentered {
+.ourprogrammescentered {
     position: absolute;
     left:50%;
     transform: translate(-50%, -50%);
     z-index: 999;
 }
 
-h2 {
-    font-family: 'Raleway';
-    font-style: normal; 
-    font-size:24px;
-    color: #000000;
+.ourprogrammetypes {
+    background-color: aqua;
+    padding: 5px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
 }
 
-.contactintroimage {
-    margin: 50px auto;
-    width: 50%;
-    height: auto;
-}
 
-.contactintroheading {
+.ourprogrammesheading {
+    margin: 2em 0;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
@@ -50,7 +47,13 @@ h2 {
     color: #1E0F9E;
 }
 
-.contactintroblurb {
+.ourprogrammeslist{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;  
+}
+.ourprogrammesparagraphs {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -63,7 +66,7 @@ h2 {
 /* only 2 breakpoints general mobile and then laptop */
 /*laptop breakpoint */
 
-
+/* 
 @media only screen and (min-width: 375px) {
 
     .coontactsection {
@@ -104,4 +107,4 @@ h2 {
         font-size: 24px; 
     }
 }
-
+ */
