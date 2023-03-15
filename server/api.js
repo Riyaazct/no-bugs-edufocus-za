@@ -209,7 +209,7 @@ router.post("/login", async (req, res) => {
 
     res.status(200).json({
       user: user,
-      message: "Success",
+      message: `${username}`,
     });
 
 
@@ -217,15 +217,8 @@ router.post("/login", async (req, res) => {
     console.error(err);
     res.status(500).send("An error occurred while processing your request.");
   }
-
 });
-// router.get("/login", (req, res) => {
-//   if (req.session.user) {
-//     res.send({ loggedIn: true, user: req.session.user });
-//   } else {
-//     res.send({ loggedIn: false });
-//   }
-// });
+
 
 // Logout endpoint
 router.post("/logout", (req, res) => {
