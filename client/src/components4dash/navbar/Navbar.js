@@ -1,4 +1,4 @@
-import "./navbar.scss"
+import "./navbar.css"
 import React, { useContext } from 'react';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';

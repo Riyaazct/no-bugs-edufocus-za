@@ -1,5 +1,6 @@
 import "./OurPeople.css";
 import NavbarBlue from "../components/Navbar/Header";
+import Footer from "../components/Footer"
 
 const OurPeople = () => {
   return (
@@ -92,7 +93,7 @@ const OurPeople = () => {
           <h1>Our Team</h1>
         </div>
       </div>
-
+      <Footer />
     </div>
   );
 };

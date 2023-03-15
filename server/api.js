@@ -35,6 +35,17 @@ router.get("/our-people", (_, res) => {
 	console.log("Our People Page API is working....");
 });
 
+router.get("/users", async (req, res) => {
+	try {
+		const getUsersQuery = "SELECT * FROM registration";
+		const usersResult = await db.query(getUsersQuery);
+		const users = usersResult.rows;
+		res.status(200).json(users);
+	} catch (err) {
+		console.error(err);
+		res.status(500).send("An error occurred while processing your request.");
+	}
+});
 
 
 // router.post("/users", async (req, res) => {

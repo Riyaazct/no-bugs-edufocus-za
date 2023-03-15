@@ -1,6 +1,6 @@
-import "./single.scss";
+import "./single.css";
 import Sidebar from "../../components4dash/sidebar/Sidebar";
-import Navbar from "../../components4dash/navbar/Navbar";
+import Navbar from "../../components4dash/navbar/Navbar.js";
 import Chart from "../../components4dash/chart/Chart.jsx";
 import List from "../../components4dash/table/Table.jsx";
 
@@ -28,17 +28,17 @@ const Single = () => {
                 </div>
                 <div className="detailItem">
                   <span className="itemKey">Phone:</span>
-                  <span className="itemValue">+1 2345 67 89</span>
+                  <span className="itemValue">+27 23 456 7189</span>
                 </div>
                 <div className="detailItem">
                   <span className="itemKey">Address:</span>
                   <span className="itemValue">
-                    Elton St. 234 Garden Yd. NewYork
+                    Cape town Long St 24
                   </span>
                 </div>
                 <div className="detailItem">
                   <span className="itemKey">Country:</span>
-                  <span className="itemValue">USA</span>
+                  <span className="itemValue">ZAR</span>
                 </div>
               </div>
             </div>

@@ -75,7 +75,7 @@ import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 
 // dashboard
-import Home1 from "./pages4dash/home/Home1.jsx";
+import Dash from "./pages4dash/home/Dash.jsx";
 import List from "./pages4dash/list/List";
 import Single from "./pages4dash/single/Single.jsx";
 import New from "./pages4dash/new/New.jsx";
@@ -94,7 +94,7 @@ const App = () => (
 		<Route path="/login" element={<LogIn />} />
 		<Route path="/signup" element={<SignUp />} />
 
-		<Route path="/dashboard" element={<Home1 />} />
+		<Route path="/dashboard" element={<Dash />} />
 		<Route path="/dashboard/users" element={<List />} />
 		<Route path="/dashboard/users/:userId" element={<Single />} />
 		<Route

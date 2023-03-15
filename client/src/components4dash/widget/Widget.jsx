@@ -1,4 +1,4 @@
-import "./widget.scss";
+import "./widget.css";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import DownloadIcon from '@mui/icons-material/Download';

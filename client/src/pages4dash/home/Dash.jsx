@@ -1,6 +1,6 @@
 import Sidebar from "../../components4dash/sidebar/Sidebar";
 import Navbar from "../../components4dash/navbar/Navbar";
-import "./home.scss";
+import "./home.css";
 import Widget from "../../components4dash/widget/Widget.jsx";
 import Featured from "../../components4dash/featured/Featured.jsx";
 import Chart from "../../components4dash/chart/Chart.jsx";
