@@ -91,6 +91,7 @@
 		"express-fileupload": "^1.4.0",
 		"express-session": "^1.17.3",
 		"font-awesome": "^4.7.0",
+		"googleapis": "^112.0.0",
 		"helmet": "^6.0.1",
 		"mdb-react-ui-kit": "^5.1.0",
 		"morgan": "^1.10.0",

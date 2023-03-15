@@ -1,3 +1,4 @@
+
 import { Router } from "express";
 import session from "express-session";
 import bodyParser from "body-parser";
@@ -5,6 +6,24 @@ import cookieParser from "cookie-parser";
 import db from "./db";
 import logger from "./utils/logger";
 import imageRoutes from "./imageRoutes";
+import nodemailer from "nodemailer";
+
+//contact form imports and getting tokens and google oauth
+
+const { google } = require("googleapis");
+const dotenv = require("dotenv");
+dotenv.config();
+const OAuth2 = google.auth.OAuth2;
+
+const oauth2Client = new OAuth2(
+  process.env.Client_ID,
+  process.env.Client_Secret,
+  "https://developers.google.com/oauthplayground"
+);
+
+oauth2Client.setCredentials({ refresh_token:process.env.Refresh_Token });
+const accessToken = oauth2Client.getAccessToken();
+//++++++++++++++++++++
 
 const fileUpload = require("express-fileupload");
 const router = Router();
@@ -163,13 +182,81 @@ router.get("/login", (_, res) => {
   res.json({ message: "Hello, I am login!" });
 });
 
-router.get("/contact-us", (_, res) => {
-  console.log("Contact us page API is working");
-});
-
 router.get("/our-people", (_, res) => {
   console.log("Our People Page API is working....");
 });
+
+
+//***********************/
+//CONTACT PAGE
+
+//   message object from frontend
+//   const [contactmsg, setContactmsg] = useState({
+//   fullname: "",
+//   email: "",
+//   messagetype: "",
+//   message: "",
+//  });
+
+//general get for testing purpose
+
+router.get("/contact", (_, res) => {
+  console.log("Contact Page API is working...");
+  res.json({ message: "Hello, I am Contact" });
+});
+
+router.post("/contact",(req, res)=>{
+
+  const { fullname, email, messagetype, message } = req.body;
+
+  //email sample
+  const output=`
+  <p>You have a new contact request</p>
+  <h3>Contact details</h3>
+  <ul>
+  <li>FirstName: ${fullname}</li>
+  <li>Email: ${email}</li>
+  <li>Message Type: ${messagetype}</li>
+  <li>Message : ${message}</li>
+  </ul>`;
+
+  //res.send(output);
+
+  console.log({ output });
+
+  //sending mail using SMTP and nodemailer
+  const smtpTrans = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      type:"OAuth2",
+      user:process.env.GMAIL_USER,
+      clientId:process.env.Client_ID,
+      clientSecret:process.env.Client_Secret,
+      refreshToken:process.env.Refresh_Token,
+      accessToken:accessToken,
+    },
+  });
+
+  //email with content
+  const mailOpts = {
+    from:process.env.GMAIL_USER,
+    to:process.env.RECIPIENT,
+    subject:"New message from Edufocus Website Contact form",
+    html:output,
+  };
+    //send email
+  smtpTrans.sendMail(mailOpts,(error,res)=>{
+    if(error){
+    console.log(error);
+    } else{
+      res.status(200).send("Message sent successfully");
+    }
+   //smtpTrans.close();
+  });
+});
+//****************************/
 
 // REGISTRATION
 router.post("/createAccount", async (req, res) => {
@@ -203,6 +290,9 @@ router.post("/createAccount", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const { username, password } = req.body;
+    let theObj = req.body.fullname;
+    res.send("theObj");
+
     // Check if the username exists
     const checkUserQuery = "SELECT * FROM registration WHERE username = $1";
     const userResult = await db.query(checkUserQuery, [username]);
