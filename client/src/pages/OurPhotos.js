@@ -4,9 +4,10 @@ import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 import "./OurPhotos.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-// import { RxDotFilled } from "react-icons/rx";
+import NewFooter from "../components/NewFooter";
+
 import Header from "../components/Navbar/Header";
-// import Footer from "../components/Footer";
+
 
 
 
@@ -66,74 +67,80 @@ const OurPhotos = () => {
 
 	return (
 		<Fragment>
-		{loading ? (<h3>Loading...</h3>) : (<>
-
-				<Header />
-			<div className="photosContainer">
-				<h1>Our Photos</h1>
-				<hr />
-				<div className="carouselContainer">
-					<div className="carouselCard">
-						<div className="carouselTextContainer">
-							<h3>{slide[event].event}</h3>
-							<div className="carouselText">
-								<p>{slide[event].location}</p>
-								<p>{slide[event].date}</p>
-							</div>
-						</div>
-
-						<div className="imageContainer">
-							<img
-								src={slide[event].images[currentIndex]}
-								alt=""
-								onClick={() => {
-									setModalopen(true);
-									setSelectedImage(slide[event].images[currentIndex]);
-								}}
-							/>
-							<div className="left">
-								<IoIosArrowBack size={40} color="white" onClick={prevImage} />
-							</div>
-							<div className="right">
-								<IoIosArrowForward
-									size={40}
-									color="white"
-									onClick={nextImage}
-									/>
-							</div>
-						</div>
-						<form className="formContainer">
-							<label className="h2 mt-2" htmlFor="otherEvents">
-								See other events
-							</label>
-							<select
-								className="form-select form-select-lg mb-3"
-								onClick={(e) => handleClick(e)}
-								name="otherEvents"
-								id="otherEvents"
-							>
-								{slide.map((item, index) => (
-									<option key={index} value={index}>
-										{item.event}
-									</option>
-								))}
-							</select>
-						</form>
-					</div>
-
-					{/* <div className="carouselThumbnails">
-						<img src={slide[event].images[event]} alt="" />
-					</div> */}
-				</div>
-				{modalOpen && (
-					<ImageModal
-					imageUrl={selectedImage}
+			{loading ? (
+				<h3>Loading...</h3>
+			) : (
+				<>
+					{modalOpen ? (
+						<ImageModal
+						imageUrl={selectedImage}
 						closeModal={() => setModalopen(false)}
-					/>
-				)}
-			</div>
-			{/* <Footer /> */}
-			</>)}
+						/>
+						) : (
+							<div className="photosContainer">
+							<Header />
+							<div className="titleDiv">
+								<h1>Our Photos</h1>
+								<hr />
+							</div>
+							<div className="carouselContainer">
+								<div className="carouselCard">
+									<div className="carouselTextContainer">
+										<h3>{slide[event].event}</h3>
+										<div className="carouselText">
+											<p>{slide[event].location}</p>
+											<p>{slide[event].date}</p>
+										</div>
+									</div>
+
+									<div className="imageContainer">
+										<img
+											src={slide[event].images[currentIndex]}
+											alt=""
+											onClick={() => {
+												setModalopen(true);
+												setSelectedImage(slide[event].images[currentIndex]);
+											}}
+										/>
+										<div className="left">
+											<IoIosArrowBack
+												size={40}
+												color="white"
+												onClick={prevImage}
+											/>
+										</div>
+										<div className="right">
+											<IoIosArrowForward
+												size={40}
+												color="white"
+												onClick={nextImage}
+											/>
+										</div>
+									</div>
+									<form className="formContainer">
+										<label className="h2 mt-2" htmlFor="otherEvents">
+											See other events
+										</label>
+										<select
+											className="form-select form-select-lg mb-3"
+											onClick={(e) => handleClick(e)}
+											name="otherEvents"
+											id="otherEvents"
+										>
+											{slide.map((item, index) => (
+												<option key={index} value={index}>
+													{item.event}
+												</option>
+											))}
+										</select>
+									</form>
+								</div>
+							</div>
+							<NewFooter />
+						</div>
+					)}
+				</>
+			)}
 		</Fragment>
 	);
 };
