@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
+
+body {
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    color:#000000;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+} 
+
+.ourprogrammes {
+    margin: 20px 30px;
+    text-align: center;
+}
+
+.ourprogrammesheading {
+    margin: 1.5em 0;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #1E0F9E;  
+    text-align: center;
+}
+
+.ourprogrammesintro {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.ourprogrammestypes {
+    background-color: aqua;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 20px 30px;
+}
+
+.ourprogrammeslist{
+    margin-left: 50px;
+    text-align: center;
+
+}
+
+.ourprogrammesimage{
+    display: absolute;
+}
+
+
+.ourprogrammeslist li{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;  
+    text-align: left;
+    color:#1E0F9E;
+}
+
+.ourprogrammesparagraphs {
+    margin: 20px 30px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+
+/* Media Queries */
+/* only 2 breakpoints */
+
+@media only screen and (min-width: 768px) {
+    
+    .ourprogrammescontainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .ourprogrammeslist{
+        text-align: center;
+    
+    }
+
+}

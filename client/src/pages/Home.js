@@ -17,8 +17,10 @@ function Home() {
 								<h1>Edu Focus</h1>
 								<h4>The teacher is at the heart of everything we do</h4>
 								<div className="buttons">
+
 									<Link to="/" className="buttonLink">
-										<Button
+					<Link to="/ourprogrammes" className="buttonLink">
+				<Button
 											variant="contained"
 											size="large"
 											style={{ backgroundColor: '#6AE3C6', color: '#1E0F9E' }}
@@ -114,7 +116,9 @@ function Home() {
 					</div>
 				</section>
 			</div>
+
 			<NewFooter />	
+
 		</>
 		
 	);
