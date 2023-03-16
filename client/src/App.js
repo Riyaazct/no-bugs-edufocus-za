@@ -12,9 +12,7 @@ import { PrivateRoute } from "./pages/PrivateRoute";
 import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-
-
-
+import TrainingMaterialsManagement from "./pages/TrainingMaterialsManagement";
 
 
 
@@ -39,6 +37,8 @@ const App = () => (
 		<Route path="*" element={<Error />} />
 
 		<Route path="/contact" element={<Contact />} />
+
+		<Route path="/admin/training-material" element={<TrainingMaterialsManagement />} />
 
 	</Routes>
 );
