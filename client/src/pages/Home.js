@@ -18,12 +18,12 @@ function Home() {
 								<h4>The teacher is at the heart of everything we do</h4>
 								<div className="buttons">
 
-									<Link to="/" className="buttonLink">
+
 					<Link to="/ourprogrammes" className="buttonLink">
 				<Button
 											variant="contained"
 											size="large"
-											style={{ backgroundColor: '#6AE3C6', color: '#1E0F9E' }}
+											style={{ backgroundColor: "#6AE3C6", color: "#1E0F9E" }}
 										>
 											Programmes
 										</Button>
@@ -31,7 +31,7 @@ function Home() {
 									<Link to="/contact" className="buttonLink">
 										<Button
 											variant="contained"
-											style={{ backgroundColor: '#1E0F9E', color: '#6AE3C6' }}
+											style={{ backgroundColor: "#1E0F9E", color: "#6AE3C6" }}
 											size="large"
 										>
 											Support
@@ -62,7 +62,7 @@ function Home() {
 						<Button
 							variant="contained"
 							size="large"
-							style={{ backgroundColor: '#17997A', color: '#fff' }}
+							style={{ backgroundColor: "#17997A", color: "#fff" }}
 						>
 							Partner with us
 						</Button>
@@ -117,10 +117,10 @@ function Home() {
 				</section>
 			</div>
 
-			<NewFooter />	
+			<NewFooter />
 
 		</>
-		
+
 	);
 }
 
