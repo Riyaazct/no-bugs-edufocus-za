@@ -1,5 +1,6 @@
 import "./OurProgrammes.css";
 import NavbarBlue from "../components/Navbar/NavbarBlue";
+import NewFooter from "../components/NewFooter";
 
 const OurProgrammes= () => {
 
@@ -30,6 +31,7 @@ const OurProgrammes= () => {
                 We participate in academic and research-related activities to stay abreast of the latest developments in the education sector. This allows us to remain relevant, provide sound advice and support and the most up-to-date support and mentorship intervention strategies suitable to the contextual realities of our South African schools.
             </p>
 		</section>
+        <NewFooter />
 		</main>
 	);
 

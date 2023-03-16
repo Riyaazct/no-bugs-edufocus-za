@@ -2,7 +2,7 @@ import "./Contact.css";
 import Header from "../components/Navbar/Header";
 import { useState } from "react";
 import axios from "axios";
-
+import NewFooter from "../components/NewFooter";
 
 const Contact = () => {
 
@@ -225,6 +225,7 @@ const Contact = () => {
 				</form>
 			</section>
 		</section>
+		<NewFooter />
 		</main>
 	);
 
