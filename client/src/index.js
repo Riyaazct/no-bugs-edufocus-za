@@ -5,7 +5,6 @@ import "./pages/LogIn.css";
 import "./pages/SignUp.css";
 import App from "./App";
 import React from "react";
-import reportWebVitals from "./reportWebVitals";
 // import { render } from 'react-dom';
 window.React = React;
 import { AuthProvider } from "./context/AuthProvider";
@@ -18,7 +17,4 @@ createRoot(document.getElementById("root")).render(
 	</BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
