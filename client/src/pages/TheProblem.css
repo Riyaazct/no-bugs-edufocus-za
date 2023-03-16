@@ -6,6 +6,10 @@
 	}
 }
 
+.theProblemTitle {
+	background-color: ;
+}
+
 .theProblemContent {
 	display: flex;
 	flex-direction: column;
@@ -23,7 +27,7 @@
 }
 
 .mainContainer hr {
-	margin-bottom: 30px;
+	display: none;
 }
 
 .theProblemContent img {
@@ -85,6 +89,7 @@
 		max-width: 80%;
 		margin-top: 100px;
 		gap: 10px;
+		
 	}
 
 	.theProblemContent img {
@@ -113,10 +118,10 @@
 	.backgroundDiv {
 		position: absolute;
 		width: 80%;
-		height: 580px;
+		height: 600px;
 		background-color: #17997b;
 		z-index: -1;
-		top: 55px;
+		top: 65px;
 		left: 155px;
 		border-radius: 5px;
 	}
