@@ -1,28 +1,29 @@
 import React from "react";
 import "./Home.css";
 import Headers from "../components/Navbar/Header";
-import Footer from "../components/Footer";
+import NewFooter from "../components/NewFooter";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
 function Home() {
 	return (
 		<>
-			<Headers />
+		<Headers />
 			<div className="home-page">
 				<section className="hero-wrap">
 					<div className="overlay">
 						<div className="content-wrap">
 							<div className="left-box">
-								<h2>Edu Focus</h2>
-								<h3>The teacher is at the heart of everything we do</h3>
+								<h1>Edu Focus</h1>
+								<h4>The teacher is at the heart of everything we do</h4>
 								<div className="buttons">
-									<Link to="/contact" className="buttonLink">
-										<Button
+
+
+					<Link to="/ourprogrammes" className="buttonLink">
+				<Button
 											variant="contained"
-											color="primary"
 											size="large"
-											style={{ margin: "10px" }}
+											style={{ backgroundColor: "#6AE3C6", color: "#1E0F9E" }}
 										>
 											Programmes
 										</Button>
@@ -30,9 +31,8 @@ function Home() {
 									<Link to="/contact" className="buttonLink">
 										<Button
 											variant="contained"
-											color="secondary"
+											style={{ backgroundColor: "#1E0F9E", color: "#6AE3C6" }}
 											size="large"
-											style={{ margin: "10px" }}
 										>
 											Support
 										</Button>
@@ -52,20 +52,21 @@ function Home() {
 				</section>
 				<section className="welcome">
 					<div className="welcome-text">
-						<h2>Welcome to EduFocus Projects.</h2>
+						<h3>Welcome to EduFocus Projects</h3>
 						<p>
 							EduFocus Projects NPO provides training, coaching and mentoring
 							interventions to the education sector, in alignment with Goal 4 of
 							the Sustainable Development Goals (SDGs, 2015): QUALITY EDUCATION
 						</p>
+						<Link to="/contact" className="buttonLink">
 						<Button
 							variant="contained"
-							color="secondary"
 							size="large"
-							style={{ margin: "10px" }}
+							style={{ backgroundColor: "#17997A", color: "#fff" }}
 						>
 							Partner with us
 						</Button>
+						</Link>
 					</div>
 					<div className="welcome-img">
 						<img
@@ -115,8 +116,11 @@ function Home() {
 					</div>
 				</section>
 			</div>
-			<Footer/>
+
+			<NewFooter />
+
 		</>
+
 	);
 }
 

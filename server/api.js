@@ -44,24 +44,6 @@ router.use(session({
   },
 }));
 
-// FILE UPLOAD ENDPOINT
-// router.post("/training_material", (req, res) => {
-// 	if (req.files === null) {
-// 		return res.status(400).json({ msg: "No file uploaded" });
-// 	}
-
-// 	const file = req.files.file;
-
-// 	file.mv(`${__dirname}/training_material/${file.name}`, (err) => {
-// 		if (err) {
-// 			console.error(err);
-// 			return res.status(500).send(err);
-// 		}
-
-// 		res.json({ fileName: file.name, filePath: `/training_material/${file.name}` });
-// 	});
-// });
-
 router.post("/training_material", async (req, res) => {
 	if (req.files === null) {
 		return res.status(400).json({ msg: "No file uploaded" });
@@ -296,8 +278,7 @@ router.post("/createAccount", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const { username, password } = req.body;
-    let theObj = req.body.fullname;
-    res.send("theObj");
+
 
     // Check if the username exists
     const checkUserQuery = "SELECT * FROM registration WHERE username = $1";
