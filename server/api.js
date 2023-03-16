@@ -248,12 +248,12 @@ router.post("/contact", async (req, res)=>{
     if(error){
       console.log("Error");
         res.status(500).json({
-        msg: "fail",
+        message: "fail",
       });
     } else{
       console.log("Success");
     res.status(200).json({
-      msg: "success",
+      message: "success",
     });
     }
   });
