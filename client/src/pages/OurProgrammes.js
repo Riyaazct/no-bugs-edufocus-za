@@ -1,13 +1,12 @@
 import "./OurProgrammes.css";
-import NavbarBlue from "../components/Navbar/NavbarBlue";
 import NewFooter from "../components/NewFooter";
-
+import Header from "../components/Navbar/Header";
 const OurProgrammes= () => {
 
 
 	return (
 		<main role="main">
-		<NavbarBlue />
+		<Header />
 		<section className="ourprogrammes">
             <h2 className="ourprogrammesheading">Our Programmes.</h2>
             <p className="ourprogrammesparagraphs"> Our programmes span across two geographical areas, namely:</p>
