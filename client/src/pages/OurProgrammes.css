@@ -12,7 +12,19 @@ body {
 } 
 
 .ourprogrammes {
-    margin: 20px;
+    margin: 20px 30px;
+    text-align: center;
+}
+
+.ourprogrammesheading {
+    margin: 1.5em 0;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #1E0F9E;  
+    text-align: center;
 }
 
 .ourprogrammesintro {
@@ -21,90 +33,62 @@ body {
     text-align: center;
 }
 
-.ourprogrammescentered {
-    position: absolute;
-    left:50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-}
-
-.ourprogrammetypes {
+.ourprogrammestypes {
     background-color: aqua;
-    padding: 5px;
+    border-radius: 5px;
+    padding: 15px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-}
-
-
-.ourprogrammesheading {
-    margin: 2em 0;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 0.02em;
-    color: #1E0F9E;
+    margin: 20px 30px;
 }
 
 .ourprogrammeslist{
+    margin-left: 50px;
+    text-align: center;
+
+}
+
+.ourprogrammesimage{
+    display: absolute;
+}
+
+
+.ourprogrammeslist li{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;  
+    text-align: left;
+    color:#1E0F9E;
 }
+
 .ourprogrammesparagraphs {
+    margin: 20px 30px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
+    text-align: center;
 }
+
 
 /* Media Queries */
-/* only 2 breakpoints general mobile and then laptop */
-/*laptop breakpoint */
+/* only 2 breakpoints */
 
-/* 
-@media only screen and (min-width: 375px) {
-
-    .coontactsection {
-        width: 100vh;
-    }
-
-    .contactintro {    
-        display: block;
-        position: relative;
-        margin: 100px auto 0px;
-    } 
-
+@media only screen and (min-width: 768px) {
     
-    .contactcentered {
-        position: absolute;
-        top:25%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        z-index: 999;
+    .ourprogrammescontainer {
+        display: flex;
+        justify-content: center;
     }
 
-    .contactintroimage {
-        margin: 15px auto;
-        height: 200px;
-        width: auto;
+    .ourprogrammeslist{
+        text-align: center;
+    
     }
 
-    .contactintroheading {
-        font-size: 36px;
-    } 
-
-    .contactsocialcontainer {
-        width: 620px;
-        margin: 50px auto;
-        bottom: 200px;
-    }
-    .contactintroblurb {
-        font-size: 24px; 
-    }
 }
- */
