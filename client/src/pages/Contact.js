@@ -13,24 +13,12 @@ const Contact = () => {
 		{ label: "Donation", value: "donation" },
 	];
 
-	const messageSent = {
-		success: "Your message has been sent successfully",
-		failure:"Your message has not been sent, please contact info@edufocusprojects.org.za directly",
-	};
-
-	const [contactmsgconfirmation, setContactmsgconfirmation] = useState("");
-
  	const [contactmsg, setContactmsg] = useState({
 		fullname: "",
 		email: "",
 		messagetype: "",
 		message: "",
    });
-
- 	const [fullname, setFullname] = useState("");
-	const [email, setEmail] = useState("");
-	const [messagetype, setMessagetype] = useState("query");
-	const [message, setMessage] = useState("");
 
 	function handleFullnameChange(event) {
 		contactmsg.fullname = event.target.value;
@@ -56,26 +44,33 @@ const Contact = () => {
       	event.preventDefault();
 		const enquiryBody = { ...contactmsg };
 		console.log("Sending data to server");
-		setContactmsg({
-			fullname: "",
-			email: "",
-			messagetype: "",
-			message: "",
-		});
 		try {
 			const response = await axios.post("/api/contact",
 			JSON.stringify( enquiryBody ),
 			{
 				headers: { "Content-Type": "application/json" },
 				withCredentials: true,
+			}).then((response)=>{
+				console.log({ response });
+				console.log(response.data.msg);
+				if (response.data.msg === "success"){
+					alert("Your Message has been sent to Edufocus.");
+					// const data = response.data;
+					console.log("SUCCESS!");
+					setContactmsg({
+						fullname: "",
+						email: "",
+						messagetype: "",
+						message: "",
+					});
+				}else if(response.data.message === "fail"){
+					alert("Message failed to send.Please Email info@edufocusprojects.org.za.");
+				}
 			});
-			const data = await response.data;
-			console.log(data);
-			setContactmsgconfirmation(messageSent.success);
 		} catch (err) {
+		console.log({ error });
 			if (!err?.response) {
 			console.log("No Server Response");
-			setContactmsgconfirmation(messageSent.failure);
 			}
 		}
 	};
@@ -94,7 +89,7 @@ const Contact = () => {
 					<h2 className="contactintroheading">Get in touch with us.</h2>
 					<p className="contactintroblurb">
 						Click here to see what we've been up to and join our social media
-						community!{" "}
+						community!
 					</p>
 				</div>
 			</section>
@@ -205,7 +200,7 @@ const Contact = () => {
 							<label htmlFor="inline-customer-message">Message Details</label>
 						</div>
 						<div>
-							<textarea rows = "5" cols = "60" name = "description"
+							<textarea rows = "5" cols = "60"
 								className="contactmessagebox"
 								id="inline-message"
 								type="text"
@@ -224,10 +219,8 @@ const Contact = () => {
 							<button className="buttonstyling" type="submit">
 								Send Message
 							</button>
+							<p className="formconfirmation"> Please wait for confirmation popup</p>
 						</div>
-					</div>
-					<div className="formitem contactmessageconfirmation">
-						<p>{contactmsgconfirmation}</p>
 					</div>
 				</form>
 			</section>

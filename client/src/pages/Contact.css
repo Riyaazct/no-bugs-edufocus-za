@@ -110,13 +110,12 @@ h2 {
     border: none;
 }
 
-.contactmessageconfirmation {
+.formconfirmation {
+    margin: 15px;
     font-family: 'Open Sans';
     font-style: normal;
-    color: aquamarine;
-    
+    font-weight: 400; 
 }
-
 
 /* Media Queries */
 /* only 2 breakpoints general mobile and then laptop */
