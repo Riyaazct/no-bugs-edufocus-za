@@ -9,9 +9,9 @@ import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 
 // dashboard
-import Customers from "./pdashboard/Customers";
-import Inventory from "./pdashboard/Inventory";
-import Orders from "./pdashboard/Orders/index";
+import Customers from "./pdashboard/Students";
+import Inventory from "./pdashboard/Material";
+import Orders from "./pdashboard/Download/index";
 import Dash from "./Dash";
 
 

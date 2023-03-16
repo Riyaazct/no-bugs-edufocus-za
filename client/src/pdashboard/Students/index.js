@@ -16,7 +16,7 @@ function Customers() {
 
   return (
     <Space size={20} direction="vertical">
-      <Typography.Title level={4}>Customers</Typography.Title>
+      <Typography.Title level={4}>Students</Typography.Title>
       <Table
         loading={loading}
         columns={[
@@ -58,7 +58,7 @@ function Customers() {
         ]}
         dataSource={dataSource}
         pagination={{
-          pageSize: 5,
+          pageSize: 7,
         }}
       ></Table>
     </Space>

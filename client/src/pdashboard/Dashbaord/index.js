@@ -132,13 +132,13 @@ function DashboardCard({ title, value, icon }) {
   );
 }
 function Recentstudent() {
-  const [dataSource, setDataSource] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [dataSource, setDataSource] = useState([]);
 
   useEffect(() => {
     setLoading(true);
     getCustomers().then((res) => {
-      setDataSource(res.products.splice(0, 3));
+      setDataSource(res.users.splice(0, 6));
       setLoading(false);
     });
   }, []);

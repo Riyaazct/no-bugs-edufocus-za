@@ -1,8 +1,8 @@
 import { Avatar, Rate, Space, Table, Typography } from "antd";
 import { useEffect, useState } from "react";
-import { getInventory } from "../../API";
+import { getInventory, getOrders } from "../../API";
 
-function Inventory() {
+function Orders() {
   const [loading, setLoading] = useState(false);
   const [dataSource, setDataSource] = useState([]);
 
@@ -16,7 +16,7 @@ function Inventory() {
 
   return (
     <Space size={20} direction="vertical">
-      <Typography.Title level={4}>Inventory</Typography.Title>
+      <Typography.Title level={4}>Download</Typography.Title>
       <Table
         loading={loading}
         columns={[
@@ -65,4 +65,4 @@ function Inventory() {
     </Space>
   );
 }
-export default Inventory;
+export default Orders;
