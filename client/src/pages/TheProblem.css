@@ -112,6 +112,15 @@
 		border-radius: 5px;
 		margin-bottom: 50px;
 	}
+	.theProblemTitle {
+	margin-bottom: 120px;
+	
+}
+
+.theProblemTitle h1 {
+	margin: unset;
+}
+
 }
 
 @media only screen and (min-width: 1060px) {
@@ -134,6 +143,7 @@
 @media only screen and (min-width: 1300px) {
 	.mainContainer {
 	margin: auto;		
+	height: 90vh;
 	}
 	
 
@@ -152,8 +162,7 @@
 		margin-right: 15px;
 	}
 
-	.backgroundDiv {
-	}
+	
 
 
 }
