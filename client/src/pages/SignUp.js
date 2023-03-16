@@ -1,20 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import axios from "axios";
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{6,24}$/;
 const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
-
+// const SIGNUP_URL = ;
 function SignUp() {
 
   const userRef = useRef();
   const errRef = useRef();
 
-  const [username, setUsername] = useState("");
+  const [users, setUser] = useState("");
   const [validName, setValidName] = useState(false);
   const [userFocus, setUserFocus] = useState(false);
 
@@ -22,7 +20,7 @@ function SignUp() {
   const [validEmail, setValidEmail] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
 
-  const [password, setPassword] = useState("");
+  const [pwd, setPwd] = useState("");
   const [validPwd, setValidPwd] = useState(false);
   const [pwdFocus, setPwdFocus] = useState(false);
 
@@ -31,7 +29,7 @@ function SignUp() {
   const [matchFocus, setMatchFocus] = useState(false);
 
   const [errMsg, setErrMsg] = useState("");
-
+  const [success, setSuccess] = useState(false);
 
   //for focus
   useEffect(() => {
@@ -40,11 +38,11 @@ function SignUp() {
 
   //for user name
   useEffect(() => {
-    const result = USER_REGEX.test(username);
+    const result = USER_REGEX.test(users);
     console.log(result);
-    console.log(username);
+    console.log(users);
     setValidName(result);
-  }, [username]);
+  }, [users]);
 
   //for email
   useEffect(() => {
@@ -56,35 +54,35 @@ function SignUp() {
 
   //for password
   useEffect(() => {
-    const result = PWD_REGEX.test(password);
+    const result = PWD_REGEX.test(pwd);
     console.log(result);
-    console.log(password);
+    console.log(pwd);
     setValidPwd(result);
-    const match = password === matchPwd;
+    const match = pwd === matchPwd;
     setValidMatch(match);
-  }, [password, matchPwd]);
+  }, [pwd, matchPwd]);
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     // if button enabled with JS hack
-    const v1 = USER_REGEX.test(username);
+    const v1 = USER_REGEX.test(users);
     const v2 = EMAIL_REGEX.test(email);
-    const v3 = PWD_REGEX.test(password);
+    const v3 = PWD_REGEX.test(pwd);
 
     if (!v1 || !v2 || !v3) {
       setErrMsg("Invalid Entry");
       return;
     }
     const newUser = {
-      username,
+      users,
       email,
-      password,
+      pwd,
 
     };
 
     try {
-      const response = await axios.post("/api/createAccount",
+      const response = await axios.post("/api/users",
 
         JSON.stringify(newUser),
         {
@@ -95,11 +93,10 @@ function SignUp() {
       const data = await response.data;
       console.log(data);
 
-      setUsername("");
-      setEmail("");
-      setPassword("");
+      setSuccess(true);
+      setUser("");
+      setPwd("");
       setMatchPwd("");
-
     } catch (err) {
       if (!err?.response) {
         setErrMsg("No Server Response");
@@ -114,7 +111,15 @@ function SignUp() {
   };
   return (
     <>
-        <section className='signup-wrap'>
+      {success ? (
+        <section className="success">
+          <h1>Success!</h1>
+          <p>
+            <a href="#">Sign In</a>
+          </p>
+        </section>
+      ) : (
+        <section className='wrap'>
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <h2>Sign Up</h2>
           <form onSubmit={handleSubmit}>
@@ -123,22 +128,22 @@ function SignUp() {
             <label htmlFor="username">
               Username:
               <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
-              <FontAwesomeIcon icon={faTimes} className={validName || !username ? "hide" : "invalid"} />
+              <FontAwesomeIcon icon={faTimes} className={validName || !users ? "hide" : "invalid"} />
             </label>
             <input
               type="text"
               id="username"
               ref={userRef}
               autoComplete="off"
-              onChange={(e) => setUsername(e.target.value)}
-              value={username}
+              onChange={(e) => setUser(e.target.value)}
+              value={users}
               required
               aria-invalid={validName ? "false" : "true"}
               aria-describedby="uidnote"
               onFocus={() => setUserFocus(true)}
               onBlur={() => setUserFocus(false)}
             />
-            <p id="uidnote" className={userFocus && username && !validName ? "instructions" : "offscreen"}>
+            <p id="uidnote" className={userFocus && users && !validName ? "instructions" : "offscreen"}>
               4 to 24 characters.<br />
               Must begin with a letter.<br />
               Letters, numbers, underscores, hyphens allowed.
@@ -169,13 +174,13 @@ function SignUp() {
             <label htmlFor="password">
               Password:
               <FontAwesomeIcon icon={faCheck} className={validPwd ? "valid" : "hide"} />
-              <FontAwesomeIcon icon={faTimes} className={validPwd || !password ? "hide" : "invalid"} />
+              <FontAwesomeIcon icon={faTimes} className={validPwd || !pwd ? "hide" : "invalid"} />
             </label>
             <input
               type="password"
               id="password"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
+              onChange={(e) => setPwd(e.target.value)}
+              value={pwd}
               required
               aria-invalid={validPwd ? "false" : "true"}
               aria-describedby="pwdnote"
@@ -215,10 +220,12 @@ function SignUp() {
           <p>
             Already have an account?<br />
             <span className="line">
-            <Link to="/login">Log In</Link>
+              <a href="#">Log In</a>
             </span>
           </p>
         </section>
+      )
+      }
     </>
   );
 }

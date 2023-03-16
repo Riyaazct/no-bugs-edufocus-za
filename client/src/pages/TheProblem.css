@@ -6,10 +6,6 @@
 	}
 }
 
-.theProblemTitle {
-	background-color: ;
-}
-
 .theProblemContent {
 	display: flex;
 	flex-direction: column;
@@ -27,7 +23,7 @@
 }
 
 .mainContainer hr {
-	display: none;
+	margin-bottom: 30px;
 }
 
 .theProblemContent img {
@@ -82,47 +78,44 @@
 		height: 100vh;
 	}
 
-		.theProblemContent {
+	.theProblemContent {
 		position: relative;
 		flex-direction: row;
 		height: fit-content;
 		max-width: 80%;
 		margin-top: 100px;
 		gap: 10px;
-		
 	}
 
 	.theProblemContent img {
 		max-height: max-content;
-		max-width: 360px;
+		max-width: 450px;
 		border-radius: unset;
 		height: 280px;
-		
+		width: 300px;
 	}
 	.theProblemTextContainer {
 		height: fit-content;
 		padding: 10px;
 		background-color: unset;
 		max-width: 50%;
-		margin-top: 50px;		
+		margin-top: 50px;
 	}
 
 	.theProblemTextContainer p {
 		margin-top: 30px;
 		font-size: 1.13rem;
 		color: black;
-		line-height: 1.05;
-		margin-top: 22px;
 	}
 
 	.backgroundDiv {
 		position: absolute;
 		width: 80%;
-		height: 600px;
+		height: 550px;
 		background-color: #17997b;
 		z-index: -1;
-		top: 65px;
-		left: 155px;
+		top: 85px;
+		left: 115px;
 		border-radius: 5px;
 	}
 	.mainContainer hr {
@@ -133,17 +126,9 @@
 }
 
 @media only screen and (min-width: 1150px) {
-
-	
-	.mainContainer {
-		max-width: 1250px;
-		margin: auto;
-	}
-
-		
 	.theProblemContent img {
 		height: 80%;
-		max-width: 430px;
+		width: 80%;
 	}
 	.theProblemTextContainer {
 		max-width: 80%;
@@ -157,16 +142,15 @@
 
 	.backgroundDiv {
 		top: 100px;
-		left: 200px;
+		left: 225px;
+		max-width: 80%;
 		height: 90%;
-
 	}
 }
 
 @media only screen and (min-width: 1450px) {
-
-	.theProblemContent {
-		max-width: 1200px;
+	.mainContainer {
+		margin: auto;
 	}
 
 	.theProblemContent img {
