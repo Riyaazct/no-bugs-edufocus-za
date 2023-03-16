@@ -1,8 +1,9 @@
 import {
-  DollarCircleOutlined,
-  ShoppingCartOutlined,
-  ShoppingOutlined,
-  UserOutlined,
+  AppstoreOutlined,
+  CloudUploadOutlined,
+  UsergroupAddOutlined,
+  CloudDownloadOutlined,
+  UserAddOutlined,
 } from "@ant-design/icons";
 import { Card, Space, Statistic, Table, Typography } from "antd";
 import { useEffect, useState } from "react";
@@ -53,7 +54,7 @@ function Dashboard() {
       <Space direction="horizontal">
         <DashboardCard
           icon={
-            <ShoppingCartOutlined
+            <CloudUploadOutlined
               style={{
                 color: "green",
                 backgroundColor: "rgba(0,255,0,0.25)",
@@ -63,12 +64,12 @@ function Dashboard() {
               }}
             />
           }
-          title={"Orders"}
+          title={"Downloads"}
           value={orders}
         />
         <DashboardCard
           icon={
-            <ShoppingOutlined
+            <CloudDownloadOutlined
               style={{
                 color: "blue",
                 backgroundColor: "rgba(0,0,255,0.25)",
@@ -78,12 +79,12 @@ function Dashboard() {
               }}
             />
           }
-          title={"Inventory"}
+          title={"Uploaded Meterial"}
           value={inventory}
         />
         <DashboardCard
           icon={
-            <UserOutlined
+            <UsergroupAddOutlined
               style={{
                 color: "purple",
                 backgroundColor: "rgba(0,255,255,0.25)",
@@ -93,12 +94,12 @@ function Dashboard() {
               }}
             />
           }
-          title={"Customer"}
+          title={"Students"}
           value={customers}
         />
         <DashboardCard
           icon={
-            <DollarCircleOutlined
+            <UserAddOutlined
               style={{
                 color: "red",
                 backgroundColor: "rgba(255,0,0,0.25)",
@@ -113,7 +114,7 @@ function Dashboard() {
         />
       </Space>
       <Space>
-        <RecentOrders />
+        <Recentstudent />
         <DashboardChart />
       </Space>
     </Space>
@@ -130,13 +131,13 @@ function DashboardCard({ title, value, icon }) {
     </Card>
   );
 }
-function RecentOrders() {
+function Recentstudent() {
   const [dataSource, setDataSource] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
-    getOrders().then((res) => {
+    getCustomers().then((res) => {
       setDataSource(res.products.splice(0, 3));
       setLoading(false);
     });
@@ -144,21 +145,25 @@ function RecentOrders() {
 
   return (
     <>
-      <Typography.Text>Recent Orders</Typography.Text>
+      <Typography.Text>Recent Students</Typography.Text>
       <Table
         columns={[
           {
-            title: "Title",
-            dataIndex: "title",
+            title: "First Name",
+            dataIndex: "firstName",
           },
           {
-            title: "Quantity",
-            dataIndex: "quantity",
+            title: "LastName",
+            dataIndex: "lastName",
           },
           {
-            title: "Price",
-            dataIndex: "discountedPrice",
+            title: "Email",
+            dataIndex: "email",
           },
+          {
+            title: "Phone",
+            dataIndex: "phone",
+          }
         ]}
         loading={loading}
         dataSource={dataSource}

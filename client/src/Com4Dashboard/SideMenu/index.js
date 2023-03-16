@@ -1,8 +1,8 @@
 import {
   AppstoreOutlined,
-  ShopOutlined,
-  ShoppingCartOutlined,
-  UserOutlined,
+  CloudUploadOutlined,
+  UsergroupAddOutlined,
+  CloudDownloadOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
 import { useEffect, useState } from "react";
@@ -32,22 +32,22 @@ function SideMenu() {
           {
             label: "Dashbaord",
             icon: <AppstoreOutlined />,
-            key: "/",
+            key: "/dash",
           },
           {
-            label: "Inventory",
-            key: "/inventory",
-            icon: <ShopOutlined />,
+            label: "Matarial",
+            key: "/Material",
+            icon: <CloudUploadOutlined />,
           },
           {
-            label: "Orders",
-            key: "/orders",
-            icon: <ShoppingCartOutlined />,
+            label: "Download",
+            key: "/Download",
+            icon: <CloudDownloadOutlined />,
           },
           {
-            label: "Customers",
-            key: "/customers",
-            icon: <UserOutlined />,
+            label: "Students",
+            key: "/Students",
+            icon: <UsergroupAddOutlined />,
           },
         ]}
       ></Menu>
