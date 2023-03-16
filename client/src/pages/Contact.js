@@ -52,8 +52,8 @@ const Contact = () => {
 				withCredentials: true,
 			}).then((response)=>{
 				console.log({ response });
-				console.log(response.data.msg);
-				if (response.data.msg === "success"){
+				console.log(response.data.message);
+				if (response.data.message === "success"){
 					alert("Your Message has been sent to Edufocus.");
 					// const data = response.data;
 					console.log("SUCCESS!");
