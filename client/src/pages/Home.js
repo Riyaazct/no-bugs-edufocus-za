@@ -1,79 +1,77 @@
 import React from "react";
 import "./Home.css";
-import Headers from "../components/Navbar/Header";
-import NewFooter from "../components/NewFooter";
+import NavbarBlue from "../components/Navbar/Header";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
+import Footer from "../components/Footer"
 
 function Home() {
 	return (
 		<>
-		<Headers />
+			<NavbarBlue />
 			<div className="home-page">
 				<section className="hero-wrap">
 					<div className="overlay">
 						<div className="content-wrap">
-							<div className="left-box">
-								<h1>Edu Focus</h1>
-								<h4>The teacher is at the heart of everything we do</h4>
-								<div className="buttons">
-
-
-					<Link to="/ourprogrammes" className="buttonLink">
-				<Button
-											variant="contained"
-											size="large"
-											style={{ backgroundColor: "#6AE3C6", color: "#1E0F9E" }}
-										>
-											Programmes
-										</Button>
-									</Link>
-									<Link to="/contact" className="buttonLink">
-										<Button
-											variant="contained"
-											style={{ backgroundColor: "#1E0F9E", color: "#6AE3C6" }}
-											size="large"
-										>
-											Support
-										</Button>
-									</Link>
-								</div>
+							<div className="text-wrap">
+								<h3>The teacher is at the heart of everything we do</h3>
 							</div>
-							<div className="right-box">
-								<div className="logo-wrap">
-									<img
-										src="api/images/home/logo.webp"
-										alt="big round logo EduFocus"
-									/>
-								</div>
+							<div className="logo-wrap">
+								<img src="api/images/home/logo.webp" alt="big round logo EduFocus" />
+							</div>
+							<div className="buttons">
+								<Button
+									variant="contained"
+									color="secondary"
+									size="large"
+									style={{ margin: "10px" }}
+								>
+									Programmes
+								</Button>
+								<Button
+									variant="contained"
+									color="primary"
+									size="large"
+									style={{ margin: "10px" }}
+								>
+									Partner with us
+								</Button>
+								<Button
+									variant="contained"
+									color="secondary"
+									size="large"
+									style={{ margin: "10px" }}
+								>
+									Support
+								</Button>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section className="welcome">
-					<div className="welcome-text">
-						<h3>Welcome to EduFocus Projects</h3>
+				<section>
+					<div className="welcome">
+						<h2>Welcome to EduFocus Projects.</h2>
 						<p>
 							EduFocus Projects NPO provides training, coaching and mentoring
 							interventions to the education sector, in alignment with Goal 4 of
 							the Sustainable Development Goals (SDGs, 2015): QUALITY EDUCATION
 						</p>
-						<Link to="/contact" className="buttonLink">
-						<Button
-							variant="contained"
-							size="large"
-							style={{ backgroundColor: "#17997A", color: "#fff" }}
-						>
-							Partner with us
-						</Button>
-						</Link>
+						<img
+							className="svg1"
+							src="api/images/home/green.svg"
+							alt="green round shape"
+						/>
 					</div>
-					<div className="welcome-img">
+					<div className="second-hero">
 						<img
 							src="api/images/home/hero-second.png"
 							alt="group of three people looking at a paper"
 						/>
 					</div>
+					<img
+						className="svg2"
+						src="api/images/home/blue.svg"
+						alt="blue elliptical shape"
+					/>
 				</section>
 				<section className="programmes">
 					<h3>What Do We Do?</h3>
@@ -91,36 +89,15 @@ function Home() {
 							</p>
 						</div>
 						<div className="photos">
-							<div className="coaching">
-								<h4>Coaching programmes</h4>
-								<img src="api/images/home/coaching.webp" alt="coaching" />
-								<p>
-									<Link to="/">Find out more...</Link>
-								</p>
-							</div>
-							<div className="training">
-								<h4>Training programmes</h4>
-								<img src="api/images/home/training.webp" alt="training" />
-								<p>
-									<Link to="/">Find out more...</Link>
-								</p>
-							</div>
-							<div className="mentor">
-								<h4>Mentoring programmes</h4>
-								<img src="api/images/home/mentor.webp" alt="mentor" />
-								<p>
-									<Link to="/">Find out more...</Link>
-								</p>
-							</div>
+							<img src="api/images/home/coaching.webp" alt="coaching" />
+							<img src="api/images/home/training.webp" alt="training" />
+							<img src="api/images/home/mentor.webp" alt="mentor" />
 						</div>
 					</div>
 				</section>
+				<Footer />
 			</div>
-
-			<NewFooter />
-
 		</>
-
 	);
 }
 

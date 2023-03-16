@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@600&display=swap');
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --color-black: #000;
   --color-blue: #1E0F9E;
@@ -9,39 +16,43 @@
   --color-darkgreen: #0c5d4a;
 }
 
-.signup-wrap {
+html {
+
   font-family: 'Raleway', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--color-blue);
+}
+
+/* body {
+  background-color: var(--color-lightgreen);
+
+  min-height: 100vh;
+  margin: 0 auto;
+} */
+
+.wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
-  background-color: var(--color-lightgreen);
-  min-height: 100vh;
-  margin: 0 auto;
+  padding: 2.5rem;
 }
 
-.signup-wrap h2 {
-  font-size: 1.5rem;
-}
-
-.signup-wrap form {
+/* form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
+} */
+
+label {
+  margin-top: 10px;
 }
 
-.signup-wrap label {
-  margin-top: 5px;
-}
-
-.signup-wrap input[type="text"],
-.signup-wrap input[type="email"],
-.signup-wrap input[type="password"] {
-  padding: 3px;
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 5px;
@@ -49,10 +60,10 @@
   box-sizing: border-box;
 }
 
-.signup-wrap button {
+button {
   background-color: var(--color-black);
   color: white;
-  padding: 5px 10px;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -61,11 +72,10 @@
 
 }
 
-.signup-wrap button:hover {
+button:hover {
   background-color: var(--color-blue);
 }
-
-.signup-wrap .instructions {
+.instructions {
   font-size: 0.7rem;
   border-radius: 0.5rem;
   background: var(--color-blue);
@@ -75,30 +85,30 @@
   bottom: -10px;
 }
 
-.signup-wrap .instructions>svg {
+.instructions>svg {
   margin-right: 0.25rem;
 }
 
-.signup-wrap .offscreen {
+.offscreen {
   position: absolute;
   left: -9999px;
 }
 
-.signup-wrap .hide {
+.hide {
   display: none;
 }
 
-.signup-wrap .valid {
+.valid {
   color: green;
   margin-left: 0.25rem;
 }
 
-.signup-wrap .invalid {
+.invalid {
   color: red;
   margin-left: 0.25rem;
 }
 
-.signup-wrap .errmsg {
+.errmsg {
   background-color: white;
   color: red;
   font-weight: bold;
@@ -106,6 +116,6 @@
   margin-bottom: 0.5rem;
 }
 
-.signup-wrap .line {
+.line {
   display: inline-block;
 }

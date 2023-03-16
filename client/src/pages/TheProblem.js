@@ -4,10 +4,8 @@ import "./TheProblem.css";
 const TheProblem = () => {
 	return (
 		<div className="mainContainer" role={"main"}>
-			<div className="theProblemTitle">
 			<h1>THE PROBLEM</h1>
-			<hr size="2" />
-			</div>
+			<hr size="2" /*color="#1e0f9e"*/ />
 			<div className="theProblemContent">
 				<div className="backgroundDiv"></div>
 
