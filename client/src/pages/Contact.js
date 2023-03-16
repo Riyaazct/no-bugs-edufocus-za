@@ -13,7 +13,7 @@ const Contact = () => {
 		{ label: "Donation", value: "donation" },
 	];
 
- 	const [contactmsg, setContactmsg] = useState({
+	const [contactmsg, setContactmsg] = useState({
 		fullname: "",
 		email: "",
 		messagetype: "",
