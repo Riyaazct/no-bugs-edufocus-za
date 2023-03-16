@@ -1,6 +1,6 @@
 import React from 'react';
 import "./NewFooter.css";
-import { faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faWhatsapp, faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -9,27 +9,26 @@ const NewFooter = () => {
     <footer>
       <div className="row primary">
         <div className="column about">
-
           <h3>EduFocus</h3>
-
           <p>
             EduFocus Projects NPO provides training, coaching and mentoring
             interventions to the education sector.
           </p>
-
           <div className="social">
-            <FontAwesomeIcon icon={faFacebook} className="icon"/>
-            <FontAwesomeIcon icon={faEnvelope} className="icon"/>
-            <FontAwesomeIcon icon={faWhatsapp} className="icon"/>
-            <FontAwesomeIcon icon={faPhone} className="icon"/>
+            <a href="https://web.facebook.com/groups/www.edufocusprojects.co.za?_rdc=1&_rdr" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faFacebook} className="icon" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCrp7fGUvqgJxcQFyFyeISZQ/videos?app=desktop" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faYoutubeSquare} className="icon" />
+            </a>
+            <FontAwesomeIcon icon={faEnvelope} className="icon" title="info@edufocusprojects.org.za" />
+            <FontAwesomeIcon icon={faWhatsapp} className="icon" title="+27 83 441 9423" />
+            <FontAwesomeIcon icon={faPhone} className="icon" title="+27 83 441 9423" />
           </div>
         </div>
-
         <div className="column links">
           <h3>Company</h3>
-
           <ul>
-
             <li>
               <a href="#term-of-service">Term of service</a>
             </li>
@@ -43,10 +42,7 @@ const NewFooter = () => {
               <a href="#our-programmes">OUR PROGRAMMES</a>
             </li>
           </ul>
-
         </div>
-
-
         <div className="column links">
           <h3>About</h3>
           <ul>
@@ -64,18 +60,14 @@ const NewFooter = () => {
             </li>
           </ul>
         </div>
-
         <div className="column subscribe">
           <h3>Newsletter</h3>
           <div>
             <input type="email" placeholder="Your email here" />
             <button>SUBMIT</button>
           </div>
-
         </div>
-
       </div>
-
       <div className="row copyright">
         <div className="footer-menu">
 
