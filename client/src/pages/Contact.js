@@ -1,5 +1,5 @@
 import "./Contact.css";
-import NavbarBlue from "../components/Navbar/NavbarBlue";
+import Header from "../components/Navbar/Header";
 import { useState } from "react";
 import axios from "axios";
 
@@ -73,7 +73,7 @@ const Contact = () => {
 
 	return (
 		<main role="main">
-		<NavbarBlue />
+		<Header />
 		<section className="contactsection">
 			<section className="contactintro">
 				<img

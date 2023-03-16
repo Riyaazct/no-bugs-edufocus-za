@@ -13,9 +13,7 @@ import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import OurProgrammes from "./pages/OurProgrammes";
-
-
-
+import TrainingMaterialsManagement from "./pages/TrainingMaterialsManagement";
 
 
 
@@ -39,6 +37,8 @@ const App = () => (
 		</Route>
 		<Route path="*" element={<Error />} />
 		<Route path="/ourprogrammes" element={<OurProgrammes />} />
+		<Route path="/admin/training-material" element={<TrainingMaterialsManagement />} />
+		<Route path="/admin/training-material" element={<TrainingMaterialsManagement />} />
 
 	</Routes>
 );
