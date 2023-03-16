@@ -12,6 +12,7 @@ import { PrivateRoute } from "./pages/PrivateRoute";
 import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import OurProgrammes from "./pages/OurProgrammes";
 import TrainingMaterialsManagement from "./pages/TrainingMaterialsManagement";
 
 
@@ -29,15 +30,14 @@ const App = () => (
 		<Route path="/contact" element={<Contact />} />
 		<Route path="/unauthorized" element={<Unauthorized />} />
 		<Route element={<PrivateRoute role='admin' />}>
-			<Route path="/adm" element={<Administrator />} />
+		<Route path="/adm" element={<Administrator />} />
 		</Route>
 		<Route element={<PrivateRoute role='member' />}>
-			<Route path="/member" element={<Member />} />
+		<Route path="/member" element={<Member />} />
 		</Route>
 		<Route path="*" element={<Error />} />
-
-		<Route path="/contact" element={<Contact />} />
-
+		<Route path="/ourprogrammes" element={<OurProgrammes />} />
+		<Route path="/admin/training-material" element={<TrainingMaterialsManagement />} />
 		<Route path="/admin/training-material" element={<TrainingMaterialsManagement />} />
 
 	</Routes>
