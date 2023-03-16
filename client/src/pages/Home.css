@@ -9,18 +9,21 @@
 
 a {
   text-decoration: none;
-
 }
 
 .home-page {
+  font-size: 1rem;
   min-height: 100vh;
   margin: 0 auto;
-  color: var(--color-black);
-  margin: 0;
   padding: 0;
-  box-sizing: border-box
+  color: var(--color-black);
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 400;
 }
 
+
+/* HERO */
 .hero-wrap {
   height: 100vh;
   position: relative;
@@ -60,7 +63,7 @@ a {
   justify-content: center;
   align-items: center;
   margin-left: 10rem;
-  margin-top: 13rem;
+  margin-top: 7rem;
 
 }
 
@@ -68,31 +71,29 @@ a {
   width: 35rem;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 
 }
 
-.left-box h2 {
-  font-size: 2rem;
-  color: white;
-}
-
-.left-box h3 {
-  font-size: 1.2rem;
-
+.left-box h4 {
+  text-align: center;
 }
 
 .left-box .buttons {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 3rem;
+  gap: 1.5rem;
 }
 
 .left-box .buttons button {
-  width: 7rem;
-  padding: 0.5rem;
-  font-size: 0.7rem;
+  width: 9rem;
+  padding: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
+/* WELCOME */
 .welcome {
   display: flex;
   flex-direction: row;
@@ -100,7 +101,7 @@ a {
   justify-content: center;
   margin: 3rem;
   gap: 2rem;
-  margin-top: -2rem;
+  margin-top: -1rem;
 }
 
 .welcome-img {
@@ -118,30 +119,33 @@ a {
   text-align: center;
 }
 
-.welcome-text h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.welcome-text h3 {
+  margin-top: -2rem;
+  margin-bottom: 2rem;
 }
 
 .welcome-text p {
-  font-size: 1rem;
-  line-height: 1.5;
+
+  line-height: 1.8;
+  margin-bottom: 3rem;
 }
 
 .welcome button {
+  width: 12rem;
   font-size: 0.8rem;
+  font-weight: 600;
+
 }
 
+/* PROGRAMMES */
 .programmes {
+  margin-top: -5rem;
   margin-bottom: -10rem;
 }
 
 .programmes h3 {
-  margin-top: -6rem;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  color: var(--color-blue);
+
 }
 
 .container {
@@ -159,21 +163,17 @@ a {
   margin-top: 1rem;
   flex: 1;
   flex-basis: 100%;
-  font-size: 0.8rem;
 
 }
 
 .text p {
-  font-size: 1rem;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.5;
-  font-weight: 500;
+  line-height: 1.8;
   text-indent: 1rem;
   color: var(--color-black);
 }
 
-
 .photos {
+  margin-top: 1rem;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -192,7 +192,6 @@ a {
 }
 
 .photos h4 {
-  font-size: 1.2rem;
   margin-bottom: 2rem;
   color: var(--color-blue)
 }
@@ -203,62 +202,70 @@ a {
 
 /* MOBILE */
 @media only screen and (max-width: 600px) {
+  .home-page {
+    font-size: 0.5rem;
+  }
+
   .hero-wrap {
-    height: 55vh;  
+    height: 50vh;
   }
 
   .content-wrap {
-    flex-direction: ;
-    margin-top: 3rem;
-    margin-left: 2rem;
+    margin: auto;
+    flex-direction: column;
     gap: 1rem;
   }
 
   .left-box {
-    width: 100%;
+    width: 10rem;
+    gap: 0;
   }
 
-  .left-box h2 {
-    font-size: 1rem;
-    width: 100%;
+  .left-box h1 {
+    font-size: large;
+
   }
 
-  .left-box h3 {
-    font-size: 0.8rem;
+  .left-box h4 {
+    text-align: center;
+    font-size: small;
+
+  }
+
+  .left-box .buttons {
+    gap: 0.5rem;
+
   }
 
   .left-box .buttons button {
-    width: 3rem;
+    width: 7rem;
     padding: 0.5rem;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
 
   .logo-wrap img {
-    max-width: 35%;
+    max-width: 100px;
     height: auto;
+    margin-right: 2rem;
   }
 
   .welcome {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
-  }
-
-  .welcome-text h2 {
-    font-size: 1.5rem;
-    padding-bottom: 1rem;
+    margin-top: 3rem;
   }
 
   .welcome-text p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 
   .welcome button {
-    font-size: 0.5rem;
+    margin-top: -3rem;
+    font-size: 0.6rem;
   }
 
   .welcome-img {
-    margin-top: -4rem;
+    margin-top: -3rem;
     margin-bottom: 2rem;
   }
 
@@ -266,41 +273,162 @@ a {
     font-size: 1.5rem;
     margin-top: px;
   }
+
   .text p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-top: -1rem;
   }
 
   .photos {
     justify-content: center;
   }
+
   .photos h4 {
     font-size: 1rem;
   }
 }
 
 /* TABLET */
- @media only screen and (min-width: 601px) and (max-width: 870px) { 
+@media only screen and (min-width: 601px) and (max-width: 870px) {
+
+  .hero-wrap {
+    height: 70vh;
+  }
+
+  .content-wrap {
+    margin-top: 12rem;
+  }
+
+  .left-box h1 {
+    font-size: 2rem;
+  }
+
+  .left-box .buttons button {
+
+    font-size: 1rem;
+  }
+
   .welcome {
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
-     flex-direction: ; 
-   } 
-  .welcome-text h2 {
+    flex-direction: ;
+  }
+
+  .welcome-text h3 {
     font-size: 1.5rem;
   }
+
   .welcome button {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
+
   .programmes {
-    margin-top: 8rem;
-  } 
+    margin-top: 4rem;
+  }
+
   .text p {
     font-size: 0.8rem;
-  } 
+  }
+
   .photos {
     justify-content: center;
   }
 
 }
 
+@media only screen and (min-width: 871px) and (max-width: 1024px) {
+
+  .hero-wrap {
+    height: 50vh;
+  }
+
+  .left-box h1 {
+    font-size: 2rem;
+  }
+
+  .left-box .buttons button {
+    font-size: 1rem;
+  }
+
+  .welcome {
+    margin-top: 4rem;
+  }
+
+  .welcome button {
+    width: 15rem;
+    font-size: 1rem;
+  }
+
+  .programmes {
+    margin-top: 3rem;
+  }
+
+  .photos {
+    justify-content: center;
+  }
+}
+
+
+@media only screen and (min-width: 1440px) {
+  .home-page {
+    font-size: 1.5rem;
+  }
+
+  .hero-wrap {
+    height: 85vh;
+  }
+
+  .content-wrap {
+    margin-top: 15rem;
+  }
+
+  .left-box h1 {
+    font-size: 3rem;
+  }
+
+  .left-box h4 {
+    font-size: 2rem;
+  }
+
+  .left-box .buttons button {
+    width: 14rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .welcome {
+    margin-top: -2rem;
+  }
+
+  .welcome-text h3 {
+    font-size: 3rem;
+  }
+
+  .welcome-text p {
+    font-size: 1.5rem;
+  }
+
+  .welcome button {
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 18rem;
+
+  }
+
+  .programmes {
+    margin-top: -7rem;
+  }
+
+  .programmes h3 {
+    font-size: 3rem;
+  }
+
+  .text p {
+    font-size: 1.5rem;
+  }
+
+  .photos>div>img {
+    max-width: 400px;
+  }
+
+}
