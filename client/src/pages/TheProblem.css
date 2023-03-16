@@ -1,10 +1,3 @@
-@media screen and (max-width: 768px) {
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-}
 
 .theProblemTitle {
 	background-color: ;
@@ -78,117 +71,89 @@
 }
 
 @media only screen and (min-width: 992px) {
-	.mainContainer {
-		height: 100vh;
+	.mainContainer{
+		height: 80vh;
+		margin-bottom: 0;
 	}
-
-		.theProblemContent {
+	.theProblemContent {
 		position: relative;
-		flex-direction: row;
-		height: fit-content;
-		max-width: 80%;
+		max-width: 85%;
 		margin-top: 100px;
-		gap: 10px;
-		
 	}
 
 	.theProblemContent img {
-		max-height: max-content;
-		max-width: 360px;
+		position: absolute;
+		left: 45px;
+		top: -50px;
+		max-width: 300px;
 		border-radius: unset;
 		height: 280px;
-		
+	
 	}
 	.theProblemTextContainer {
-		height: fit-content;
 		padding: 10px;
 		background-color: unset;
-		max-width: 50%;
-		margin-top: 50px;		
+		max-width: 75%;
+		
 	}
 
 	.theProblemTextContainer p {
-		margin-top: 30px;
-		font-size: 1.13rem;
-		color: black;
+		font-size: 0.95rem;
 		line-height: 1.05;
-		margin-top: 22px;
 	}
 
 	.backgroundDiv {
-		position: absolute;
-		width: 80%;
-		height: 600px;
+		display: flex;
+		justify-content: flex-end;
+		max-width: 650px;
+		margin-left: auto;
 		background-color: #17997b;
 		z-index: -1;
-		top: 65px;
-		left: 155px;
 		border-radius: 5px;
-	}
-	.mainContainer hr {
-		width: 60%;
-		margin-left: auto;
-		margin-right: auto;
+		margin-bottom: 50px;
 	}
 }
 
-@media only screen and (min-width: 1150px) {
-
+@media only screen and (min-width: 1060px) {
+	.mainContainer{
+		max-width: 950px; 
+		 margin-left: auto; 
+		 margin-right: 10%;
+	}
 	
-	.mainContainer {
-		max-width: 1250px;
-		margin: auto;
-	}
-
-		
+	
 	.theProblemContent img {
-		height: 80%;
-		max-width: 430px;
+		left: 40px;
 	}
 	.theProblemTextContainer {
-		max-width: 80%;
-		margin-top: 80px;
+		max-width: 70%;
 	}
 
-	.theProblemTextContainer p {
-		font-size: 1.2rem;
-		padding-right: 15px;
-	}
-
-	.backgroundDiv {
-		top: 100px;
-		left: 200px;
-		height: 90%;
-
-	}
 }
 
-@media only screen and (min-width: 1450px) {
-
-	.theProblemContent {
-		max-width: 1200px;
+@media only screen and (min-width: 1300px) {
+	.mainContainer {
+	margin: auto;		
 	}
+	
 
 	.theProblemContent img {
-		height: 350px;
-		width: unset;
+		max-width: 450px;
+		left: -120px;
+		height: 300px;
+
 	}
 	.theProblemTextContainer {
-		max-width: 50%;
+		height: 470px;
 	}
 
 	.theProblemTextContainer p {
-		font-size: 1.25rem;
+		font-size: 1.02rem;
+		margin-right: 15px;
 	}
 
 	.backgroundDiv {
-		left: 180px;
-		max-width: 75%;
 	}
 
-	.backgroundDiv {
-		max-width: 75%;
-		height: 85%;
-	}
 
 }

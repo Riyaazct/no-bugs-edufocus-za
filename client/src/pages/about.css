@@ -92,7 +92,7 @@ h1 {
 
 	.aboutFirstParagraph,
 	.aboutSecondParagraph {
-		font-size: 1.17rem;
+		font-size: 1.1rem;
 	}
 
 	.aboutFirstParagraph {
@@ -120,11 +120,11 @@ h1 {
 	.aboutFirstParagraph {
 		top: -205px;
 		max-width: 65%;
-		font-size: 1.26rem;
+		font-size: 1.2rem;
 	}
 	.aboutSecondParagraph {
 		max-width: 65%;
-		font-size: 1.26rem;
+		font-size: 1.22rem;
 		top: -180px;
 	}
 	.spanForName {

@@ -25,7 +25,7 @@ hr {
 
 .visionCardContent li {
 	list-style: none;
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 
 .visionCard:first-child ul,
@@ -47,7 +47,7 @@ hr {
 	border: none;
 	background-color: unset;
 	color: #17997a;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	font-weight: 500;
 	width: 100%;
 }
@@ -69,9 +69,8 @@ hr {
 
 /* 768px */
 @media only screen and (min-width: 768px) {
-	.main_container {
-	}
-
+	
+	
 	.visionCardContainer {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -79,6 +78,7 @@ hr {
 		padding-right: 30px;
 		gap: 10px;
         margin: 0px auto ;
+		max-width: 85%;
 	}
 
 	.visionCard {
@@ -87,7 +87,7 @@ hr {
 		}
 
 	.visionCardTitle {
-		font-size: 1.4rem;
+		font-size: 1.3rem;
 		margin: auto;		
 	}
 
@@ -102,7 +102,7 @@ hr {
 		
 	}
 	.visionCardContent li {
-		font-size: 1rem;
+		font-size: 0.9rem;
 	}
 
 	.visionCard:first-child ul,
@@ -152,7 +152,7 @@ hr {
 /* 1050px  SCREEN*/
 @media only screen and (min-width: 1050px) {
 	.visionCardContainer {
-		max-width: 95%;
+		max-width: 80%;
 		gap: 30px;
 	}
 	.visionCardTitle {
@@ -160,39 +160,43 @@ hr {
 	}
 
 	.visionCard li {
-	font-size: 1.14rem;
+	font-size: 1rem;
 	max-width: 450px;
 }
 
 .visionCardContent img {
-	height: 200px;
+	height: 170px;
 }
 
 .readMoreButton {
-	font-size: 1.25rem;
+	font-size: 1.05rem;
 }
 }
 
 /* 1400px screen size */
 @media only screen and (min-width: 1400px) {
 	.visionCardContainer {
-		max-width: 90%;
+		max-width: 80%;
 		gap: 50px;
 	}
 
+	.visionCard {
+		padding: 15px;
+	}
+
 	.visionCardTitle {
-		font-size: 2rem;
+		font-size: 1.8rem;
 }
 
 	.visionCard li {
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 }
 
 .visionCardContent img {
-	height: 280px;
+	height: 250px;
 }
 
 .readMoreButton {
-	font-size: 1.45rem;
+	font-size: 1.3rem;
 }
 }
