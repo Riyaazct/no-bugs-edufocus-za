@@ -69,6 +69,8 @@ hr {
 
 /* 768px */
 @media only screen and (min-width: 768px) {
+	.main_container {
+	}
 
 	.visionCardContainer {
 		display: grid;
@@ -77,7 +79,6 @@ hr {
 		padding-right: 30px;
 		gap: 10px;
         margin: 0px auto ;
-		height: 80vh;
 	}
 
 	.visionCard {

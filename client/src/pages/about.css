@@ -2,8 +2,6 @@
 	position: relative;
 }
 
-
-
 h1 {
 	margin-left: 10px;
 	margin-top: 30px;
@@ -44,10 +42,6 @@ h1 {
 	font-size: 1.2rem;
 }
 
-.aboutHr {
-	max-width: 95%;
-}
-
 /* MEDIA QUERIES */
 
 @media only screen and (min-width: 768px) {
@@ -73,10 +67,7 @@ h1 {
 	}
 
 	.aboutHr {
-		margin-bottom: 80px;
-		max-width: 30%;
-		margin-left: auto;
-		margin-right: auto;
+		display: none;
 	}
 	.aboutSecondParagraph {
 		top: -210px;
@@ -87,6 +78,7 @@ h1 {
 	}
 	h1 {
 		text-align: center;
+		margin-bottom: 30px;
 	}
 }
 
@@ -118,9 +110,7 @@ h1 {
 		max-width: 80%;
 		margin: 0 auto;
 	}
-	.aboutHr {
-		max-width: 30%;
-	}
+	
 }
 
 @media only screen and (min-width: 1320px) {
@@ -140,9 +130,7 @@ h1 {
 	.spanForName {
 		font-size: 1.5rem;
 	}
-	.aboutHr {
-		max-width: 25%;
-	}
+	
 }
 
 @media only screen and (min-width: 1691px) {
