@@ -13,6 +13,13 @@ const Contact = () => {
 		{ label: "Donation", value: "donation" },
 	];
 
+	const messageSent = {
+		success: "Your message has been sent successfully",
+		failure:"Your message has not been sent, please contact info@edufocusprojects.org.za directly",
+	};
+
+	const [contactmsgconfirmation, setContactmsgconfirmation] = useState("");
+
  	const [contactmsg, setContactmsg] = useState({
 		fullname: "",
 		email: "",
@@ -49,7 +56,7 @@ const Contact = () => {
       	event.preventDefault();
 		const enquiryBody = { ...contactmsg };
 		console.log("Sending data to server");
-		setValues({
+		setContactmsg({
 			fullname: "",
 			email: "",
 			messagetype: "",
@@ -64,9 +71,11 @@ const Contact = () => {
 			});
 			const data = await response.data;
 			console.log(data);
+			setContactmsgconfirmation(messageSent.success);
 		} catch (err) {
 			if (!err?.response) {
 			console.log("No Server Response");
+			setContactmsgconfirmation(messageSent.failure);
 			}
 		}
 	};
@@ -216,6 +225,9 @@ const Contact = () => {
 								Send Message
 							</button>
 						</div>
+					</div>
+					<div className="formitem contactmessageconfirmation">
+						<p>{contactmsgconfirmation}</p>
 					</div>
 				</form>
 			</section>

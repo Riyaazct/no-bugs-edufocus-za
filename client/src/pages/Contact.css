@@ -110,6 +110,14 @@ h2 {
     border: none;
 }
 
+.contactmessageconfirmation {
+    font-family: 'Open Sans';
+    font-style: normal;
+    color: aquamarine;
+    
+}
+
+
 /* Media Queries */
 /* only 2 breakpoints general mobile and then laptop */
 /*laptop breakpoint */

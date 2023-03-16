@@ -249,8 +249,14 @@ router.post("/contact",(req, res)=>{
     //send email
   smtpTrans.sendMail(mailOpts,(error,res)=>{
     if(error){
+      res.json({
+        msg: "fail",
+      });
     console.log(error);
     } else{
+      res.json({
+        msg: "success",
+      });
       res.status(200).send("Message sent successfully");
     }
    //smtpTrans.close();
