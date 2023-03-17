@@ -96,7 +96,7 @@ nav {
 	z-index: -1;
 	align-items: flex-start;
 	background-color: var(--secondaryColor);
-	border-radius: 100px;
+	border-radius: 5px;
 	display: flex;
 	height: 40px;
 	justify-content: flex-end;
@@ -110,7 +110,7 @@ nav {
 	display: flex;
 	height: 40px;
 	min-width: 92px;
-	padding: 8px 16.9px;
+	padding: 8px 25px;
 }
 
 .sign-up {
@@ -125,6 +125,10 @@ nav {
 
 .signupbutton {
 	border-radius: 5px;
+}
+
+.navlinks {
+ margin-left: 200px;
 }
 
 @media only screen and (max-width: 1024px) {

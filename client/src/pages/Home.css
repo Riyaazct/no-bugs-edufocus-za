@@ -366,6 +366,13 @@ a {
   .photos {
     justify-content: center;
   }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    gap: 1.5rem;
+  }
 }
 
 
@@ -395,7 +402,12 @@ a {
     padding: 1rem;
     font-size: 1.5rem;
   }
-
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    gap: 1.5rem;
+  }
   .welcome {
     margin-top: -2rem;
   }
