@@ -94,7 +94,7 @@ const OurPeople = () => {
         </div>
       </div>
       <div>
-      	<Footer />
+        <Footer />
       </div>
     </div>
    
