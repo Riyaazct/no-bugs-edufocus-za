@@ -48,48 +48,32 @@ router.get("/users", async (req, res) => {
 });
 
 
-// router.post("/users", async (req, res) => {
-//   const { users, email, pwd } = req.body;
-//   const query =
-//       "INSERT INTO signup (users, email, pwd) VALUES ($1, $2, $3)";
-//       db
-//       .query(query, [users, email, pwd])
-//       .then(() => res.send("User added!"))
-//       .catch((error) => {
-//             console.error(error);
-//             res.status(500).json(error);
-//           });
-// });
+router.post("/createAccount", async (req, res) => {
+  const { username, email, password } = req.body;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Check if the username already exists
+  const checkUserQuery = "SELECT * FROM registration WHERE username = $1";
+  const userResult = await db.query(checkUserQuery, [username]);
+  if (userResult.rowCount > 0) {
+    return res.status(400).send("Username already exists");
+  }
+  // Check if the email already exists
+  const checkEmailQuery = "SELECT * FROM registration WHERE email = $1";
+  const emailResult = await db.query(checkEmailQuery, [email]);
+  if (emailResult.rowCount > 0) {
+    return res.status(400).send("Email already exists");
+  }
+  // Hash the password
+  const hashedPwd = await bcrypt.hash(password, 10);
+  // If both checks pass, insert the new record with hashed password
+ const insertQuery = "INSERT INTO registration (username, email, password) VALUES ($1, $2, $3)";
+  db.query(insertQuery, [username, email, hashedPwd])
+    .then(() => res.send("User added!"))
+    .catch((error) => {
+      console.error(error);
+      res.status(500).json(error);
+    });
+});
 
 
 

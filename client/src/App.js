@@ -10,8 +10,8 @@ import SignUp from "./pages/SignUp";
 
 // dashboard
 import Customers from "./pdashboard/Students";
-import Inventory from "./pdashboard/Material";
-import Orders from "./pdashboard/Download/index";
+import Inventory from "./pdashboard/Uploaded";
+import Orders from "./pdashboard/Orders/index";
 import Dash from "./Dash";
 
 
