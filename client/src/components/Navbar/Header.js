@@ -15,32 +15,30 @@ function NavbarBlue() {
 		<header>
 			<h3>EduFocus</h3>
 			<nav ref={navRef}>
-				<div className={location.pathname === "/" ? "pageActive" : ""}>
-					<a href="/">
-						Home
-					</a>
-				</div>
-				<div className={location.pathname === "/about" ? "pageActive" : ""}>
-					<a href="/about">
-						About Us
-					</a>
-				</div>
-				<div className={location.pathname === "/contact" ? "pageActive" : ""}>
-					<a href="/contact">
-						Contact Us
-					</a>
-				</div>
-				<div
-					className={
-						location.pathname === "/Ourpeople/this/a/team" ? "pageActive" : ""
-					}
-				>
-					<a href="/Ourpeople/this/a/team">
-						Our People
-					</a>
-				</div>
-				<div className={location.pathname === "/photos" ? "pageActive" : ""}>
-					<a href="/photos">Our Photos</a>
+				<div className="navlinks">
+					<div className={location.pathname === "/" ? "pageActive" : ""}>
+						<a href="/">
+							Home
+						</a>
+					</div>
+					<div className={location.pathname === "/about" ? "pageActive" : ""}>
+						<a href="/about">
+							About Us
+						</a>
+					</div>
+					<div className={location.pathname === "/Ourpeople/this/a/team" ? "pageActive" : ""}>
+						<a href="/Ourpeople/this/a/team">
+							Our People
+						</a>
+					</div>
+					<div className={location.pathname === "/photos" ? "pageActive" : ""}>
+						<a href="/photos">Our Photos</a>
+					</div>
+					<div className={location.pathname === "/contact" ? "pageActive" : ""}>
+						<a href="/contact">
+							Contact Us
+						</a>
+					</div>
 				</div>
 				<div className="small-s">
 					<a href="/login">Login</a>
