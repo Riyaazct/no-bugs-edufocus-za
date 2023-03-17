@@ -346,6 +346,14 @@ a {
     font-size: 2rem;
   }
 
+
+  .left-box .buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    gap: 1.5rem;
+  }
+
   .left-box .buttons button {
     font-size: 1rem;
   }
@@ -359,6 +367,13 @@ a {
     font-size: 1rem;
   }
 
+  
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
   .programmes {
     margin-top: 3rem;
   }
@@ -394,6 +409,20 @@ a {
     width: 14rem;
     padding: 1rem;
     font-size: 1.5rem;
+  }
+
+
+  .left-box .buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    gap: 1.5rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .welcome {
