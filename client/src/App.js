@@ -7,7 +7,6 @@ import LogIn from "./pages/LogIn";
 import Member from "./pages/Member";
 import Error from "./pages/Error";
 import Unauthorized from "./pages/Unauthorize";
-import Administrator from "./pages/Administrator";
 import { PrivateRoute } from "./pages/PrivateRoute";
 import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
@@ -30,14 +29,16 @@ const App = () => (
 		<Route path="/contact" element={<Contact />} />
 		<Route path="/unauthorized" element={<Unauthorized />} />
 		<Route element={<PrivateRoute role='admin' />}>
-		<Route path="/adm" element={<Administrator />} />
+		<Route path="/admin/training-material" element={<TrainingMaterialsManagement/>} />
 		</Route>
 		<Route element={<PrivateRoute role='member' />}>
 		<Route path="/member" element={<Member />} />
 		</Route>
 		<Route path="*" element={<Error />} />
 		<Route path="/ourprogrammes" element={<OurProgrammes />} />
+
 		<Route path="/admin/training-material" element={<TrainingMaterialsManagement />} />
+
 
 	</Routes>
 );

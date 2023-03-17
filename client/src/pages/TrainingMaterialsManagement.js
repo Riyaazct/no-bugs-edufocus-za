@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./TrainingMaterialsManagement.css";
 import FileUploadPage from "./FileUploadPage";
@@ -6,7 +7,15 @@ import FileUploadPage from "./FileUploadPage";
 const TrainingMaterialsManagement = () => {
 	const [materials, setMaterials] = useState([]);
 	const [addMaterialActive, setAddMaterialActive] = useState(false);
-
+	const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await axios.post("/api/logout");
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
 	// set materials state to material data from api on page load.
 	useEffect(() => {
@@ -38,6 +47,7 @@ const TrainingMaterialsManagement = () => {
 	return (
 		<>
 			<div className="trainingMaterialsPageHeading">
+			<button onClick={handleLogout}>Logout</button>
 				<h2>Training Material Management</h2>
 				<button
 					type="button"
