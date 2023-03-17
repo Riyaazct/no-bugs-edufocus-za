@@ -132,11 +132,6 @@ router.delete("/training_material/:id", (req, res) => {
   } );
 });
 
-
-
-
-
-
 router.get("/", (_, res) => {
   logger.debug("Welcoming everyone...");
   res.json({ message: "Hello, world!" });
@@ -187,7 +182,8 @@ router.get("/contact", (_, res) => {
   res.json({ message: "Hello, I am Contact" });
 });
 
-router.post("/contact",(req, res)=>{
+router.post("/contact", async (req, res)=>{
+ try {
 
   const { fullname, email, messagetype, message } = req.body;
 
@@ -206,7 +202,8 @@ router.post("/contact",(req, res)=>{
 
   console.log({ output });
 
-  //sending mail using SMTP and nodemailer
+
+ //sending mail using SMTP and nodemailer
   const smtpTrans = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -229,14 +226,23 @@ router.post("/contact",(req, res)=>{
     html:output,
   };
     //send email
-  smtpTrans.sendMail(mailOpts,(error,res)=>{
+  smtpTrans.sendMail(mailOpts,(error,response)=>{
     if(error){
-    console.log(error);
+      console.log("Error");
+        res.status(500).json({
+        message: "fail",
+      });
     } else{
-      res.status(200).send("Message sent successfully");
+      console.log("Success");
+    res.status(200).json({
+      message: "success",
+    });
     }
-   //smtpTrans.close();
   });
+} catch (err) {
+    console.error(err);
+    res.status(500).send("An error occurred while processing your request.");
+  }
 });
 //****************************/
 
