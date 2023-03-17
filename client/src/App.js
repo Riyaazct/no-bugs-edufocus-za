@@ -36,6 +36,10 @@ const App = () => (
 		</Route>
 		<Route path="*" element={<Error />} />
 		<Route path="/ourprogrammes" element={<OurProgrammes />} />
+
+		<Route path="/admin/training-material" element={<TrainingMaterialsManagement />} />
+
+
 	</Routes>
 );
 
