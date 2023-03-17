@@ -124,11 +124,6 @@ nav {
 	color: black;
 }
 
-
-.header-buttons {
-	background-color: #25dac5;
-}
-
 @media only screen and (max-width: 1024px) {
 
 
@@ -150,6 +145,7 @@ nav {
 		gap: 1.5rem;
 		background-color: var(--mainColor);
 		transition: 1s;
+		padding-left: 100px;
 	}
 
 	header .responsive_nav {
