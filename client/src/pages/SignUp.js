@@ -91,27 +91,27 @@ function SignUp() {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
         }
-      );
-      const data = await response.data;
-      console.log(data);
+      ).then((response)=>{
+        if (response.data.msg === "success"){
+            alert("Message Sent.");
+            const data = response.data;
+            console.log(data);
 
-      setUsername("");
-      setEmail("");
-      setPassword("");
-      setMatchPwd("");
-
+            setUsername("");
+            setEmail("");
+            setPassword("");
+            setMatchPwd("");
+        }else if(response.data.msg === "fail"){
+            alert("Message failed to send.");
+        }
+     });
     } catch (err) {
-      if (!err?.response) {
-        setErrMsg("No Server Response");
-      } else if (err.response?.status === 409) {
-        setErrMsg("Username Taken");
-      } else {
-        setErrMsg("Registration Failed");
-      }
-      errRef.current.focus();
-    }
-
+			if (!err?.response) {
+			console.log("No Server Response");
+			}
+		}
   };
+
   return (
     <>
         <section className='signup-wrap'>

@@ -2,17 +2,19 @@
 
 body {
     margin: 0 auto;
-    /* height: 2000px; */
     max-width: 100%;
     box-sizing: border-box;
     color:#000000;
+    
+} 
+
+main {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-} 
+}
 
 .contactsection {
-    height: 2000px;
     margin: 20px;
 }
 
@@ -21,12 +23,6 @@ body {
     display: inline-block;
     text-align: center;
 }
-
-/* .contactcentered {
-    left:50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-} */
 
 h2 {
     font-family: 'Raleway';
@@ -105,8 +101,15 @@ h2 {
 .buttonstyling {
     background-color: #1E0F9E;
     color: #FFFFFF;
-    padding: 20px;
+    padding: 20px ;
     border: none;
+}
+
+.formconfirmation {
+    margin: 15px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400; 
 }
 
 /* Media Queries */
