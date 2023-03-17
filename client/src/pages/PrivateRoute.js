@@ -2,7 +2,7 @@ import React from "react";
 
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
-import Administrator from "./Administrator";
+import TrainingMaterialsManagement from "./TrainingMaterialsManagement";
 import Member from "./Member";
 export const PrivateRoute = () => {
   const { isAuthorized, auth } = useAuth();
@@ -12,7 +12,7 @@ export const PrivateRoute = () => {
   }
   return <>
   {
-   role==='member'?<Member />:<Administrator /> 
+   role==='member'?<Member />:<TrainingMaterialsManagement/> 
   }
   </>;
 };

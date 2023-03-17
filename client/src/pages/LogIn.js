@@ -43,7 +43,7 @@ function LogIn() {
       if (role === "admin") {
         setUsername("");
         setPassword("");
-        navigate("/adm");
+        navigate("/admin/training-material");
       } else if (role === "member") {
         setUsername("");
         setPassword("");
