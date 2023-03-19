@@ -1,6 +1,6 @@
 import "./OurPeople.css";
 import NavbarBlue from "../components/Navbar/Header";
-import Footer from "../components/Footer";
+import NewFooter from "../components/NewFooter";
 
 const OurPeople = () => {
   return (
@@ -128,7 +128,7 @@ const OurPeople = () => {
 				</div>
 			</div>
 			<div>
-				<Footer />
+				<NewFooter />
 			</div>
 		</div>
 	);
