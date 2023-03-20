@@ -125,6 +125,8 @@ nav {
 }
 
 @media only screen and (max-width: 1024px) {
+
+
 	header .nav-btn {
 		visibility: visible;
 		opacity: 1;
@@ -143,6 +145,7 @@ nav {
 		gap: 1.5rem;
 		background-color: var(--mainColor);
 		transition: 1s;
+		padding-left: 100px;
 	}
 
 	header .responsive_nav {
@@ -181,5 +184,10 @@ nav {
 		gap: 1.5rem;
 		background-color: var(--mainColor);
 		transition: 1s;
+		color: #eee;
+	}
+
+	.dmsans-medium-white-16px {
+		color: #eee;
 	}
 }
