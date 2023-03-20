@@ -71,21 +71,26 @@
 }
 
 @media only screen and (min-width: 992px) {
+	main {
+		overflow: scroll;
+	}
 	.mainContainer{
 		height: 80vh;
 		margin-bottom: 0;
 	}
 	.theProblemContent {
-		position: relative;
+		/* position: relative; */
+		display: flex;
+		flex-direction: row;
 		max-width: 85%;
-		margin-top: 100px;
 	}
 
 	.theProblemContent img {
-		position: absolute;
-		left: 45px;
-		top: -50px;
-		max-width: 300px;
+		/* position: absolute; */
+		/* left: 45px;
+		top: -50px; */
+		margin-top: 100px;
+		max-width: 400px;
 		border-radius: unset;
 		height: 280px;
 	
@@ -104,11 +109,11 @@
 
 	.backgroundDiv {
 		display: flex;
-		justify-content: flex-end;
-		max-width: 650px;
+		/* justify-content: flex-end; */
+		justify-content: center;
+		/* max-width: 650px; */
 		margin-left: auto;
 		background-color: #17997b;
-		z-index: -1;
 		border-radius: 5px;
 		margin-bottom: 50px;
 	}
