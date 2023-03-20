@@ -80,6 +80,7 @@
 @media only screen and (min-width: 992px) {
 	.mainContainer {
 		height: 100vh;
+		margin-bottom: 350px;
 	}
 
 		.theProblemContent {
@@ -137,7 +138,9 @@
 	
 	.mainContainer {
 		max-width: 1250px;
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 200px;
 	}
 
 		
@@ -163,7 +166,11 @@
 	}
 }
 
-@media only screen and (min-width: 1450px) {
+@media only screen and (min-width: 1400px) {
+
+	.mainContainer{
+		margin-bottom: 100px;
+	}
 
 	.theProblemContent {
 		max-width: 1200px;
