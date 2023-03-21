@@ -76,7 +76,7 @@ const Contact = () => {
 	};
 
 	return (
-		<main role="main">
+		<main role="main" className="contactPage">
 		<Header />
 		<section className="contactsection">
 			<section className="contactintro">
