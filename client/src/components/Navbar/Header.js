@@ -60,10 +60,10 @@ function NavbarBlue() {
 			<div className="header-buttons">
         <Stack spacing={2} direction="row">
           <Link to="/login" className="no-link">
-            <Button variant="outlined">Login </Button>
+            <Button variant="outlined" id="loginButton">Login </Button>
           </Link>
           <Link to="/signup" className="no-link">
-            <Button variant="contained">Sign Up</Button>
+            <Button variant="contained" id="signupButton">Sign Up</Button>
           </Link>
         </Stack>
       </div>
