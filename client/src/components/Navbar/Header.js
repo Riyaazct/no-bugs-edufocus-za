@@ -16,7 +16,7 @@ function NavbarBlue() {
 	return (
 		<header>
 			<h3>EduFocus</h3>
-			<nav ref={navRef} className="navPosition">
+			<nav ref={navRef}>
 				<div className={location.pathname === "/" ? "pageActive" : ""}>
 					<a href="/">
 						Home
@@ -60,10 +60,10 @@ function NavbarBlue() {
 			<div className="header-buttons">
         <Stack spacing={2} direction="row">
           <Link to="/login" className="no-link">
-            <Button variant="outlined" id="loginButton">Login </Button>
+            <Button variant="outlined">Login </Button>
           </Link>
           <Link to="/signup" className="no-link">
-            <Button variant="contained" id="signupButton">Sign Up</Button>
+            <Button variant="contained">Sign Up</Button>
           </Link>
         </Stack>
       </div>
