@@ -56,11 +56,7 @@ header {
 	background-color: #25dac5;
 }
 
-.navPosition {
-	align-self: center;
-	position: relative;
-	left: 10%;
-}
+
 
 nav a {
 	margin: 0 1rem;
@@ -166,6 +162,7 @@ nav {
 	header .responsive_nav {
 		transform: translateY(100vh);
 		z-index: 10;
+		padding:0;
 	}
 
 	.header-buttons2 {
@@ -204,5 +201,12 @@ nav {
 
 	.dmsans-medium-white-16px {
 		color: #eee;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	.navPosition {
+		align-self: center;
+		position: relative;
+		left: 10%;
 	}
 }
