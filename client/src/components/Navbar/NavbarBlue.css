@@ -58,7 +58,8 @@ header {
 
 .navPosition {
 	align-self: center;
-	margin: auto;
+	position: relative;
+	left: 10%;
 }
 
 nav a {
