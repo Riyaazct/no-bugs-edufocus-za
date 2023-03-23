@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
-/* 
+
 body {
     margin: 0 auto;
     max-width: 100%;
     box-sizing: border-box;
     color:#000000;
     
-}  */
+} 
 
-
-.contactPage {
-    margin: auto;
+main {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -21,10 +19,9 @@ body {
 }
 
 .contactintro {
-    /* position: relative; */
+    position: relative;
     display: inline-block;
     text-align: center;
-    color:#1E0F9E;
 }
 
 h2 {
@@ -93,7 +90,7 @@ h2 {
 }
 
 .contactform {
-  margin: 0 auto;
+   padding-left:250px;
 }
 
 .formitem{
@@ -120,7 +117,7 @@ h2 {
 /*laptop breakpoint */
 
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 375px) {
 
     .coontactsection {
         width: 100vh;
