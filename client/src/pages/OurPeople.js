@@ -1,137 +1,126 @@
-import "./OurPeople.css";
-import NavbarBlue from "../components/Navbar/Header";
 import NewFooter from "../components/NewFooter";
+import Header from "../components/Navbar/Header";
+import "./OurPeople.css";
 
 const OurPeople = () => {
-  return (
-		<div>
-			<div className="header">
-				<NavbarBlue />
-				<div>
-					<h1>Our Team</h1>
-				</div>
-			</div>
-
-			<div className="our-people">
-				<div className="member-1">
-					<div className="name">
-						<div className="designer-who-makes pageText">
-							Dr Dee is our Founder and Managing Director with 30+ years of
-							experience in teaching, financial management, and
-							entrepreneurship.
-						</div>
-						<b className="product-manager">Founder and Managing Director</b>
-						<p></p>
-						<div className="nicole-fisher personHeading">Dr Dorothy E. Esau</div>
-					</div>
-					<div className="userpic">
+	return (
+		<>
+				<Header />
+			<div className="ourPeopleContainer">
+				<h1 className="heading">Our Team</h1>
+				<div className="our-people">
+					<div className="member-1">
 						<img
 							className="mask-icon"
 							alt=""
 							src="/api/images/ourPeople/dorothy.jpg"
 						/>
-					</div>
-				</div>
-				<div className="member-11">
-					<div className="name1">
-						<div className="designer-who-makes1 pageText ">
-							Grace Bruintjies, our Chairperson, holds a prospective Ph.D. and
-							is a co-researcher on the SU-cohort Community Engaged Teaching and
-							Learning NRF project.
+						<div className="name">
+							<div className="nicole-fisher">Dr Dorothy E. Esau</div>
+							<p></p>
+							<b className="product-manager">Founder and Managing Director</b>
+							<div className="designer-who-makes">
+								Dr Dee is our Founder and Managing Director with 30+ years of
+								experience in teaching, financial management, and
+								entrepreneurship.
+							</div>
 						</div>
-						<b className="product-manager1">Chairperson</b>
-						<div className="nicole-fisher1 personHeading">Grace Bruintjies</div>
 					</div>
-					<div className="userpic">
+					<div className="member-1">
 						<img
 							className="mask-icon"
 							alt=""
 							src="/api/images/ourPeople/grace.jpg"
 						/>
-					</div>
-				</div>
-				<div className="member-12">
-					<div className="name2">
-						<div className="designer-who-makes2 pageText">
-							{
-								"Cherith is a teacher with a Bachelor's in Education from the Western Cape Education Department. She is currently pursuing her B.Ed Honours degree in Language & Literacy at the University of the Western Cape and is committed to being a lifelong learner"
-							}
+						<div className="name">
+							<div className="nicole-fisher">Grace Bruintjies</div>
+							<b className="product-manager">Chairperson</b>
+							<div className="designer-who-makes">
+								Grace Bruintjies, our Chairperson, holds a prospective Ph.D. and
+								is a co-researcher on the SU-cohort Community Engaged Teaching
+								and Learning NRF project.
+							</div>
 						</div>
-						<b className="product-manager2">Treasurer</b>
-						<div className="nicole-fisher2 personHeading">Cherith Wareley</div>
+						<div className="userpic"></div>
 					</div>
-					<div className="userpic">
+					<div className="member-1">
 						<img
 							className="mask-icon"
 							alt=""
 							src="/api/images/ourPeople/cherith.jpg"
 						/>
-					</div>
-				</div>
-				<div className="member-13">
-					<div className="name2">
-						<div className="designer-who-makes2 pageText">
-							holds a BA (Human Ecology) degree from the University of the
-							Western Cape, and Certificates in NPO Management and Business
-							Management Coaching from the University of Stellenbosch Business
-							School.
+						<div className="name">
+							<div className="nicole-fisher">Cherith Wareley</div>
+							<b className="product-manager">Treasurer</b>
+							<div className="designer-who-makes">
+								{
+									"Cherith is a teacher with a Bachelor's in Education from the Western Cape Education Department. She is currently pursuing her B.Ed Honours degree in Language & Literacy at the University of the Western Cape and is committed to being a lifelong learner"
+								}
+							</div>
 						</div>
-						<b className="product-manager2">Secretary</b>
-						<div className="nicole-fisher3 personHeading">Faith Brown</div>
+						<div className="userpic"></div>
 					</div>
-					<div className="userpic">
+					<div className="member-1">
 						<img
 							className="mask-icon"
 							alt=""
 							src="/api/images/ourPeople/faith.jpg"
 						/>
-					</div>
-				</div>
-				<div className="member-14">
-					<div className="name1">
-						<div className="designer-who-makes1 pageText">
-							{
-								"Jade (Damonse) Glenn has an Honours in Educational Psychology and a Bachelor of Education degree in English and Life Orientation from UWC. "
-							}
+						<div className="name">
+							<div className="nicole-fisher">Faith Brown</div>
+							<b className="product-manager">Secretary</b>
+							<div className="designer-who-makes">
+								holds a BA (Human Ecology) degree from the University of the
+								Western Cape, and Certificates in NPO Management and Business
+								Management Coaching from the University of Stellenbosch Business
+								School.
+							</div>
 						</div>
-						<b className="product-manager4">Volunteer</b>
-						<div className="nicole-fisher4 personHeading">Jade Damonse</div>
 					</div>
-					<div className="userpic">
+					<div className="member-1">
 						<img
 							className="mask-icon"
 							alt=""
 							src="/api/images/ourPeople/jade.jpg"
 						/>
-					</div>
-				</div>
-				<div className="member-15">
-					<div className="name5">
-						<div className="designer-who-makes5 pageText">
-							He has over 20 years of sales and marketing experience in the
-							corporate sector and recently completed a Master's degree in
-							Entrepreneurial Studies at CPUT with a focus on Social
-							Entrepreneurship in Youth Development.
+						<div className="name">
+							<div className="nicole-fisher">Jade Damonse</div>
+							<b className="product-manager">Volunteer</b>
+							<div className="designer-who-makes">
+								{
+									"Jade (Damonse) Glenn has an Honours in Educational Psychology and a Bachelor of Education degree in English and Life Orientation from UWC. "
+								}
+							</div>
 						</div>
-						<b className="product-manager">
-							Marketing and Public Relations expert
-						</b>
-						<div className="nicole-fisher5 personHeading">Henry Esau</div>
+						<div className="userpic"></div>
 					</div>
-					<div className="userpic">
+					<div className="member-1">
 						<img
 							className="mask-icon"
 							alt=""
 							src="/api/images/ourPeople/henry.jpg"
 						/>
+						<div className="name">
+							<div className="nicole-fisher">Henry Esau</div>
+							<b className="product-manager">
+								Marketing and Public Relations expert
+							</b>
+							<div className="designer-who-makes">
+								He has over 20 years of sales and marketing experience in the
+								corporate sector and recently completed a Master's degree in
+								Entrepreneurial Studies at CPUT with a focus on Social
+								Entrepreneurship in Youth Development.
+							</div>
+						</div>
 					</div>
 				</div>
+				<p className="space">&nbsp;</p>
+				<button className="button-outline">Be Our Partner</button>
+
+				<p className="space">&nbsp;</p>
 			</div>
-			<div>
 				<NewFooter />
-			</div>
-		</div>
+		</>
 	);
 };
-
 export default OurPeople;
