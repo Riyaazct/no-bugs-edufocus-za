@@ -4,8 +4,9 @@ import NewFooter from "../components/NewFooter";
 
 const OurPeople = () => {
    return (
-    <div className="container">
+   <div>
         <NavbarBlue />
+       <div className="container">
         <h1 className="heading">Our Team</h1>
       <div className="our-people">
         <div className="member-1">
@@ -128,8 +129,10 @@ const OurPeople = () => {
       <button className="button-outline">Be Our Partner</button>
         
       <p className="space">&nbsp;</p>
-      <NewFooter />
+     
     </div>
+       <NewFooter />
+   </div>
   );
 };
 
