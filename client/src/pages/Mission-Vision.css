@@ -176,23 +176,24 @@ hr {
 /* 1400px screen size */
 @media only screen and (min-width: 1400px) {
 	.visionCardContainer {
-		max-width: 90%;
+		max-width: 80%;
 		gap: 50px;
+		margin-bottom: 250px;
 	}
 
 	.visionCardTitle {
-		font-size: 2rem;
+		font-size: 1.8rem;
 }
 
 	.visionCard li {
-	font-size: 1.3rem;
+	font-size: 1.05rem;
 }
 
 .visionCardContent img {
-	height: 280px;
+	height: 200px;
 }
 
 .readMoreButton {
-	font-size: 1.45rem;
+	font-size: 1.2rem;
 }
 }

@@ -81,6 +81,7 @@
 	.mainContainer {
 		height: 100vh;
 		margin-bottom: 350px;
+		
 	}
 
 		.theProblemContent {
@@ -119,7 +120,7 @@
 	.backgroundDiv {
 		position: absolute;
 		width: 80%;
-		height: 600px;
+		height: 650px;
 		background-color: #17997b;
 		z-index: -1;
 		top: 65px;
@@ -141,6 +142,8 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 200px;
+
+
 	}
 
 		
