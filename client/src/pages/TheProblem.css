@@ -52,7 +52,8 @@
 @media only screen and (min-width: 768px) {
 	.mainContainer {
 		text-align: center;
-		margin-bottom: 50px;
+		margin-bottom: 150px;
+		margin-top: 150px;
 	}
 
 	.theProblemContent {
@@ -80,7 +81,8 @@
 @media only screen and (min-width: 992px) {
 	.mainContainer {
 		height: 100vh;
-		margin-bottom: 350px;
+		margin-bottom: 250px;
+		margin-top: 100px;
 		
 	}
 
@@ -172,7 +174,7 @@
 @media only screen and (min-width: 1400px) {
 
 	.mainContainer{
-		margin-bottom: 100px;
+		margin-bottom: 200px;
 	}
 
 	.theProblemContent {

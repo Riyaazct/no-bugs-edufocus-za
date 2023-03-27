@@ -81,7 +81,6 @@ const OurPhotos = () => {
 							<Header />
 							<div className="titleDiv">
 								<h1>Our Photos</h1>
-								<hr />
 							</div>
 							<div className="carouselContainer">
 								<div className="carouselCard">

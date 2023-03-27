@@ -11,6 +11,8 @@
 
 .photosContainer h1 {
 	margin-left: 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .carouselContainer {
@@ -32,9 +34,8 @@
 	height: 450px;
 }
 .imageContainer img {
-	max-height: 100%;
-	height: 450px;
-	object-fit: fill;
+	max-height: 450px;
+	width: auto;
 }
 
 .carouselText {
@@ -89,8 +90,10 @@
 }
 
 .imageModal img {
-	width: 100vw;
-	height: 85vh;
+	width: auto;
+	height: 80vh;
+	margin-bottom: 80px;
+	
 }
 /* MEDIA QUERIES */
 @media only screen and (min-width: 768px) {
@@ -101,14 +104,13 @@
 		margin: auto;
 		border-radius: 20px;
 		margin-bottom: 50px !important;
+		background-color: unset;
+		padding: 20px;
 	}
 	.carouselCard:hover {
 		border: 1px solid #17997a;
 		background-color: #bfbfbf56;
 	}
-	.carouselCard {
-	background-color: unset;
-}
 
 	.carouselCard:hover .left,
 	.carouselCard:hover .right {
@@ -117,6 +119,7 @@
 
 	.photosContainer h1 {
 		font-size: 2.4rem;
+		text-align: center;
 	}
 	.carouselTextContainer h3 {
 		font-size: 1.7rem;
@@ -133,13 +136,15 @@
 		border-top-right-radius: 20px;
 		border-top-left-radius: 20px;
 	}
+
 	.imageContainer img {
-		height: 100%;
-		width: 70%;
+		height: 400px;
+		width: auto;
+		max-width: 550px;
 		border-radius: 5px;
 	}
 	.imageModal img {
-		width: 80vw;
+		width: auto;
 		margin-bottom: 80px;
 	}
 
@@ -152,7 +157,7 @@
 	.titleDiv h1 {
 		margin-top: 20px;
 	}
-	
+
 	.titleDiv hr {
 		display: none;
 	}
@@ -165,17 +170,14 @@
 		margin: inherit;
 		max-width: 80%;
 	}
-	.imageContainer img {
-		max-width: 450px;
-		width: 100%;
-	}
+
 	.imageModal img {
-		height: 90vh;
-		width: 70vw;
+		height: 80vh;
+		width: auto;
 		margin-bottom: 50px;
 	}
 	.carouselContainer {
-		max-width: 80vw;
+		max-width: 85vw;
 	}
 	.carouselCard h3 {
 		font-size: 1.9rem;
@@ -186,13 +188,17 @@
 }
 
 @media only screen and (min-width: 1200px) {
-	
 	.carouselCard {
 		padding: 5px;
 		margin: 5px;
-		max-width: 55%;
+		max-width: 65%;
 		margin: auto;
 	}
+	.imageContainer img {
+		width: auto;
+		max-width: 90%;
+	}
+
 	.photosContainer h1 {
 		font-size: 2.6rem;
 	}
@@ -205,8 +211,8 @@
 	}
 
 	.imageModal img {
-		width: 50vw;
-		height: 95vh;
+		width: auto;
+		height: 85vh;
 		margin-bottom: 35px;
 	}
 }
