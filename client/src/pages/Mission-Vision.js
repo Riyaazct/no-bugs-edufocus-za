@@ -42,7 +42,6 @@ const Mission = () => {
 					<div className="visionCard" key={index}>
 						{/* TITLE */}
 						<h1 className="visionCardTitle">{title}</h1>
-						<hr color="#1e0f9e" size="3" className="visionHr" />
 						<div className="visionCardContent">
 							{/* IMAGE */}
 							<div className="visionCardImage">
@@ -81,6 +80,7 @@ const Mission = () => {
 						</div>
 					</div>
 				))}
+			<hr />
 			</div>
 		);
 };

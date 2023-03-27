@@ -26,9 +26,7 @@
 	margin-left: 5px;
 }
 
-.mainContainer hr {
-	display: none;
-}
+
 
 .theProblemContent img {
 	width: 100%;
@@ -71,11 +69,7 @@
 		background-color: unset;
 		line-height: 1.2;
 	}
-	.mainContainer hr {
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+	
 }
 
 @media only screen and (min-width: 992px) {
@@ -129,11 +123,7 @@
 		left: 155px;
 		border-radius: 5px;
 	}
-	.mainContainer hr {
-		width: 60%;
-		margin-left: auto;
-		margin-right: auto;
-	}
+	
 }
 
 @media only screen and (min-width: 1150px) {

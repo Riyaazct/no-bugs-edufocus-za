@@ -4,11 +4,7 @@
 	margin-bottom: 50px;
 }
 
-hr {
-	margin-top: 0;
-	margin-bottom: 20px;
-	
-}
+
 
 .visionCardTitle {
 	margin-top: 5%;
@@ -137,10 +133,7 @@ hr {
 
 	}
 
-	.visionHr {
-		width: 100%;
-		background-color: #1e0f9e;
-	}
+
 
 	.seeMoreButtonContainer {
 	text-align: end;

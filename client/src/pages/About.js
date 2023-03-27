@@ -43,6 +43,7 @@ const About = () => (
 						country.
 					</p>
 				</div>
+					<hr />
 			</div>
 		</div>
 		<Mission />
