@@ -14,7 +14,7 @@ function Home() {
 					<div className="overlay">
 						<div className="content-wrap">
 							<div className="left-box">
-								<h1 id="eduheading">EduFocus</h1>
+								<h1 id="eduheading">EduFocus Projects</h1>
 								<h4>The teacher is at the heart of everything we do</h4>
 								<div className="buttons">
 					<Link to="/ourprogrammes" className="buttonLink">
