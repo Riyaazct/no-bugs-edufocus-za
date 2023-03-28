@@ -9,7 +9,7 @@ const NewFooter = () => {
 		<footer>
 			<div className="row primary">
 				<div className="column about">
-					<h3>EduFocus</h3>
+					<h3>EduFocus Projects</h3>
 					<p>
 						EduFocus Projects NPO provides training, coaching and mentoring
 						interventions to the education sector.
