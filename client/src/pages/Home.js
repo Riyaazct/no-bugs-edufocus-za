@@ -39,10 +39,12 @@ function Home() {
 							</div>
 							<div className="right-box">
 								<div className="logo-wrap">
-									<img
+								<div class="front-img"></div>
+                <div class="back-img"></div>
+									{/* <img
 										src="api/images/home/logo.webp"
 										alt="big round logo EduFocus"
-									/>
+									/> */}
 								</div>
 							</div>
 						</div>
