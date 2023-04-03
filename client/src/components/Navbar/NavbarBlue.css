@@ -14,7 +14,9 @@
 	--secondaryColor: #25dac5;
 	--textColor: #eee;
 }
-
+.nav-logo {
+	width: 4rem;
+}
 .pageActive {
 	border: 2px solid #25dac5;
 	height: 40px;
@@ -27,6 +29,7 @@
 }
 
 header {
+	
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -59,9 +62,11 @@ header {
 
 
 nav a {
+	/* width: 5.7rem; */
 	margin: 0 1rem;
 	color: var(--textColor);
 	text-decoration: none;
+	
 }
 
 nav a:hover {
