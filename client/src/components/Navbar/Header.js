@@ -15,7 +15,9 @@ function NavbarBlue() {
 
 	return (
 		<header>
-			<h3>EduFocus Projects</h3>
+			<div className="nav-logo">
+			<h4>EduFocus Projects</h4>
+			</div>
 			<nav ref={navRef} className="navPosition">
 				<div className={location.pathname === "/" ? "pageActive" : ""}>
 					<a href="/">

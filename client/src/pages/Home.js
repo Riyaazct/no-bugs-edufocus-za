@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Home() {
 	return (
 		<>
-		<Headers />
+			<Headers />
 			<div className="home-page">
 				<section className="hero-wrap">
 					<div className="overlay">
@@ -17,8 +17,8 @@ function Home() {
 								<h1 id="eduheading">EduFocus Projects</h1>
 								<h4>The teacher is at the heart of everything we do</h4>
 								<div className="buttons">
-					<Link to="/ourprogrammes" className="buttonLink">
-				<Button
+									<Link to="/ourprogrammes" className="buttonLink">
+										<Button
 											variant="contained"
 											size="large"
 											style={{ backgroundColor: "#6AE3C6", color: "#1E0F9E" }}
@@ -39,10 +39,8 @@ function Home() {
 							</div>
 							<div className="right-box">
 								<div className="logo-wrap">
-									<img
-										src="api/images/home/logo.webp"
-										alt="big round logo EduFocus"
-									/>
+									<div className="front-logo"></div>
+									<div className="back-logo"></div>
 								</div>
 							</div>
 						</div>
@@ -57,13 +55,13 @@ function Home() {
 							the Sustainable Development Goals (SDGs, 2015): QUALITY EDUCATION
 						</p>
 						<Link to="/contact" className="buttonLink">
-						<Button
-							variant="contained"
-							size="large"
-							style={{ backgroundColor: "#17997A", color: "#fff" }}
-						>
-							Partner with us
-						</Button>
+							<Button
+								variant="contained"
+								size="large"
+								style={{ backgroundColor: "#17997A", color: "#fff" }}
+							>
+								Partner with us
+							</Button>
 						</Link>
 					</div>
 					<div className="welcome-img">
