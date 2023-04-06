@@ -267,7 +267,8 @@ router.post("/createAccount", async (req, res) => {
   // If both checks pass, insert the new record with hashed password
  const insertQuery = "INSERT INTO registration (username, email, password) VALUES ($1, $2, $3)";
   db.query(insertQuery, [username, email, hashedPwd])
-    .then(() => res.send("User added!"))
+    .then(() => res.json({ msg: "Success!" }))
+    // .then(() => res.send("Success!"))
     .catch((error) => {
       console.error(error);
       res.status(500).json(error);
