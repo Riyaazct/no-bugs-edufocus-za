@@ -55,7 +55,7 @@ header {
 	}
 	
 #signupButton {
-	color: var(--mainColor);
+	color: #ffff;
 	background-color: #25dac5;
 }
 
@@ -144,11 +144,13 @@ nav {
 
 
 	header .nav-btn {
+		
 		visibility: visible;
 		opacity: 1;
 	}
 
 	header nav {
+		
 		position: fixed;
 		top: -100vh;
 		left: 0;
@@ -165,6 +167,7 @@ nav {
 	}
 
 	header .responsive_nav {
+		
 		transform: translateY(100vh);
 		z-index: 10;
 		padding:0;
@@ -182,8 +185,8 @@ nav {
 
 	nav .nav-close-btn {
 		position: absolute;
-		top: 2rem;
-		right: 2rem;
+		top: -1rem;
+		right: 0;
 	}
 
 	nav a {
