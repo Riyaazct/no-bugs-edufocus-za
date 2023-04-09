@@ -55,7 +55,7 @@ header {
 	}
 	
 #signupButton {
-	color:#eee;
+	color: var(--mainColor);
 	background-color: #25dac5;
 }
 

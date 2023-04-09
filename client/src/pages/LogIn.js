@@ -1,5 +1,7 @@
 import React from "react";
 import "./LogIn.css";
+import Headers from "../components/Navbar/Header";
+import NewFooter from "../components/NewFooter";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import { useAuth } from "../hooks/useAuth";
@@ -66,45 +68,46 @@ function LogIn() {
   };
 
   return (
+    <>
+      <Headers />
+      <section className='login-wrap'>
+        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+        <h2>Log in</h2>
+        <form className="loginForm" onSubmit={handleSubmit}>
+          {/* USERNAME */}
+          <label htmlFor="username">
+            Username:</label>
+          <input
+            type="text"
+            id="username"
+            ref={userRef}
+            autoComplete="off"
+            onChange={(e) => setUsername(e.target.value)}
+            value={username}
+            required
+          />
+          {/* PASSWORD */}
+          <label htmlFor="password">
+            Password:
+          </label>
+          <input
+            type="password"
+            id="password"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+            required />
+          <button>Log in</button>
+        </form>
+        <div>
+          Don't have an account?<br />
+          <span className="line">
+            <Link to="/signup">Sign up</Link>
+          </span>
 
-    <section className='login-wrap'>
-      <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-      <h2>Log in</h2>
-      <form className="loginForm" onSubmit={handleSubmit}>
-        {/* USERNAME */}
-        <label htmlFor="username">
-          Username:</label>
-        <input
-          type="text"
-          id="username"
-          ref={userRef}
-          autoComplete="off"
-          onChange={(e) => setUsername(e.target.value)}
-          value={username}
-          required
-        />
-        {/* PASSWORD */}
-        <label htmlFor="password">
-          Password:
-        </label>
-        <input
-          type="password"
-          id="password"
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-          required />
-        <button>Log in</button>
-      </form>
-      <div>
-        Don't have an account?<br />
-        <span className="line">
-          <Link to="/signup">Sign up</Link>
-        </span>
-
-      </div>
-    </section>
-
-
+        </div>
+      </section>
+      <NewFooter />
+    </>
   );
 }
 export default LogIn;
