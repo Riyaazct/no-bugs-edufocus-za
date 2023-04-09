@@ -171,14 +171,13 @@ a {
 }
 
 .welcome-text p {
-
   line-height: 1.8;
   margin-bottom: 3rem;
 }
 
 .welcome button {
-  width: 12rem;
-  font-size: 0.8rem;
+  width: 13rem;
+  font-size: 1rem;
   font-weight: 600;
 
 }
@@ -253,7 +252,7 @@ a {
   }
 
   .hero-wrap {
-    height: 65vh;
+    height: 80vh;
   }
 
   .content-wrap {
@@ -291,11 +290,13 @@ a {
     padding: 0.5rem;
     font-size: 0.6rem;
   }
+
   .logo-wrap {
     margin-top: -1rem;
     width: 9rem;
-    height: 9rem; 
+    height: 9rem;
   }
+
   .welcome {
     display: flex;
     flex-direction: column;
@@ -336,10 +337,10 @@ a {
 }
 
 /* TABLET */
-@media only screen and (min-width: 601px) and (max-width: 870px) {
+@media only screen and (min-width: 600px) and (max-width: 870px) {
 
   .hero-wrap {
-    height: 70vh;
+    height: 50vh;
   }
 
   .content-wrap {
@@ -351,22 +352,17 @@ a {
   }
 
   .left-box .buttons button {
-
     font-size: 1rem;
   }
 
   .welcome {
+    margin-bottom: 1rem;
     margin-top: 3rem;
-    margin-bottom: 2rem;
-    flex-direction: ;
+    gap: 1rem;
   }
 
   .welcome-text h3 {
     font-size: 1.5rem;
-  }
-
-  .welcome button {
-    font-size: 1rem;
   }
 
   .programmes {
@@ -384,9 +380,8 @@ a {
 }
 
 @media only screen and (min-width: 871px) and (max-width: 1024px) {
-
   .hero-wrap {
-    height: 50vh;
+    height: 45vh;
   }
 
   .left-box h1 {
@@ -406,6 +401,10 @@ a {
     font-size: 1rem;
   }
 
+  .logo-wrap {
+    margin-top: -6rem;
+  }
+
   .welcome {
     margin-top: 4rem;
   }
@@ -413,13 +412,6 @@ a {
   .welcome button {
     width: 15rem;
     font-size: 1rem;
-  }
-
-
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
   }
 
   .programmes {
@@ -434,7 +426,7 @@ a {
 
 @media only screen and (min-width: 1440px) {
   .home-page {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .hero-wrap {
@@ -448,7 +440,7 @@ a {
   .logo-wrap {
     margin-left: 14rem;
     width: 16rem;
-    height: 16rem; 
+    height: 16rem;
   }
 
   .left-box h1 {
