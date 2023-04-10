@@ -1,5 +1,7 @@
 import React from "react";
 import "./SignUp.css";
+import Headers from "../components/Navbar/Header";
+import NewFooter from "../components/NewFooter";
 import { Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -98,7 +100,7 @@ function SignUp() {
           setUsername("");
           setEmail("");
           setPassword("");
-          setMatchPwd("");  
+          setMatchPwd("");
         } else if (response.data.msg === "fail") {
           alert("Message failed to send.");
         }
@@ -112,6 +114,7 @@ function SignUp() {
 
   return (
     <>
+      <Headers />
       <section className='signup-wrap'>
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
         <h2>Sign Up</h2>
@@ -223,6 +226,7 @@ function SignUp() {
           </span>
         </p>
       </section>
+      <NewFooter />
     </>
   );
 }
