@@ -110,6 +110,11 @@
       padding:30px 20px;
   }
 }
+.ourPeopleContainer a {
+    text-decoration: none;
+    color: #fff;
+    }
+
 /* @media (max-width:908px){
   .ourPeopleContainer{
       padding:20px;

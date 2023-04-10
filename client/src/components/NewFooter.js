@@ -5,7 +5,7 @@ import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NewFooter = () => {
-  return (
+	return (
 		<footer>
 			<div className="row primary">
 				<div className="column about">
@@ -34,16 +34,17 @@ const NewFooter = () => {
 							className="icon"
 							title="info@edufocusprojects.org.za"
 						/>
-						<FontAwesomeIcon
-							icon={faWhatsapp}
-							className="icon"
-							title="+27 83 441 9423"
-						/>
+						<a href="https://wa.me/27716247778"
+							className="icon">
+							<FontAwesomeIcon
+								icon={faWhatsapp} />
+						</a>
 						<FontAwesomeIcon
 							icon={faPhone}
 							className="icon"
 							title="+27 83 441 9423"
 						/>
+
 					</div>
 				</div>
 				<div className="column links">
@@ -59,7 +60,7 @@ const NewFooter = () => {
 							<a href="#privacy-policy">Privacy Policy</a>
 						</li>
 						<li>
-							<a href="#our-programmes">OUR PROGRAMMES</a>
+							<a href='/ourprogrammes'>OUR PROGRAMMES</a>
 						</li>
 					</ul>
 				</div>

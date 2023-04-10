@@ -91,21 +91,21 @@ function Home() {
 								<h4>Coaching programmes</h4>
 								<img src="api/images/home/coaching.webp" alt="coaching" />
 								<p>
-									<Link to="/">Find out more...</Link>
+									<Link to="/ourprogrammes">Find out more...</Link>
 								</p>
 							</div>
 							<div className="training">
 								<h4>Training programmes</h4>
 								<img src="api/images/home/training.webp" alt="training" />
 								<p>
-									<Link to="/">Find out more...</Link>
+									<Link to="/ourprogrammes">Find out more...</Link>
 								</p>
 							</div>
 							<div className="mentor">
 								<h4>Mentoring programmes</h4>
 								<img src="api/images/home/mentor.webp" alt="mentor" />
 								<p>
-									<Link to="/">Find out more...</Link>
+									<Link to="/ourprogrammes">Find out more...</Link>
 								</p>
 							</div>
 						</div>

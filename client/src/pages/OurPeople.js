@@ -115,10 +115,10 @@ const OurPeople = () => {
 					</div>
 				</div>
 				<p className="space">&nbsp;</p>
-				<button className="button-outline">Be Our Partner</button>
-
+				<button className="button-outline"><a href="/contact">Be Our Partner</a></button>
 				<p className="space">&nbsp;</p>
 			</div>
+			
 				<NewFooter />
 		</>
 	);
