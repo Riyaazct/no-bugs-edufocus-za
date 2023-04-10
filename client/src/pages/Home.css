@@ -248,9 +248,9 @@ a {
 
 /* MOBILE */
 @media only screen and (max-width: 600px) {
-  .home-page {
+  /* .home-page {
     font-size: 0.5rem;
-  }
+  } */
 
   .hero-wrap {
     height: 50vh;
