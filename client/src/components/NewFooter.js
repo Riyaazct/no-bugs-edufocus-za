@@ -34,17 +34,15 @@ const NewFooter = () => {
 							className="icon"
 							title="info@edufocusprojects.org.za"
 						/>
-						<a href="https://wa.me/27716247778"
+						<a href="https://wa.me/27834419423"
 							className="icon">
-							<FontAwesomeIcon
-								icon={faWhatsapp} />
+							<FontAwesomeIcon icon={faWhatsapp} />
 						</a>
 						<FontAwesomeIcon
 							icon={faPhone}
 							className="icon"
 							title="+27 83 441 9423"
 						/>
-
 					</div>
 				</div>
 				<div className="column links">
@@ -60,7 +58,7 @@ const NewFooter = () => {
 							<a href="#privacy-policy">Privacy Policy</a>
 						</li>
 						<li>
-							<a href='/ourprogrammes'>OUR PROGRAMMES</a>
+							<a href="/ourprogrammes">OUR PROGRAMMES</a>
 						</li>
 					</ul>
 				</div>
