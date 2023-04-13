@@ -1,7 +1,7 @@
 import React from "react";
 import "./NewFooter.css";
 import { faFacebook, faWhatsapp, faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NewFooter = () => {
@@ -44,7 +44,6 @@ const NewFooter = () => {
 							className="icon"
 							title="+27 83 441 9423"
 						/>
-
 					</div>
 				</div>
 				<div className="column links">
@@ -81,22 +80,23 @@ const NewFooter = () => {
 						</li>
 					</ul>
 				</div>
-				<div className="column subscribe">
-					<h3>Newsletter</h3>
-					<div>
-						<input type="email" placeholder="Your email here" />
-						<button>SUBMIT</button>
-					</div>
-				</div>
 			</div>
+			<button className="scroll-to-top"
+				onClick={() =>
+					window.scrollTo({
+						top: 0,
+						behavior: "smooth"
+					})
+				}>
+				<FontAwesomeIcon icon={faAngleUp} className="icon" />
+			</button>
 			<div className="row copyright">
 				<div className="footer-menu">
 					<a href="/">Home</a>
 					<a href="/about">About Us</a>
 					<a href="/contact">Contact Us</a>
-					<a href="">Social</a>
 				</div>
-				<p>© 2023 Copyright: Edufocus</p>
+				<p>© 2023 Copyright: EduFocus Projects</p>
 			</div>
 		</footer>
 	);

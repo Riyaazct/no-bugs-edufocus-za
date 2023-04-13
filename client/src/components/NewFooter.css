@@ -5,6 +5,7 @@ footer {
   background-color: #1E0F9E;
   color: white;
   font-size: 0.9rem;
+  position: relative;
 }
 
 footer * {
@@ -18,7 +19,7 @@ footer .row {
 }
 footer .row.primary {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 1fr;
   align-items: stretch;
 }
 footer .column {
@@ -26,7 +27,7 @@ footer .column {
   display: flex;
   flex-direction: column;
   padding: 0 2em;
-  min-height: 15em;
+  min-height: 12em;
 }
  footer h3 {
   width: 100%;
@@ -57,18 +58,7 @@ footer .about p {
   line-height: 2;
   margin: 0;
 }
-footer input,
-footer button {
-  font-size: 1em;
-  padding: 1em;
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 5px;
-}
- footer button {
-  background-color: var(--color-green);
-  color: #ffffff;
-}
+
  footer div.social {
   
   display: flex;
@@ -103,9 +93,29 @@ footer .copyright {
   color: #27bcda;
 }
 .copyright p {
-  font-size: 0.9em;
+  font-size: 0.6rem;
   text-align: right;
 }
+.scroll-to-top {
+  position: absolute;
+  bottom: 10rem;
+  right: 0.2rem;
+  background-color: #5767aa;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 5%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.scroll-to-top:hover {
+  background-color: #27bcda;
+}
+
 @media screen and (max-width: 850px) {
   footer .row.primary {
     grid-template-columns: 1fr;
