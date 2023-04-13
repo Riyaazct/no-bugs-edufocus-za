@@ -250,7 +250,7 @@ a {
 
 /* MOBILE */
 @media only screen and (max-width: 600px) {
- 
+
   .hero-wrap {
     height: 80vh;
   }
