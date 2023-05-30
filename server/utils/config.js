@@ -11,10 +11,16 @@ function createDatabaseUrl() {
 	if (process.env.DATABASE_URL) {
     return process.env.DATABASE_URL;
   }
-  const host = process.env.DB_HOST ?? "dpg-cflvv6pa6gdjlmrp8jc0-a.frankfurt-postgres.render.com";
-  const name = process.env.DB_NAME ?? "cyf_poqg";
-  const password = process.env.DB_PASS ?? process.env.DB_PASSWORD ?? "YEmXa47TQTYWDe1li2RFft9InpWl3cTW";
+  const host =
+		process.env.DB_HOST ??
+		"dpg-chn23167avj3o34tg39g-a.frankfurt-postgres.render.com";
+  const name = process.env.DB_NAME ?? "cyf_0j0o";
+  const password =
+		process.env.DB_PASS ??
+		process.env.DB_PASSWORD ??
+		"umfhHWPX5PPu4FnZPWMKeAvTq2zEufnq";
   const port = process.env.DB_PORT ?? "5432";
-  const username = process.env.DB_USER ?? process.env.DB_USERNAME ?? "cyf_poqg_user";
+  const username =
+		process.env.DB_USER ?? process.env.DB_USERNAME ?? "cyf_0j0o_user";
   return `postgres://${username}:${password}@${host}:${port}/${name}`;
 }
