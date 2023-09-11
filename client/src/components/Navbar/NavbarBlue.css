@@ -154,8 +154,8 @@ nav {
 		position: fixed;
 		top: -100vh;
 		left: 0;
-		/* height: 100%;
-		width: 100%; */
+		height: 100%;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -164,6 +164,7 @@ nav {
 		background-color: var(--mainColor);
 		transition: 1s;
 		padding-left: 100px;
+		z-index: 1000;
 	}
 
 	header .responsive_nav {
