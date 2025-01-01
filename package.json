@@ -106,8 +106,7 @@
 		"styled-components": "^5.3.8",
 		"winston": "^3.8.2"
 	},
-	"proxy": "http://localhost:3100",
-	"engines": {
+		"engines": {
 		"node": "^20 || ^22",
 		"npm": "^10"
 	}
