@@ -3,5 +3,9 @@
 	"installCommand": "npm install",
 	"outputDirectory": "api/static",
 	"regions": ["fra1"],
-	"rewrites": [{ "source": "/api/(.*)", "destination": "/api/app" }]
+	"rewrites": [{ "source": "/api/(.*)", "destination": "/api/app" }],
+	"engines": {
+		"node": "18.x",
+		"npm": "8.x"
+	}
 }
